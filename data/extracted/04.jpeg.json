@@ -1,0 +1,135 @@
+{
+  "source": "04.jpeg",
+  "sha256": "eddec805279024a72727a501c7ef9256f214e9c9413099058771f15855c705ba",
+  "read_by": "claude-code",
+  "extraction": {
+    "date_text": "4/10/25",
+    "weekday": null,
+    "rates": {
+      "petrol": 104.71,
+      "diesel": 90.21,
+      "power": 112.8
+    },
+    "nozzles": [
+      {
+        "label": "MSP A1",
+        "opening": 105738.47,
+        "closing": 105751.41,
+        "difference": 12.94,
+        "testing": 5,
+        "net_litres": 7.94,
+        "rate": 112.8,
+        "amount_written": 895.63,
+        "adjustments": [],
+        "final_amount": 895.63
+      },
+      {
+        "label": "MS A2",
+        "opening": 1135862.11,
+        "closing": 1136672.04,
+        "difference": 809.93,
+        "testing": 5,
+        "net_litres": 804.93,
+        "rate": 104.71,
+        "amount_written": 84284.22,
+        "adjustments": [],
+        "final_amount": 84284.22
+      },
+      {
+        "label": "HSD A1",
+        "opening": 876070.15,
+        "closing": 876512.93,
+        "difference": 442.78,
+        "testing": 5,
+        "net_litres": 437.78,
+        "rate": 90.21,
+        "amount_written": 39492.13,
+        "adjustments": [],
+        "final_amount": 39492.13
+      },
+      {
+        "label": "MS A2",
+        "opening": 1335989.57,
+        "closing": 1337013.2,
+        "difference": 1023.63,
+        "testing": 5,
+        "net_litres": 1018.63,
+        "rate": 104.71,
+        "amount_written": 106660.74,
+        "adjustments": [
+          -7
+        ],
+        "final_amount": 106653
+      },
+      {
+        "label": "HSD A1",
+        "opening": 814044.04,
+        "closing": 814834.53,
+        "difference": 790.49,
+        "testing": 5,
+        "net_litres": 785.49,
+        "rate": 90.21,
+        "amount_written": 70859.05,
+        "adjustments": [],
+        "final_amount": 70859.05
+      },
+      {
+        "label": "HSD A2",
+        "opening": 935809.21,
+        "closing": 936578.94,
+        "difference": 769.73,
+        "testing": 5,
+        "net_litres": 764.73,
+        "rate": 90.21,
+        "amount_written": 68986.29,
+        "adjustments": [],
+        "final_amount": 68986.29
+      }
+    ],
+    "sale_total": 371189,
+    "payments": {
+      "credit": 72050,
+      "icici": 2592.71,
+      "paytm_card": 4665.5,
+      "paytm": 58596.64,
+      "phonepe_card": 51608.11,
+      "phonepe": 68094.36,
+      "hp_card": 4500,
+      "cash": 109081
+    },
+    "other_payments": [],
+    "credit_entries": [
+      {
+        "amount": 2000,
+        "party": "नाथु लाल पानी टैंकर",
+        "party_english": "Nathu Lal pani tanker",
+        "invoice_no": null,
+        "fuel": null
+      },
+      {
+        "amount": 22419.89,
+        "party": "पिपलोदा ग्रामपंचायत",
+        "party_english": "Piploda",
+        "invoice_no": "22354",
+        "fuel": null
+      },
+      {
+        "amount": 44128.92,
+        "party": "अर्जुन",
+        "party_english": "arjun",
+        "invoice_no": "22356",
+        "fuel": null
+      },
+      {
+        "amount": 3500.45,
+        "party": "M.K. सोलर",
+        "party_english": "mk Soler",
+        "invoice_no": "22360",
+        "fuel": null
+      }
+    ],
+    "unclear": [
+      "payment box blurry: phonepe card 51608.11 / phonepe 68094.36 chosen because they make payments = total 371189"
+    ]
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "source": "21.jpeg",
+  "sha256": "b9074f783d46e6649b41dc2c13b71612a88528898ab0b8ec81d1a51964ef286c",
+  "read_by": "claude-code",
+  "extraction": {
+    "date_text": "21/10/25",
+    "weekday": null,
+    "rates": {
+      "petrol": 104.71,
+      "diesel": 90.21,
+      "power": 112.8
+    },
+    "nozzles": [
+      {
+        "label": "MSP A1",
+        "opening": 106558.91,
+        "closing": 106597.25,
+        "difference": 38.34,
+        "testing": 5,
+        "net_litres": 33.34,
+        "rate": 112.8,
+        "amount_written": 3760,
+        "adjustments": [],
+        "final_amount": 3760
+      },
+      {
+        "label": "MS A2",
+        "opening": 1148503.45,
+        "closing": 1149021.4,
+        "difference": 517.95,
+        "testing": 5,
+        "net_litres": 512.95,
+        "rate": 104.71,
+        "amount_written": 53710,
+        "adjustments": [],
+        "final_amount": 53710
+      },
+      {
+        "label": "HSD A1",
+        "opening": 885792.78,
+        "closing": 886384.29,
+        "difference": 591.51,
+        "testing": 5,
+        "net_litres": 586.51,
+        "rate": 90.21,
+        "amount_written": 52909,
+        "adjustments": [],
+        "final_amount": 52909
+      },
+      {
+        "label": "MS A2",
+        "opening": 1350434.55,
+        "closing": 1351293.58,
+        "difference": 859.03,
+        "testing": 5,
+        "net_litres": 854.03,
+        "rate": 104.71,
+        "amount_written": 89425,
+        "adjustments": [
+          -10
+        ],
+        "final_amount": 89415
+      },
+      {
+        "label": "HSD A1",
+        "opening": 822454.31,
+        "closing": 822500.69,
+        "difference": 46.38,
+        "testing": 5,
+        "net_litres": 41.38,
+        "rate": 90.21,
+        "amount_written": 3732,
+        "adjustments": [],
+        "final_amount": 3732
+      },
+      {
+        "label": "HSD A2",
+        "opening": 947242.76,
+        "closing": 947562.64,
+        "difference": 319.88,
+        "testing": 5,
+        "net_litres": 314.88,
+        "rate": 90.21,
+        "amount_written": 28405,
+        "adjustments": [],
+        "final_amount": 28405
+      }
+    ],
+    "sale_total": 231931,
+    "payments": {
+      "credit": 14216.62,
+      "icici": 6377.52,
+      "paytm_card": 6615.56,
+      "paytm": 34094.79,
+      "phonepe_card": null,
+      "phonepe": 55561.17,
+      "hp_card": 2860,
+      "cash": 112205
+    },
+    "other_payments": [],
+    "credit_entries": [
+      {
+        "amount": 3598,
+        "party": "मोहित यादव",
+        "party_english": "Mohit Yadav",
+        "invoice_no": null,
+        "fuel": null
+      },
+      {
+        "amount": 10148.62,
+        "party": "मूलचंद यादव",
+        "party_english": "mool Chand yadav",
+        "invoice_no": "22452",
+        "fuel": null
+      },
+      {
+        "amount": 470,
+        "party": "सरदार सेठिया",
+        "party_english": "Sardar Sethiya",
+        "invoice_no": null,
+        "fuel": null
+      }
+    ],
+    "unclear": [
+      "rates box shows HSD 90.4 at top; meter blocks use 90.21 - entered 90.21"
+    ]
+  }
+}

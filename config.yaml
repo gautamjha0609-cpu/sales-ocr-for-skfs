@@ -1,0 +1,78 @@
+# ---------------------------------------------------------------------------
+# SKFS daily sales ledger photos -> monthly Excel workbook
+# Every cell address the system writes is listed here. If the Excel format
+# changes, edit this file (and template/template.xlsx) - no code change.
+# ---------------------------------------------------------------------------
+
+paths:
+  input: input                  # photos: input/<YYYY-MM>/*.jpg  (or loose in input/)
+  output: output                # workbook: output/sale <Mon>-<YYYY>.xlsx
+  extracted: data/extracted     # one JSON per photo = what was read from it
+  template: template/template.xlsx
+  parties: parties.yaml         # known udhar party names (spelling used in Excel)
+
+# ---- Claude API (only for photos that have no JSON yet) --------------------
+# Needs ANTHROPIC_API_KEY. Without a key, ask Claude Code to fill the JSON
+# files (see README) and the rest runs offline.
+claude:
+  model: claude-opus-5
+  effort: medium        # low | medium | high  (higher = more careful, more tokens)
+  max_tokens: 16000
+  max_image_side: 2000
+  jpeg_quality: 90
+  retry_on_errors: 1    # re-read a photo once if its numbers don't add up
+  use_fallbacks: true
+
+# ---- Workbook -----------------------------------------------------------------
+workbook:
+  file_name: "sale {mon}-{year}.xlsx"
+  day_sheet_name: "{d}-{m}-{Y}"        # 1-11-2025 like the sample
+  template_day_sheet: TEMPLATE         # sheet in template.xlsx copied for each day
+  register_sheet: Sheet1               # month credit register; null to skip
+  register_first_row: 5
+
+cells:
+  rate_petrol: C4
+  rate_diesel: C5
+  rate_power: C6
+  # "Actual Amount" row
+  paytm: H8          # Paytm card + Paytm
+  hp_card: J8
+  icici: L8
+  phonepe: N8        # PhonePe card + PhonePe
+  cash: R8
+  credit: T8         # udhar total
+  icici_copy: K17    # sample always repeats ICICI here
+  # boxed nozzle amounts: one per row (13,14,15); H24/I24/J24 add them up
+  petrol_col: H
+  diesel_col: I
+  power_col: J
+  nozzle_rows: [13, 14, 15]
+  fuel_amounts: split   # split = one nozzle per row (like the sample)
+                        # sum   = total of all nozzles in row 13 only
+
+# Day-to-day manual cells in the template that the ledger photo does not
+# contain (Paytm/PhonePe petrol-diesel split, cash qty). They are left blank
+# for you to fill so no stale number is carried from another day.
+manual_cells: [K15, K16, K19, M20, Q4, Q5, Q6]
+
+credit_rows:            # udhar lines that carry an invoice number
+  first_row: 15
+  last_row: 25
+  party_col: A
+  type_col: B
+  rate_col: D
+  amount_col: E
+  invoice_col: F
+  default_type: diesal
+  type_names: {diesel: diesal, petrol: petrol, power: Petrol Power}
+
+# ---- Checks (rupees / litres) -------------------------------------------------
+tolerance:
+  reading: 0.02        # closing - opening vs written difference
+  amount: 2.0          # litres x rate vs written amount
+  day_total: 2.0       # petrol + diesel + power vs written total sale
+  payments: 2.0        # all payment lines vs written total sale
+  credit_list: 1.0     # udhar lines vs udhar total
+  rate_min: 50
+  rate_max: 200

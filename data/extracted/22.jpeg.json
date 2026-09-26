@@ -1,0 +1,116 @@
+{
+  "source": "22.jpeg",
+  "sha256": "09821197f9fe46e0fa8831459e5a79567a3f7c4f5586fa2deb0b386e9e776b73",
+  "read_by": "claude-code",
+  "extraction": {
+    "date_text": "22/10/25",
+    "weekday": null,
+    "rates": {
+      "petrol": 104.71,
+      "diesel": 90.21,
+      "power": 112.8
+    },
+    "nozzles": [
+      {
+        "label": "MSP A1",
+        "opening": 106597.25,
+        "closing": 106608.05,
+        "difference": 10.8,
+        "testing": 5,
+        "net_litres": 5.8,
+        "rate": 112.8,
+        "amount_written": 654,
+        "adjustments": [],
+        "final_amount": 654
+      },
+      {
+        "label": "MS A2",
+        "opening": 1149021.4,
+        "closing": 1149713.29,
+        "difference": 691.89,
+        "testing": 5,
+        "net_litres": 686.89,
+        "rate": 104.71,
+        "amount_written": 71924,
+        "adjustments": [
+          -7
+        ],
+        "final_amount": 71917
+      },
+      {
+        "label": "HSD A1",
+        "opening": 886384.29,
+        "closing": 886936.98,
+        "difference": 552.69,
+        "testing": 5,
+        "net_litres": 547.69,
+        "rate": 90.21,
+        "amount_written": 49407,
+        "adjustments": [],
+        "final_amount": 49407
+      },
+      {
+        "label": "MS A2",
+        "opening": 1351293.58,
+        "closing": 1352142.04,
+        "difference": 848.46,
+        "testing": 5,
+        "net_litres": 843.46,
+        "rate": 104.71,
+        "amount_written": 88318,
+        "adjustments": [
+          -7
+        ],
+        "final_amount": 88311
+      },
+      {
+        "label": "HSD A1",
+        "opening": 822500.69,
+        "closing": 822581.31,
+        "difference": 80.62,
+        "testing": 5,
+        "net_litres": 75.62,
+        "rate": 90.21,
+        "amount_written": 6821,
+        "adjustments": [],
+        "final_amount": 6821
+      },
+      {
+        "label": "HSD A2",
+        "opening": 947562.64,
+        "closing": 947859.44,
+        "difference": 296.8,
+        "testing": 5,
+        "net_litres": 291.8,
+        "rate": 90.21,
+        "amount_written": 26323,
+        "adjustments": [],
+        "final_amount": 26323
+      }
+    ],
+    "sale_total": 243433,
+    "payments": {
+      "credit": 5000,
+      "icici": 5360.42,
+      "paytm_card": 5707.41,
+      "paytm": 49918.42,
+      "phonepe_card": null,
+      "phonepe": 66418.6,
+      "hp_card": null,
+      "cash": 106978
+    },
+    "other_payments": [],
+    "credit_entries": [
+      {
+        "amount": 5000,
+        "party": "हरि काका (घर)",
+        "party_english": "Hari Kaka (ghar)",
+        "invoice_no": null,
+        "fuel": null
+      }
+    ],
+    "unclear": [
+      "HSD A1 closing looks like 886936.38; next day's opening and the amount 49407 both give 886936.98"
+    ]
+  }
+}

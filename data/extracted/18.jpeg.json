@@ -1,0 +1,164 @@
+{
+  "source": "18.jpeg",
+  "sha256": "b28d6f9c7a09e2d81ebd35c9e5350210fa774864fad9a98a63f059083bab9dea",
+  "read_by": "claude-code",
+  "extraction": {
+    "date_text": "18/10/25",
+    "weekday": null,
+    "rates": {
+      "petrol": 104.71,
+      "diesel": 90.21,
+      "power": 112.8
+    },
+    "nozzles": [
+      {
+        "label": "MSP A1",
+        "opening": 106406.85,
+        "closing": 106434.1,
+        "difference": 27.25,
+        "testing": 5,
+        "net_litres": 22.25,
+        "rate": 112.8,
+        "amount_written": 2509,
+        "adjustments": [],
+        "final_amount": 2509
+      },
+      {
+        "label": "MS A2",
+        "opening": 1146089.54,
+        "closing": 1146957.81,
+        "difference": 868.27,
+        "testing": 5,
+        "net_litres": 863.27,
+        "rate": 104.71,
+        "amount_written": 90393,
+        "adjustments": [],
+        "final_amount": 90393
+      },
+      {
+        "label": "HSD A1",
+        "opening": 883807.82,
+        "closing": 884791.26,
+        "difference": 983.44,
+        "testing": 10,
+        "net_litres": 973.44,
+        "rate": 90.21,
+        "amount_written": 87814,
+        "adjustments": [],
+        "final_amount": 87814
+      },
+      {
+        "label": "MS A2",
+        "opening": 1347579.59,
+        "closing": 1348613.62,
+        "difference": 1034.03,
+        "testing": 5,
+        "net_litres": 1029.03,
+        "rate": 104.71,
+        "amount_written": 107749,
+        "adjustments": [
+          -6
+        ],
+        "final_amount": 107743
+      },
+      {
+        "label": "HSD A1",
+        "opening": 821386.0,
+        "closing": 821855.85,
+        "difference": 469.85,
+        "testing": 5,
+        "net_litres": 464.85,
+        "rate": 90.21,
+        "amount_written": 41934,
+        "adjustments": [],
+        "final_amount": 41934
+      },
+      {
+        "label": "HSD A2",
+        "opening": 946000.89,
+        "closing": 946332.8,
+        "difference": 331.91,
+        "testing": 5,
+        "net_litres": 326.91,
+        "rate": 90.21,
+        "amount_written": 29490,
+        "adjustments": [],
+        "final_amount": 29490
+      }
+    ],
+    "sale_total": 359883,
+    "payments": {
+      "credit": 43220,
+      "icici": 16250.59,
+      "paytm_card": 8081.36,
+      "paytm": 62028.05,
+      "phonepe_card": 35060.81,
+      "phonepe": 81007.72,
+      "hp_card": null,
+      "cash": 114225
+    },
+    "other_payments": [],
+    "credit_entries": [
+      {
+        "amount": 2651.23,
+        "party": "मूलचंद यादव",
+        "party_english": "mool Chand yadav",
+        "invoice_no": "22439",
+        "fuel": null
+      },
+      {
+        "amount": 22000.41,
+        "party": "इन्द्रा देवी",
+        "party_english": "indra devi",
+        "invoice_no": "22440",
+        "fuel": null
+      },
+      {
+        "amount": 3157.35,
+        "party": "इन्द्रा देवी",
+        "party_english": "indra devi",
+        "invoice_no": "22441",
+        "fuel": null
+      },
+      {
+        "amount": 2463.63,
+        "party": "श्री श्याम ट्रांसपोर्ट",
+        "party_english": "Shyam Tran.",
+        "invoice_no": "22442",
+        "fuel": null
+      },
+      {
+        "amount": 8143.25,
+        "party": "पिपलोदा ग्रामपंचायत",
+        "party_english": "Piploda",
+        "invoice_no": "22443",
+        "fuel": null
+      },
+      {
+        "amount": 1500,
+        "party": "प्रेमचंद जाट",
+        "party_english": "Premchand Jat",
+        "invoice_no": null,
+        "fuel": null
+      },
+      {
+        "amount": 1804,
+        "party": "हरि काका (घर)",
+        "party_english": "Hari Kaka (ghar)",
+        "invoice_no": null,
+        "fuel": null
+      },
+      {
+        "amount": 1500,
+        "party": "नाथुलाल पानी टैंकर",
+        "party_english": "Nathu Lal pani tanker",
+        "invoice_no": null,
+        "fuel": null
+      }
+    ],
+    "unclear": [
+      "udhar total overwritten, reads 43220",
+      "invoice numbers of 2463.63 and 8143.25 cut off at page edge (2244?) - assumed 22442, 22443"
+    ]
+  }
+}

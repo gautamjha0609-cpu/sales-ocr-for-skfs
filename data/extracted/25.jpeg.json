@@ -1,0 +1,166 @@
+{
+  "source": "25.jpeg",
+  "sha256": "c430667e8ae240c3af710c67067e2d51a3c309bbd608903843dddebafe6a6e31",
+  "read_by": "claude-code",
+  "extraction": {
+    "date_text": "25/10/25",
+    "weekday": null,
+    "rates": {
+      "petrol": 104.71,
+      "diesel": 90.21,
+      "power": 112.8
+    },
+    "nozzles": [
+      {
+        "label": "MSP A1",
+        "opening": 106702.21,
+        "closing": 106895.24,
+        "difference": 193.03,
+        "testing": 5,
+        "net_litres": 188.03,
+        "rate": 112.8,
+        "amount_written": 21209,
+        "adjustments": [],
+        "final_amount": 21209
+      },
+      {
+        "label": "MS A2",
+        "opening": 1151202.64,
+        "closing": 1151742.6,
+        "difference": 539.96,
+        "testing": 5,
+        "net_litres": 534.96,
+        "rate": 104.71,
+        "amount_written": 56015,
+        "adjustments": [],
+        "final_amount": 56015
+      },
+      {
+        "label": "HSD A1",
+        "opening": 888300.11,
+        "closing": 888701.85,
+        "difference": 401.74,
+        "testing": 5,
+        "net_litres": 396.74,
+        "rate": 90.21,
+        "amount_written": 35789,
+        "adjustments": [
+          -60
+        ],
+        "final_amount": 35729
+      },
+      {
+        "label": "MS A2",
+        "opening": 1354108.58,
+        "closing": 1354811.19,
+        "difference": 702.61,
+        "testing": 5,
+        "net_litres": 697.61,
+        "rate": 104.71,
+        "amount_written": 73046,
+        "adjustments": [
+          -40
+        ],
+        "final_amount": 73006
+      },
+      {
+        "label": "HSD A1",
+        "opening": 823091.26,
+        "closing": 823857.26,
+        "difference": 766,
+        "testing": 5,
+        "net_litres": 761,
+        "rate": 90.21,
+        "amount_written": 68649,
+        "adjustments": [],
+        "final_amount": 68649
+      },
+      {
+        "label": "HSD A2",
+        "opening": 948750.32,
+        "closing": 949228.99,
+        "difference": 478.67,
+        "testing": 5,
+        "net_litres": 473.67,
+        "rate": 90.21,
+        "amount_written": 42729,
+        "adjustments": [],
+        "final_amount": 42729
+      }
+    ],
+    "sale_total": 297337,
+    "payments": {
+      "credit": 73572,
+      "icici": 5312.27,
+      "paytm_card": 3687.55,
+      "paytm": 34079.03,
+      "phonepe_card": 22341.12,
+      "phonepe": 50386.32,
+      "hp_card": null,
+      "cash": 107958
+    },
+    "other_payments": [],
+    "credit_entries": [
+      {
+        "amount": 2000,
+        "party": "नाथुलाल पानी टैंकर",
+        "party_english": "Nathu Lal pani tanker",
+        "invoice_no": null,
+        "fuel": null
+      },
+      {
+        "amount": 2000,
+        "party": "हरि काका (घर)",
+        "party_english": "Hari Kaka (ghar)",
+        "invoice_no": null,
+        "fuel": null
+      },
+      {
+        "amount": 21999.85,
+        "party": "इन्द्रा देवी",
+        "party_english": "indra devi",
+        "invoice_no": "22462",
+        "fuel": null
+      },
+      {
+        "amount": 17474.87,
+        "party": "मूलचंद यादव",
+        "party_english": "mool Chand yadav",
+        "invoice_no": "22463",
+        "fuel": null
+      },
+      {
+        "amount": 18412.37,
+        "party": "पिपलोदा ग्रामपंचायत",
+        "party_english": "Piploda",
+        "invoice_no": "22464",
+        "fuel": null
+      },
+      {
+        "amount": 3389.85,
+        "party": "श्री श्याम ट्रांसपोर्ट",
+        "party_english": "Shyam Tran.",
+        "invoice_no": "22465",
+        "fuel": null
+      },
+      {
+        "amount": 2248,
+        "party": "प्रेमचंद जाट",
+        "party_english": "Premchand Jat",
+        "invoice_no": null,
+        "fuel": null
+      },
+      {
+        "amount": 500,
+        "party": "महिमा पेट्रोल",
+        "party_english": "Mahima Petrol",
+        "invoice_no": null,
+        "fuel": null
+      }
+    ],
+    "unclear": [
+      "HSD A1 (3rd block) rate written 90.4, amount matches 90.21",
+      "udhar list is 5547 less than udhar total 73572 - check list"
+    ]
+  }
+}

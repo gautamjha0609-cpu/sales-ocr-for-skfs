@@ -1,0 +1,170 @@
+{
+  "source": "13.jpeg",
+  "sha256": "e5712df053e73bd149ef9cf67c6ce78c0d375b64b26a2122aa275c94b14b47dc",
+  "read_by": "claude-code",
+  "extraction": {
+    "date_text": "13/10/25",
+    "weekday": null,
+    "rates": {
+      "petrol": 104.71,
+      "diesel": 90.21,
+      "power": 112.8
+    },
+    "nozzles": [
+      {
+        "label": "MSP A1",
+        "opening": 106248.13,
+        "closing": 106263.23,
+        "difference": 15.1,
+        "testing": 5,
+        "net_litres": 10.1,
+        "rate": 112.8,
+        "amount_written": 1139,
+        "adjustments": [],
+        "final_amount": 1139
+      },
+      {
+        "label": "MS A2",
+        "opening": 1142628.39,
+        "closing": 1143376.92,
+        "difference": 748.53,
+        "testing": 5,
+        "net_litres": 743.53,
+        "rate": 104.71,
+        "amount_written": 77855,
+        "adjustments": [],
+        "final_amount": 77855
+      },
+      {
+        "label": "HSD A1",
+        "opening": 880969.17,
+        "closing": 881643.34,
+        "difference": 674.17,
+        "testing": 5,
+        "net_litres": 669.17,
+        "rate": 90.21,
+        "amount_written": 60365,
+        "adjustments": [],
+        "final_amount": 60365
+      },
+      {
+        "label": "MS A2",
+        "opening": 1343304.93,
+        "closing": 1344189.06,
+        "difference": 884.13,
+        "testing": 5,
+        "net_litres": 879.13,
+        "rate": 104.71,
+        "amount_written": 92053,
+        "adjustments": [
+          -6
+        ],
+        "final_amount": 92047
+      },
+      {
+        "label": "HSD A1",
+        "opening": 818669.69,
+        "closing": 819048.44,
+        "difference": 378.75,
+        "testing": 5,
+        "net_litres": 373.75,
+        "rate": 90.21,
+        "amount_written": 33715,
+        "adjustments": [],
+        "final_amount": 33715
+      },
+      {
+        "label": "HSD A2",
+        "opening": 942340.34,
+        "closing": 943262.35,
+        "difference": 922.01,
+        "testing": 5,
+        "net_litres": 917.01,
+        "rate": 90.21,
+        "amount_written": 82723,
+        "adjustments": [],
+        "final_amount": 82723
+      }
+    ],
+    "sale_total": 347844,
+    "payments": {
+      "credit": 81465,
+      "icici": 11158.5,
+      "paytm_card": 3019.36,
+      "paytm": 55918.77,
+      "phonepe_card": 23500.0,
+      "phonepe": 48996.14,
+      "hp_card": null,
+      "cash": 123786
+    },
+    "other_payments": [],
+    "credit_entries": [
+      {
+        "amount": 20549.83,
+        "party": "मूलचंद यादव",
+        "party_english": "mool Chand yadav",
+        "invoice_no": "22409",
+        "fuel": null
+      },
+      {
+        "amount": 523.55,
+        "party": "मूलचंद यादव",
+        "party_english": "mool Chand yadav",
+        "invoice_no": "22410",
+        "fuel": null
+      },
+      {
+        "amount": 14013.22,
+        "party": "श्री सायर स्कूल",
+        "party_english": "sayar School",
+        "invoice_no": "22411",
+        "fuel": null
+      },
+      {
+        "amount": 21644.98,
+        "party": "पिपलोदा ग्रामपंचायत",
+        "party_english": "Piploda",
+        "invoice_no": "22412",
+        "fuel": null
+      },
+      {
+        "amount": 8011.53,
+        "party": "मोनू शंकर",
+        "party_english": "Monu Shankar",
+        "invoice_no": "22414",
+        "fuel": null
+      },
+      {
+        "amount": 4601.61,
+        "party": "श्री श्याम ट्रांसपोर्ट",
+        "party_english": "Shyam Tran.",
+        "invoice_no": "22416",
+        "fuel": null
+      },
+      {
+        "amount": 3000,
+        "party": "रवि यादव",
+        "party_english": "Ravi Yadav",
+        "invoice_no": null,
+        "fuel": null
+      },
+      {
+        "amount": 5850,
+        "party": "प्रेमचंद जाट",
+        "party_english": "Premchand Jat",
+        "invoice_no": null,
+        "fuel": null
+      },
+      {
+        "amount": 3271,
+        "party": "हरि काका (घर)",
+        "party_english": "Hari Kaka (ghar)",
+        "invoice_no": null,
+        "fuel": null
+      }
+    ],
+    "unclear": [
+      "udhar 22414 name unclear: मोनू शंकर?"
+    ]
+  }
+}

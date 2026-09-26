@@ -1,0 +1,163 @@
+{
+  "source": "15.10.jpeg",
+  "sha256": "a19a2cac8273777e1f8ea631c4bc8fb6c9e84c33b06952aad17203b23e6f4bce",
+  "read_by": "claude-code",
+  "extraction": {
+    "date_text": "15/10/25",
+    "weekday": null,
+    "rates": {
+      "petrol": 104.71,
+      "diesel": 90.21,
+      "power": 112.8
+    },
+    "nozzles": [
+      {
+        "label": "MSP",
+        "opening": 106275.22,
+        "closing": 106286.95,
+        "difference": 11.73,
+        "testing": 5,
+        "net_litres": 6.73,
+        "rate": 112.8,
+        "amount_written": 759,
+        "adjustments": [],
+        "final_amount": 759
+      },
+      {
+        "label": "MS A2",
+        "opening": 1143921.02,
+        "closing": 1144632.33,
+        "difference": 711.31,
+        "testing": 5,
+        "net_litres": 706.31,
+        "rate": 104.71,
+        "amount_written": 73957,
+        "adjustments": [],
+        "final_amount": 73957
+      },
+      {
+        "label": "HSD A1",
+        "opening": 882264.45,
+        "closing": 882740.41,
+        "difference": 475.96,
+        "testing": 5,
+        "net_litres": 470.96,
+        "rate": 90.21,
+        "amount_written": 42485,
+        "adjustments": [],
+        "final_amount": 42485
+      },
+      {
+        "label": "MS A2",
+        "opening": 1345062.88,
+        "closing": 1345878.26,
+        "difference": 815.38,
+        "testing": 5,
+        "net_litres": 810.38,
+        "rate": 104.71,
+        "amount_written": 84854,
+        "adjustments": [
+          -6
+        ],
+        "final_amount": 84848
+      },
+      {
+        "label": "HSD A1",
+        "opening": 819734.44,
+        "closing": 820391.74,
+        "difference": 657.3,
+        "testing": 5,
+        "net_litres": 652.3,
+        "rate": 90.21,
+        "amount_written": 58843,
+        "adjustments": [],
+        "final_amount": 58843
+      },
+      {
+        "label": "HSD A2",
+        "opening": 943916.18,
+        "closing": 944664.95,
+        "difference": 748.77,
+        "testing": 5,
+        "net_litres": 743.77,
+        "rate": 90.21,
+        "amount_written": 67095,
+        "adjustments": [],
+        "final_amount": 67095
+      }
+    ],
+    "sale_total": 327987,
+    "payments": {
+      "credit": 82306,
+      "icici": 451.0,
+      "paytm_card": 3898.87,
+      "paytm": 69511.51,
+      "phonepe_card": 25255.82,
+      "phonepe": 52882.37,
+      "hp_card": 3650,
+      "cash": 90030
+    },
+    "other_payments": [],
+    "credit_entries": [
+      {
+        "amount": 20815.95,
+        "party": "मूलचंद यादव",
+        "party_english": "mool Chand yadav",
+        "invoice_no": "22423",
+        "fuel": null
+      },
+      {
+        "amount": 20000,
+        "party": "पिपलोदा ग्रामपंचायत",
+        "party_english": "Piploda",
+        "invoice_no": "22424",
+        "fuel": null
+      },
+      {
+        "amount": 8189.21,
+        "party": "पिपलोदा ग्रामपंचायत",
+        "party_english": "Piploda",
+        "invoice_no": "22425",
+        "fuel": null
+      },
+      {
+        "amount": 21618.93,
+        "party": "इन्द्रा देवी",
+        "party_english": "indra devi",
+        "invoice_no": "22426",
+        "fuel": null
+      },
+      {
+        "amount": 3084.27,
+        "party": "दिनेश यादव",
+        "party_english": "dinesh",
+        "invoice_no": "22427",
+        "fuel": null
+      },
+      {
+        "amount": 2675.62,
+        "party": "श्री श्याम ट्रांसपोर्ट",
+        "party_english": "Shyam Tran.",
+        "invoice_no": "22428",
+        "fuel": null
+      },
+      {
+        "amount": 3321.42,
+        "party": "श्री श्याम ट्रांसपोर्ट",
+        "party_english": "Shyam Tran.",
+        "invoice_no": "22429",
+        "fuel": null
+      },
+      {
+        "amount": 2599.85,
+        "party": "मोनू शंकर यादव",
+        "party_english": "Monu Shankar",
+        "invoice_no": "22430",
+        "fuel": null
+      }
+    ],
+    "unclear": [
+      "udhar 22426 (indra devi) amount hard to read (2?18.93) - 21618.93 matches udhar total 82306"
+    ]
+  }
+}

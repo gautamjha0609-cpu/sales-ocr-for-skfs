@@ -1,0 +1,168 @@
+{
+  "source": "30.jpeg",
+  "sha256": "b93d7bc43151781ddc88b712d764df84e9988e3a9a40f5811eec95d00319c369",
+  "read_by": "claude-code",
+  "extraction": {
+    "date_text": "30/10/25",
+    "weekday": null,
+    "rates": {
+      "petrol": 104.71,
+      "diesel": 90.21,
+      "power": 112.8
+    },
+    "nozzles": [
+      {
+        "label": "MSP A1",
+        "opening": 107220.46,
+        "closing": 107315.22,
+        "difference": 94.76,
+        "testing": 5,
+        "net_litres": 89.76,
+        "rate": 112.8,
+        "amount_written": 10124,
+        "adjustments": [],
+        "final_amount": 10124
+      },
+      {
+        "label": "MS A2",
+        "opening": 1154264.71,
+        "closing": 1154907.46,
+        "difference": 642.75,
+        "testing": 5,
+        "net_litres": 637.75,
+        "rate": 104.71,
+        "amount_written": 66778,
+        "adjustments": [],
+        "final_amount": 66778
+      },
+      {
+        "label": "HSD A1",
+        "opening": 891349.33,
+        "closing": 892415.34,
+        "difference": 1066.01,
+        "testing": 5,
+        "net_litres": 1061.01,
+        "rate": 90.21,
+        "amount_written": 95713,
+        "adjustments": [
+          -60
+        ],
+        "final_amount": 95653
+      },
+      {
+        "label": "MS A2",
+        "opening": 1358217.25,
+        "closing": 1358894.48,
+        "difference": 677.23,
+        "testing": 5,
+        "net_litres": 672.23,
+        "rate": 104.71,
+        "amount_written": 70389,
+        "adjustments": [
+          -35
+        ],
+        "final_amount": 70354
+      },
+      {
+        "label": "HSD A1",
+        "opening": 825264.65,
+        "closing": 826039.97,
+        "difference": 775.32,
+        "testing": 5,
+        "net_litres": 770.32,
+        "rate": 90.21,
+        "amount_written": 69490,
+        "adjustments": [],
+        "final_amount": 69490
+      },
+      {
+        "label": "HSD A2",
+        "opening": 951599.89,
+        "closing": 952227.35,
+        "difference": 627.46,
+        "testing": 5,
+        "net_litres": 622.46,
+        "rate": 90.21,
+        "amount_written": 56152,
+        "adjustments": [],
+        "final_amount": 56152
+      }
+    ],
+    "sale_total": 368551,
+    "payments": {
+      "credit": 120005,
+      "icici": 7000.0,
+      "paytm_card": 4560.49,
+      "paytm": 40450.43,
+      "phonepe_card": 41141.55,
+      "phonepe": 49784.24,
+      "hp_card": 6000,
+      "cash": 99608
+    },
+    "other_payments": [],
+    "credit_entries": [
+      {
+        "amount": 5412.69,
+        "party": "श्री सायर स्कूल",
+        "party_english": "sayar School",
+        "invoice_no": "22481",
+        "fuel": null
+      },
+      {
+        "amount": 20500.29,
+        "party": "पिपलोदा ग्रामपंचायत",
+        "party_english": "Piploda",
+        "invoice_no": "22482",
+        "fuel": null
+      },
+      {
+        "amount": 3550.69,
+        "party": "दिनेश यादव",
+        "party_english": "dinesh",
+        "invoice_no": "22483",
+        "fuel": null
+      },
+      {
+        "amount": 3539.47,
+        "party": "इन्द्रा देवी",
+        "party_english": "indra devi",
+        "invoice_no": "22485",
+        "fuel": null
+      },
+      {
+        "amount": 2500.47,
+        "party": "M.K. सोलर",
+        "party_english": "mk Soler",
+        "invoice_no": "22489",
+        "fuel": null
+      },
+      {
+        "amount": 50000,
+        "party": "KEDIA LLP",
+        "party_english": "kedia",
+        "invoice_no": "22488",
+        "fuel": null
+      },
+      {
+        "amount": 3050,
+        "party": "गुलाब यादव",
+        "party_english": "Gulab Yadav",
+        "invoice_no": null,
+        "fuel": null
+      },
+      {
+        "amount": 3600,
+        "party": "प्रेमचंद जाट",
+        "party_english": "Premchand Jat",
+        "invoice_no": null,
+        "fuel": null
+      }
+    ],
+    "unclear": [
+      "rates box shows HSD 90.4; meter blocks use 90.21",
+      "paytm card has an overwritten first digit (?4560.49) - 4560.49 balances the day",
+      "udhar 22485 (indra devi) amount unclear: 3539.47? - udhar list does not reach udhar total 120005",
+      "MSP A1 litres written 85.76 but 94.76-5 = 89.76 and amount 10124 uses 89.76"
+    ]
+  }
+}

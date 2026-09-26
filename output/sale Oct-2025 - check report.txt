@@ -1,0 +1,160 @@
+Check report - October 2025
+
+
+01-10-2025  [CHECK]  photo: 01.10.jpeg
+   petrol 169,193.00 | diesel 120,044.00 | power 5,788.00 | udhar lines with invoice: 3
+   note:  udhar lines add up to 15,758.22, udhar total written is 21,758.21
+   note:  new udhar party 'Moolchand Mali' (inv 22337) - add it to parties.yaml if correct
+   note:  unclear on photo: third udhar name unclear: मूलचंद माली?
+
+02-10-2025  [CHECK]  photo: 02.10.jpeg
+   petrol 138,631.00 | diesel 189,597.00 | power 38,744.00 | udhar lines with invoice: 3
+   note:  udhar lines add up to 53,238.07, udhar total written is 54,783.07
+   note:  unclear on photo: HSD A1 rate written as 90.4, amount matches 90.21
+
+03-10-2025  [OK]  photo: 03.jpeg
+   petrol 161,380.00 | diesel 181,023.00 | power 15,833.00 | udhar lines with invoice: 8
+
+04-10-2025  [ERROR]  photo: 04.jpeg
+   petrol 190,937.22 | diesel 179,337.47 | power 895.63 | udhar lines with invoice: 3
+   ERROR: petrol 190,937.22 + diesel 179,337.47 + power 895.63 = 371,170.32, but total sale written is 371,189
+   note:  unclear on photo: payment box blurry: phonepe card 51608.11 / phonepe 68094.36 chosen because they make payments = total 371189
+
+05-10-2025  [ERROR]  photo: 05.jpeg
+   petrol 161,313.00 | diesel 194,490.00 | power 8,789.00 | udhar lines with invoice: 6
+   ERROR: petrol 161,313 + diesel 194,490 + power 8,789 = 364,592, but total sale written is 364,586
+   note:  unclear on photo: total sale corrected in ledger from 370049 to 364586
+   note:  unclear on photo: udhar 22367 name read as मोनू सिंह यादव
+
+06-10-2025  [CHECK]  photo: 06.jpeg
+   petrol 148,593.00 | diesel 148,412.00 | power 1,918.00 | udhar lines with invoice: 6
+   note:  unclear on photo: MS A2 closing written 1137991.54 but difference 574.13 gives 1137996.54
+
+07-10-2025  [CHECK]  photo: 07.jpeg
+   petrol 151,446.00 | diesel 128,218.00 | power 19,321.00 | udhar lines with invoice: 4
+   note:  petrol rate not written at top - using 104.71 from the meter blocks
+   note:  diesel rate not written at top - using 90.21 from the meter blocks
+   note:  power rate not written at top - using 112.8 from the meter blocks
+   note:  unclear on photo: rates box at top left blank on this page
+
+08-10-2025  [CHECK]  photo: 08.jpeg
+   petrol 156,898.00 | diesel 130,922.00 | power 9,560.00 | udhar lines with invoice: 2
+   note:  udhar lines add up to 44,196.54, udhar total written is 44,197.77
+   note:  unclear on photo: udhar total paise unclear (44197.?) - 44197.77 makes payments equal total
+
+09-10-2025  [CHECK]  photo: 09.jpeg
+   petrol 162,906.00 | diesel 159,967.00 | power 1,088.00 | udhar lines with invoice: 4
+   note:  HSD A1: label looks like diesel but written rate 104.71 is petrol - amount matches diesel rate, counted as diesel
+   note:  unclear on photo: 5th block: rate 104.71 written and circled, amount 51963 uses 90.21
+
+10-10-2025  [CHECK]  photo: 10.10.jpeg
+   petrol 168,293.00 | diesel 167,155.00 | power 2,805.00 | udhar lines with invoice: 4
+   note:  unclear on photo: MS A2 (4th block) opening looks like 1340876.42; previous day closed at 1340876.47
+
+11-10-2025  [CHECK]  photo: 11.jpeg
+   petrol 154,749.00 | diesel 179,646.00 | power 5,828.00 | udhar lines with invoice: 4
+   note:  unclear on photo: MS A2 (4th block) closing written 1342415.15, difference 748.72 gives 1342415.65; -7 written but no boxed final
+
+12-10-2025  [CHECK]  photo: 12.10.jpeg
+   petrol 169,301.00 | diesel 147,543.00 | power 1,641.00 | udhar lines with invoice: 1
+   note:  unclear on photo: udhar total paise faint (32500.4?)
+
+13-10-2025  [CHECK]  photo: 13.jpeg
+   petrol 169,902.00 | diesel 176,803.00 | power 1,139.00 | udhar lines with invoice: 6
+   note:  unclear on photo: udhar 22414 name unclear: मोनू शंकर?
+
+14-10-2025  [CHECK]  photo: 14.jpeg
+   petrol 147,415.00 | diesel 175,542.00 | power 788.00 | udhar lines with invoice: 2
+   note:  MS A2: label looks like petrol but written rate 90.21 is diesel - amount matches petrol rate, counted as petrol
+   note:  unclear on photo: MS A2 (2nd block): rate 90.21 written and circled, amount 56449 uses 104.71
+
+15-10-2025  [CHECK]  photo: 15.10.jpeg
+   petrol 158,805.00 | diesel 168,423.00 | power 759.00 | udhar lines with invoice: 8
+   note:  unclear on photo: udhar 22426 (indra devi) amount hard to read (2?18.93) - 21618.93 matches udhar total 82306
+
+16-10-2025  [CHECK]  photo: 16.jpeg
+   petrol 181,003.00 | diesel 169,821.00 | power 8,713.00 | udhar lines with invoice: 2
+   note:  petrol rate not written at top - using 104.71 from the meter blocks
+   note:  diesel rate not written at top - using 90.21 from the meter blocks
+   note:  power rate not written at top - using 112.8 from the meter blocks
+   note:  unclear on photo: rates box at top blank
+   note:  unclear on photo: phonepe card paise unclear (12849.?) - .95 makes payments equal total
+
+17-10-2025  [OK]  photo: 17.10.jpeg
+   petrol 147,581.00 | diesel 133,908.00 | power 3,682.00 | udhar lines with invoice: 5
+
+18-10-2025  [ERROR]  photo: 18.jpeg
+   petrol 198,136.00 | diesel 159,238.00 | power 2,509.00 | udhar lines with invoice: 5
+   ERROR: payment lines add up to 359,873.53, total sale written is 359,883
+   note:  unclear on photo: udhar total overwritten, reads 43220
+   note:  unclear on photo: invoice numbers of 2463.63 and 8143.25 cut off at page edge (2244?) - assumed 22442, 22443
+
+19-10-2025  [ERROR]  photo: 19.jpeg
+   petrol 202,516.00 | diesel 158,500.00 | power 11,953.00 | udhar lines with invoice: 3
+   ERROR: payment lines add up to 368,968.25, total sale written is 372,969
+   note:  unclear on photo: udhar 26725.15 carries two invoice numbers (22446,47) - using 22446
+
+20-10-2025  [OK]  photo: 20.jpeg
+   petrol 147,854.00 | diesel 65,153.00 | power 997.00 | udhar lines with invoice: 3
+
+21-10-2025  [CHECK]  photo: 21.jpeg
+   petrol 143,125.00 | diesel 85,046.00 | power 3,760.00 | udhar lines with invoice: 1
+   note:  unclear on photo: rates box shows HSD 90.4 at top; meter blocks use 90.21 - entered 90.21
+
+22-10-2025  [ERROR]  photo: 22.jpeg
+   petrol 160,228.00 | diesel 82,551.00 | power 654.00 | udhar lines with invoice: 0
+   ERROR: payment lines add up to 239,382.85, total sale written is 243,433
+   note:  unclear on photo: HSD A1 closing looks like 886936.38; next day's opening and the amount 49407 both give 886936.98
+
+23-10-2025  [CHECK]  photo: 23.jpeg
+   petrol 213,134.00 | diesel 107,706.00 | power 5,787.00 | udhar lines with invoice: 1
+   note:  unclear on photo: paytm corrected in ledger: 38332.27 struck, 52478.7? written above; 52478.71 is 1 rupee off the total
+   note:  unclear on photo: MS A2 (4th block) closing read 1353378.03 from difference 1235.99
+
+24-10-2025  [ERROR]  photo: 24.jpeg
+   petrol 146,605.00 | diesel 138,921.00 | power 3,705.00 | udhar lines with invoice: 3
+   ERROR: petrol 146,605 + diesel 138,921 + power 3,705 = 289,231, but total sale written is 289,250
+   ERROR: payment lines add up to 288,849.51, total sale written is 289,250
+   note:  unclear on photo: udhar 17463.75 carries invoice numbers 22456,57 - using 22456
+   note:  unclear on photo: MS A2 (4th block) adjustment read as -19 (75972 -> 75953)
+
+25-10-2025  [CHECK]  photo: 25.jpeg
+   petrol 129,021.00 | diesel 147,107.00 | power 21,209.00 | udhar lines with invoice: 4
+   note:  udhar lines add up to 68,024.94, udhar total written is 73,572
+   note:  unclear on photo: HSD A1 (3rd block) rate written 90.4, amount matches 90.21
+   note:  unclear on photo: udhar list is 5547 less than udhar total 73572 - check list
+
+26-10-2025  [CHECK]  photo: 26.jpeg
+   petrol 190,544.00 | diesel 153,748.00 | power 1,349.00 | udhar lines with invoice: 2
+   note:  unclear on photo: Piploda invoice cut at page edge (2246?) - assumed 22467
+
+27-10-2025  [CHECK]  photo: 27.jpeg
+   petrol 124,535.00 | diesel 100,819.00 | power 14,730.00 | udhar lines with invoice: 1
+   note:  unclear on photo: HSD A1 (3rd block) amount looks like 43527 but 482.96 x 90.21 = 43568 and 43567 makes the total match
+   note:  unclear on photo: first udhar amount faint: 19817.39 (makes list = udhar total)
+
+28-10-2025  [OK]  photo: 28.jpeg
+   petrol 172,362.00 | diesel 124,656.00 | power 5,712.00 | udhar lines with invoice: 2
+
+29-10-2025  [CHECK]  photo: 29.jpeg
+   petrol 129,040.00 | diesel 194,966.00 | power 12,636.00 | udhar lines with invoice: 6
+   note:  HSD A1: 460.16 x 90.21 = 41,511.03, ledger writes 41,556
+   note:  udhar lines add up to 95,651.01, udhar total written is 95,650
+   note:  unclear on photo: udhar total looks like 95150; the udhar list and the day total both give 95650
+   note:  unclear on photo: first udhar paise unclear (19792.0?)
+
+30-10-2025  [CHECK]  photo: 30.jpeg
+   petrol 137,132.00 | diesel 221,295.00 | power 10,124.00 | udhar lines with invoice: 6
+   note:  udhar lines add up to 92,153.61, udhar total written is 120,005
+   note:  unclear on photo: rates box shows HSD 90.4; meter blocks use 90.21
+   note:  unclear on photo: paytm card has an overwritten first digit (?4560.49) - 4560.49 balances the day
+   note:  unclear on photo: udhar 22485 (indra devi) amount unclear: 3539.47? - udhar list does not reach udhar total 120005
+   note:  unclear on photo: MSP A1 litres written 85.76 but 94.76-5 = 89.76 and amount 10124 uses 89.76
+   note:  HSD A1: opening 825,264.65 but previous day closed at 825,264.15
+
+31-10-2025  [CHECK]  photo: 31.jpeg
+   petrol 187,360.00 | diesel 150,814.00 | power 4,724.00 | udhar lines with invoice: 2
+   note:  unclear on photo: udhar total overwritten, read 42890 (list adds to 42889.79)
+
+How to fix: open data/extracted/<photo>.json, correct the number, run again.
+If the ledger itself has the mistake, the ERROR is real - fix it in Excel.

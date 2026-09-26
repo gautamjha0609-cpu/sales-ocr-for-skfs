@@ -1,0 +1,169 @@
+{
+  "source": "05.jpeg",
+  "sha256": "56e175a9956daaf375c6e7ce9e1a8def817eec1de39ec05e2199cdd6c6a2a29d",
+  "read_by": "claude-code",
+  "extraction": {
+    "date_text": "5/10/25",
+    "weekday": null,
+    "rates": {
+      "petrol": 104.71,
+      "diesel": 90.21,
+      "power": 112.8
+    },
+    "nozzles": [
+      {
+        "label": "MSP A1",
+        "opening": 105751.41,
+        "closing": 105834.33,
+        "difference": 82.92,
+        "testing": 5,
+        "net_litres": 77.92,
+        "rate": 112.8,
+        "amount_written": 8789,
+        "adjustments": [],
+        "final_amount": 8789
+      },
+      {
+        "label": "MS A2",
+        "opening": 1136672.04,
+        "closing": 1137422.41,
+        "difference": 750.37,
+        "testing": 5,
+        "net_litres": 745.37,
+        "rate": 104.71,
+        "amount_written": 78047,
+        "adjustments": [],
+        "final_amount": 78047
+      },
+      {
+        "label": "HSD A1",
+        "opening": 876512.93,
+        "closing": 877390.4,
+        "difference": 877.47,
+        "testing": 5,
+        "net_litres": 872.47,
+        "rate": 90.21,
+        "amount_written": 78705,
+        "adjustments": [],
+        "final_amount": 78705
+      },
+      {
+        "label": "MS A2",
+        "opening": 1337013.2,
+        "closing": 1337813.41,
+        "difference": 800.21,
+        "testing": 5,
+        "net_litres": 795.21,
+        "rate": 104.71,
+        "amount_written": 83266,
+        "adjustments": [],
+        "final_amount": 83266
+      },
+      {
+        "label": "HSD A1",
+        "opening": 814834.53,
+        "closing": 815208.93,
+        "difference": 374.4,
+        "testing": 5,
+        "net_litres": 369.4,
+        "rate": 90.21,
+        "amount_written": 33323,
+        "adjustments": [],
+        "final_amount": 33323
+      },
+      {
+        "label": "HSD A2",
+        "opening": 936578.94,
+        "closing": 937498.06,
+        "difference": 919.12,
+        "testing": 5,
+        "net_litres": 914.12,
+        "rate": 90.21,
+        "amount_written": 82462,
+        "adjustments": [],
+        "final_amount": 82462
+      }
+    ],
+    "sale_total": 364586,
+    "payments": {
+      "credit": 99260,
+      "icici": 4951.0,
+      "paytm_card": 16142.11,
+      "paytm": 62843.07,
+      "phonepe_card": 15238.1,
+      "phonepe": 59267.69,
+      "hp_card": 4700,
+      "cash": 102184
+    },
+    "other_payments": [],
+    "credit_entries": [
+      {
+        "amount": 21212.89,
+        "party": "मूलचंद यादव",
+        "party_english": "mool Chand yadav",
+        "invoice_no": "22363",
+        "fuel": null
+      },
+      {
+        "amount": 29065.66,
+        "party": "पिपलोदा ग्रामपंचायत",
+        "party_english": "Piploda",
+        "invoice_no": "22364",
+        "fuel": null
+      },
+      {
+        "amount": 22429.81,
+        "party": "अर्जुन",
+        "party_english": "arjun",
+        "invoice_no": "22365",
+        "fuel": null
+      },
+      {
+        "amount": 3502.85,
+        "party": "दिनेश यादव",
+        "party_english": "dinesh",
+        "invoice_no": "22366",
+        "fuel": null
+      },
+      {
+        "amount": 9199.66,
+        "party": "मोनू सिंह यादव",
+        "party_english": "monu",
+        "invoice_no": "22367",
+        "fuel": null
+      },
+      {
+        "amount": 3349.49,
+        "party": "अर्जुन",
+        "party_english": "arjun",
+        "invoice_no": "22368",
+        "fuel": null
+      },
+      {
+        "amount": 5500,
+        "party": "यादव किराना",
+        "party_english": "Yadav Kirana",
+        "invoice_no": null,
+        "fuel": null
+      },
+      {
+        "amount": 3000,
+        "party": "गुलाब यादव",
+        "party_english": "Gulab Yadav",
+        "invoice_no": null,
+        "fuel": null
+      },
+      {
+        "amount": 2000,
+        "party": "सरदार सेठिया",
+        "party_english": "Sardar Sethiya",
+        "invoice_no": null,
+        "fuel": null
+      }
+    ],
+    "unclear": [
+      "total sale corrected in ledger from 370049 to 364586",
+      "udhar 22367 name read as मोनू सिंह यादव"
+    ]
+  }
+}

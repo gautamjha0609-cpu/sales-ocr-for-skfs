@@ -1,0 +1,21 @@
+# Udhar (credit) parties: the spelling written into Excel column A.
+# A name read from a photo that closely matches one of these is replaced by
+# it, so the same party is always spelled the same way. Add new parties
+# here; "fuel" sets column B (default diesal).
+parties:
+  - name: mool Chand yadav
+  - name: indra devi
+  - name: shankar lal
+  - name: Shyam Tran.
+  - name: dinesh
+  - name: balaji hospital
+  - name: vandana School
+  - name: om tra
+  - name: Piploda
+  - name: sayar School
+  - name: mk Soler
+  - name: Akshat
+  - name: kedia
+  - name: arjun
+  - name: aasha devi
+  - name: monu

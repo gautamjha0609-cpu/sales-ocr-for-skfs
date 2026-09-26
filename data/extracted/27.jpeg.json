@@ -1,0 +1,136 @@
+{
+  "source": "27.jpeg",
+  "sha256": "79a5a59700b945b6c33e49e68f998b81874df371884223ca59d96f946a2ae55f",
+  "read_by": "claude-code",
+  "extraction": {
+    "date_text": "27/10/25",
+    "weekday": null,
+    "rates": {
+      "petrol": 104.71,
+      "diesel": 90.21,
+      "power": 112.8
+    },
+    "nozzles": [
+      {
+        "label": "MSP A1",
+        "opening": 106912.2,
+        "closing": 107047.79,
+        "difference": 135.59,
+        "testing": 5,
+        "net_litres": 130.59,
+        "rate": 112.8,
+        "amount_written": 14730,
+        "adjustments": [],
+        "final_amount": 14730
+      },
+      {
+        "label": "MS A2",
+        "opening": 1152483.22,
+        "closing": 1153029.11,
+        "difference": 545.89,
+        "testing": 5,
+        "net_litres": 540.89,
+        "rate": 104.71,
+        "amount_written": 56636,
+        "adjustments": [],
+        "final_amount": 56636
+      },
+      {
+        "label": "HSD A1",
+        "opening": 889229.24,
+        "closing": 889717.2,
+        "difference": 487.96,
+        "testing": 5,
+        "net_litres": 482.96,
+        "rate": 90.21,
+        "amount_written": 43567,
+        "adjustments": [],
+        "final_amount": 43567
+      },
+      {
+        "label": "MS A2",
+        "opening": 1355900.31,
+        "closing": 1356553.86,
+        "difference": 653.55,
+        "testing": 5,
+        "net_litres": 648.55,
+        "rate": 104.71,
+        "amount_written": 67909,
+        "adjustments": [
+          -10
+        ],
+        "final_amount": 67899
+      },
+      {
+        "label": "HSD A1",
+        "opening": 824211.29,
+        "closing": 824343.11,
+        "difference": 131.82,
+        "testing": 5,
+        "net_litres": 126.82,
+        "rate": 90.21,
+        "amount_written": 11440,
+        "adjustments": [],
+        "final_amount": 11440
+      },
+      {
+        "label": "HSD A2",
+        "opening": 950066.93,
+        "closing": 950579.77,
+        "difference": 512.84,
+        "testing": 5,
+        "net_litres": 507.84,
+        "rate": 90.21,
+        "amount_written": 45812,
+        "adjustments": [],
+        "final_amount": 45812
+      }
+    ],
+    "sale_total": 240084,
+    "payments": {
+      "credit": 28377,
+      "icici": 260.0,
+      "paytm_card": 3033.0,
+      "paytm": 40071.09,
+      "phonepe_card": 14641.37,
+      "phonepe": 46717.23,
+      "hp_card": 610,
+      "cash": 106374
+    },
+    "other_payments": [],
+    "credit_entries": [
+      {
+        "amount": 19817.39,
+        "party": "मूलचंद यादव",
+        "party_english": "mool Chand yadav",
+        "invoice_no": "22469",
+        "fuel": null
+      },
+      {
+        "amount": 4510,
+        "party": "मोहन जी सब्जी",
+        "party_english": "Mohan ji Sabji",
+        "invoice_no": null,
+        "fuel": null
+      },
+      {
+        "amount": 3450,
+        "party": "गुलाब यादव",
+        "party_english": "Gulab Yadav",
+        "invoice_no": null,
+        "fuel": null
+      },
+      {
+        "amount": 600,
+        "party": "मोहन जी",
+        "party_english": "Mohan ji",
+        "invoice_no": null,
+        "fuel": null
+      }
+    ],
+    "unclear": [
+      "HSD A1 (3rd block) amount looks like 43527 but 482.96 x 90.21 = 43568 and 43567 makes the total match",
+      "first udhar amount faint: 19817.39 (makes list = udhar total)"
+    ]
+  }
+}

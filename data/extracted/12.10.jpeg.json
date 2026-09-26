@@ -1,0 +1,121 @@
+{
+  "source": "12.10.jpeg",
+  "sha256": "fee6394234028b80830cdaaca4632b68a943f47d161438baa0eb4e226cf7c3bf",
+  "read_by": "claude-code",
+  "extraction": {
+    "date_text": "12/10/25",
+    "weekday": null,
+    "rates": {
+      "petrol": 104.71,
+      "diesel": 90.21,
+      "power": 112.8
+    },
+    "nozzles": [
+      {
+        "label": "MSP A1",
+        "opening": 106228.58,
+        "closing": 106248.13,
+        "difference": 19.55,
+        "testing": 5,
+        "net_litres": 14.55,
+        "rate": 112.8,
+        "amount_written": 1641,
+        "adjustments": [],
+        "final_amount": 1641
+      },
+      {
+        "label": "MS A2",
+        "opening": 1141890.7,
+        "closing": 1142628.39,
+        "difference": 737.69,
+        "testing": 5,
+        "net_litres": 732.69,
+        "rate": 104.71,
+        "amount_written": 76719,
+        "adjustments": [],
+        "final_amount": 76719
+      },
+      {
+        "label": "HSD A1",
+        "opening": 880376.18,
+        "closing": 880969.17,
+        "difference": 592.99,
+        "testing": 5,
+        "net_litres": 587.99,
+        "rate": 90.21,
+        "amount_written": 53042,
+        "adjustments": [],
+        "final_amount": 53042
+      },
+      {
+        "label": "MS A2",
+        "opening": 1342415.65,
+        "closing": 1343304.93,
+        "difference": 889.28,
+        "testing": 5,
+        "net_litres": 884.28,
+        "rate": 104.71,
+        "amount_written": 92592,
+        "adjustments": [
+          -10
+        ],
+        "final_amount": 92582
+      },
+      {
+        "label": "HSD A1",
+        "opening": 817931.61,
+        "closing": 818669.69,
+        "difference": 738.08,
+        "testing": 5,
+        "net_litres": 733.08,
+        "rate": 90.21,
+        "amount_written": 66131,
+        "adjustments": [],
+        "final_amount": 66131
+      },
+      {
+        "label": "HSD A2",
+        "opening": 942020.85,
+        "closing": 942340.34,
+        "difference": 319.49,
+        "testing": 5,
+        "net_litres": 314.49,
+        "rate": 90.21,
+        "amount_written": 28370,
+        "adjustments": [],
+        "final_amount": 28370
+      }
+    ],
+    "sale_total": 318485,
+    "payments": {
+      "credit": 32500.47,
+      "icici": 14500.0,
+      "paytm_card": 8031.14,
+      "paytm": 56041.98,
+      "phonepe_card": 19100.84,
+      "phonepe": 62887.88,
+      "hp_card": 3026,
+      "cash": 122397
+    },
+    "other_payments": [],
+    "credit_entries": [
+      {
+        "amount": 3000,
+        "party": "नाथु लाल पानी टैंकर",
+        "party_english": "Nathu Lal pani tanker",
+        "invoice_no": null,
+        "fuel": null
+      },
+      {
+        "amount": 29500.47,
+        "party": "अर्जुन",
+        "party_english": "arjun",
+        "invoice_no": "22408",
+        "fuel": null
+      }
+    ],
+    "unclear": [
+      "udhar total paise faint (32500.4?)"
+    ]
+  }
+}
