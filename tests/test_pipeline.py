@@ -12,6 +12,9 @@ from skfs_ocr.pipeline import cache_file, load_parties, run
 from skfs_ocr.validate import build_day, check_nozzle, merge_extractions, month_checks
 from skfs_ocr.workbook import day_cell_values
 
+OCT = Path("FY2025-26") / "07 Oct-2025"
+NOV = Path("FY2025-26") / "08 Nov-2025"
+
 FIX = Path(__file__).parent / "fixtures"
 
 
@@ -22,7 +25,7 @@ def fixture(name):
 @pytest.fixture
 def cfg(tmp_path):
     c = load_config()
-    for key in ("input", "output", "extracted"):
+    for key in ("input", "raw", "output", "extracted"):
         c["paths"][key] = tmp_path / key
         c["paths"][key].mkdir()
     return c
@@ -166,7 +169,7 @@ def test_full_run_writes_verified_workbook(cfg):
     add_photo(cfg, "04.jpeg", fixture("day_mismatch.json"), color=(10, 10, 10))
     code = run(cfg, use_api=False, log=lambda *a: None)
     assert code == 1                          # day 4 has a real ledger mismatch
-    out = cfg["paths"]["output"] / "sale Oct-2025.xlsx"
+    out = cfg["paths"]["output"] / OCT / "sale Oct-2025.xlsx"
     wb = openpyxl.load_workbook(out)
     assert wb.sheetnames == ["3-10-2025", "4-10-2025", "Sheet1"]
     ws = wb["3-10-2025"]
@@ -179,7 +182,7 @@ def test_full_run_writes_verified_workbook(cfg):
     assert ws["C4"].value == 104.71 and ws["R8"].value == 75717
     reg = wb["Sheet1"]
     assert reg["B5"].value == "mool Chand yadav" and reg["G5"].value == 22343
-    report = (cfg["paths"]["output"] / "sale Oct-2025 - check report.txt").read_text(encoding="utf-8")
+    report = (cfg["paths"]["output"] / OCT / "sale Oct-2025 - check report.txt").read_text(encoding="utf-8")
     assert "03-10-2025  [OK]" in report and "04-10-2025  [ERROR]" in report
     assert "No photo for day(s): 1, 2, 5," in report
 
@@ -187,7 +190,7 @@ def test_full_run_writes_verified_workbook(cfg):
 def test_rerun_is_identical_and_needs_no_api(cfg):
     add_photo(cfg, "03.jpeg", fixture("day_clean.json"))
     run(cfg, use_api=False, log=lambda *a: None)
-    out = cfg["paths"]["output"] / "sale Oct-2025.xlsx"
+    out = cfg["paths"]["output"] / OCT / "sale Oct-2025.xlsx"
     first = {ws.title: [[c.value for c in r] for r in ws.iter_rows()] for ws in openpyxl.load_workbook(out)}
     assert run(cfg, use_api=False, log=lambda *a: None) == 0
     second = {ws.title: [[c.value for c in r] for r in ws.iter_rows()] for ws in openpyxl.load_workbook(out)}
@@ -218,8 +221,8 @@ def test_month_folders_make_separate_workbooks(cfg):
     nov = fixture("day_clean.json") | {"date_text": "3/11/25"}
     add_photo(cfg, "2025-11/03.jpeg", nov, color=(50, 60, 70))
     run(cfg, use_api=False, log=lambda *a: None)
-    assert (cfg["paths"]["output"] / "sale Oct-2025.xlsx").exists()
-    assert (cfg["paths"]["output"] / "sale Nov-2025.xlsx").exists()
+    assert (cfg["paths"]["output"] / OCT / "sale Oct-2025.xlsx").exists()
+    assert (cfg["paths"]["output"] / NOV / "sale Nov-2025.xlsx").exists()
 
 
 def test_template_is_the_committed_one():
@@ -231,6 +234,69 @@ def test_loose_photos_of_two_months_split(cfg):
     add_photo(cfg, "04.jpeg", fixture("day_mismatch.json"), color=(1, 1, 1))
     add_photo(cfg, "03.11.jpeg", fixture("day_clean.json") | {"date_text": "3/11/25"}, color=(5, 5, 5))
     run(cfg, use_api=False, log=lambda *a: None)
-    oct_ = openpyxl.load_workbook(cfg["paths"]["output"] / "sale Oct-2025.xlsx")
-    nov = openpyxl.load_workbook(cfg["paths"]["output"] / "sale Nov-2025.xlsx")
+    oct_ = openpyxl.load_workbook(cfg["paths"]["output"] / OCT / "sale Oct-2025.xlsx")
+    nov = openpyxl.load_workbook(cfg["paths"]["output"] / NOV / "sale Nov-2025.xlsx")
     assert oct_.sheetnames[:2] == ["3-10-2025", "4-10-2025"] and nov.sheetnames[0] == "3-11-2025"
+
+
+# ---- filing photos by financial year ------------------------------------------
+
+def test_fy_folders():
+    from skfs_ocr.dates import parse_month_folder
+    from skfs_ocr.workbook import month_dir
+
+    c = load_config()
+    assert month_dir(c, 2025, 4) == Path("FY2025-26/01 Apr-2025")
+    assert month_dir(c, 2025, 10) == Path("FY2025-26/07 Oct-2025")
+    assert month_dir(c, 2026, 3) == Path("FY2025-26/12 Mar-2026")
+    assert month_dir(c, 2026, 4) == Path("FY2026-27/01 Apr-2026")
+    assert parse_month_folder("12 Mar-2026") == (2026, 3)
+    assert parse_month_folder("2025-11") == (2025, 11)
+
+
+def test_photos_move_to_raw_data_and_input_is_cleared(cfg):
+    add_photo(cfg, "03.jpeg", fixture("day_clean.json"))
+    add_photo(cfg, "sub/04.jpeg", fixture("day_mismatch.json"), color=(1, 1, 1))
+    new = cfg["paths"]["input"] / "05.jpeg"                 # not read yet -> stays
+    Image.new("RGB", (40, 30), (1, 2, 3)).save(new)
+    run(cfg, use_api=False, log=lambda *a: None)
+    raw = cfg["paths"]["raw"] / OCT
+    assert sorted(p.name for p in raw.iterdir()) == ["03.jpeg", "04.jpeg"]
+    assert sorted(p.name for p in cfg["paths"]["input"].rglob("*")) == ["05.jpeg"]
+    assert (cfg["paths"]["extracted"] / OCT / "03.jpeg.json").exists()
+    assert not (cfg["paths"]["extracted"] / "03.jpeg.json").exists()
+
+    # next run: input has only the unread photo, month still has both days
+    run(cfg, use_api=False, log=lambda *a: None)
+    wb = openpyxl.load_workbook(cfg["paths"]["output"] / OCT / "sale Oct-2025.xlsx")
+    assert wb.sheetnames[:2] == ["3-10-2025", "4-10-2025"]
+
+
+def test_adding_a_day_later_keeps_earlier_days(cfg):
+    add_photo(cfg, "03.jpeg", fixture("day_clean.json"))
+    run(cfg, use_api=False, log=lambda *a: None)
+    assert not list(cfg["paths"]["input"].iterdir())
+    later = fixture("day_mismatch.json")
+    add_photo(cfg, "04.jpeg", later, color=(1, 1, 1))
+    run(cfg, use_api=False, log=lambda *a: None)
+    wb = openpyxl.load_workbook(cfg["paths"]["output"] / OCT / "sale Oct-2025.xlsx")
+    assert wb.sheetnames[:2] == ["3-10-2025", "4-10-2025"]
+    assert sorted(p.name for p in (cfg["paths"]["raw"] / OCT).iterdir()) == ["03.jpeg", "04.jpeg"]
+
+
+def test_same_name_different_photo_is_kept_both(cfg):
+    add_photo(cfg, "03.jpeg", fixture("day_clean.json"))
+    run(cfg, use_api=False, log=lambda *a: None)
+    add_photo(cfg, "03.jpeg", fixture("day_clean.json"), color=(7, 7, 7))   # second page of day 3
+    run(cfg, use_api=False, log=lambda *a: None)
+    names = sorted(p.name for p in (cfg["paths"]["raw"] / OCT).iterdir())
+    assert names == ["03 (2).jpeg", "03.jpeg"]
+
+
+def test_same_photo_put_in_twice_is_not_duplicated(cfg):
+    add_photo(cfg, "03.jpeg", fixture("day_clean.json"))
+    run(cfg, use_api=False, log=lambda *a: None)
+    add_photo(cfg, "03.jpeg", fixture("day_clean.json"))                    # identical file
+    run(cfg, use_api=False, log=lambda *a: None)
+    assert [p.name for p in (cfg["paths"]["raw"] / OCT).iterdir()] == ["03.jpeg"]
+    assert not list(cfg["paths"]["input"].iterdir())

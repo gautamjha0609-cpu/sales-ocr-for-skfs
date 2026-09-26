@@ -4,7 +4,7 @@ Keeps every formula, label, format and column width of the chosen day
 sheet; only blanks the cells that change from day to day so no old value
 can leak into a new day. Run once (or again if you change the format):
 
-    python -m skfs_ocr make-template "input/sample workbook for output/sale Nov-2025 - Copy (1).xlsx"
+    python -m skfs_ocr make-template "template/sample sale Nov-2025.xlsx"
 """
 from pathlib import Path
 

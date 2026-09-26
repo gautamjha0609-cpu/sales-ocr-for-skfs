@@ -5,8 +5,9 @@
 # ---------------------------------------------------------------------------
 
 paths:
-  input: input                  # photos: input/<YYYY-MM>/*.jpg  (or loose in input/)
-  output: output                # workbook: output/sale <Mon>-<YYYY>.xlsx
+  input: input                  # new photos go here (loose, or in input/<YYYY-MM>/)
+  raw: raw_data                 # photos are moved here after a run: raw_data/FY2025-26/07 Oct-2025/
+  output: output                # workbooks: output/FY2025-26/07 Oct-2025/sale Oct-2025.xlsx
   extracted: data/extracted     # one JSON per photo = what was read from it
   template: template/template.xlsx
   parties: parties.yaml         # known udhar party names (spelling used in Excel)
@@ -26,6 +27,9 @@ claude:
 # ---- Workbook -----------------------------------------------------------------
 workbook:
   file_name: "sale {mon}-{year}.xlsx"
+  fy_folder: "FY{fy_start}-{fy_end:02d}"      # financial year April-March, e.g. FY2025-26
+  month_folder: "{fy_month:02d} {mon}-{year}"  # 01 = April ... 12 = March, e.g. "07 Oct-2025"
+  archive_input: true           # move photos out of input/ once they are in a workbook
   day_sheet_name: "{d}-{m}-{Y}"        # 1-11-2025 like the sample
   template_day_sheet: TEMPLATE         # sheet in template.xlsx copied for each day
   register_sheet: Sheet1               # month credit register; null to skip

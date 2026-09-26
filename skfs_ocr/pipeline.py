@@ -2,6 +2,7 @@
 import calendar
 import json
 import os
+import shutil
 from collections import defaultdict
 from datetime import date
 from pathlib import Path
@@ -14,7 +15,7 @@ from .extract import (IMAGE_EXTS, ClaudeReader, ExtractionError, blank_extractio
                       save_record, sha256)
 from .schema import EXTRACTION_SCHEMA
 from .validate import Day, PartyBook, build_day, merge_extractions, month_checks
-from .workbook import output_path, write_month
+from .workbook import month_dir, output_path, write_month
 
 
 def load_parties(cfg: dict) -> PartyBook:
@@ -23,14 +24,69 @@ def load_parties(cfg: dict) -> PartyBook:
     return PartyBook((data or {}).get("parties") or [])
 
 
-def discover(cfg: dict) -> list[Path]:
-    root = cfg["paths"]["input"]
+def _photos(root: Path) -> list[Path]:
+    if not root.exists():
+        return []
     return sorted(p for p in root.rglob("*") if p.is_file() and p.suffix.lower() in IMAGE_EXTS)
 
 
+def discover(cfg: dict) -> list[Path]:
+    """New photos in input/ plus already-filed photos in raw_data/ (so a month
+    is always rebuilt from all of its days)."""
+    return _photos(cfg["paths"]["input"]) + _photos(cfg["paths"]["raw"])
+
+
+def in_input(cfg: dict, photo: Path) -> bool:
+    return photo.is_relative_to(cfg["paths"]["input"])
+
+
 def cache_file(cfg: dict, photo: Path) -> Path:
-    rel = photo.relative_to(cfg["paths"]["input"])
+    """input/03.jpeg -> data/extracted/03.jpeg.json
+    raw_data/FY2025-26/07 Oct-2025/03.jpeg -> data/extracted/FY2025-26/07 Oct-2025/03.jpeg.json"""
+    root = cfg["paths"]["input"] if in_input(cfg, photo) else cfg["paths"]["raw"]
+    rel = photo.relative_to(root)
     return cfg["paths"]["extracted"] / rel.parent / f"{rel.name}.json"
+
+
+def find_photo(cfg: dict, name: str) -> Path | None:
+    p = Path(name)
+    if p.exists():
+        return p.resolve()
+    for photo in discover(cfg):
+        if photo.name == name or str(photo).endswith(name):
+            return photo
+    return None
+
+
+def archive(cfg: dict, photo: Path, year: int, month: int, log) -> Path:
+    """Move a photo from input/ to raw_data/FY.../MM Mon-YYYY/ together with its reading."""
+    dest_dir = cfg["paths"]["raw"] / month_dir(cfg, year, month)
+    dest_dir.mkdir(parents=True, exist_ok=True)
+    src_json = cache_file(cfg, photo)
+    dest = dest_dir / photo.name
+    if dest.exists() and sha256(dest) == sha256(photo):     # same photo put in twice
+        photo.unlink()
+        src_json.unlink(missing_ok=True)
+        return dest
+    n = 2
+    while dest.exists():
+        dest = dest_dir / f"{photo.stem} ({n}){photo.suffix}"
+        n += 1
+    shutil.move(str(photo), dest)
+    dest_json = cache_file(cfg, dest)
+    dest_json.parent.mkdir(parents=True, exist_ok=True)
+    if src_json.exists():
+        record = json.loads(src_json.read_text(encoding="utf-8"))
+        record["source"] = dest.name
+        dest_json.write_text(json.dumps(record, ensure_ascii=False, indent=2), encoding="utf-8")
+        src_json.unlink()
+    return dest
+
+
+def clean_empty_dirs(root: Path) -> None:
+    for d in sorted((p for p in root.rglob("*") if p.is_dir()), key=lambda p: -len(p.parts)):
+        if not any(d.iterdir()):
+            d.rmdir()
 
 
 def load_record(cfg: dict, photo: Path) -> tuple[dict | None, str]:
@@ -88,8 +144,17 @@ def run(cfg: dict, use_api: bool | None = None, log=print) -> int:
     book = load_parties(cfg)
     photos = discover(cfg)
     if not photos:
-        log(f"No photos found in {cfg['paths']['input']}")
+        log(f"No photos found in {cfg['paths']['input']} or {cfg['paths']['raw']}")
         return 1
+    if not _photos(cfg["paths"]["input"]):
+        log("input/ is empty - rebuilding workbooks from raw_data/")
+    filed = {sha256(p): p for p in _photos(cfg["paths"]["raw"])}
+    for p in _photos(cfg["paths"]["input"]):
+        if sha256(p) in filed:                      # already filed earlier: drop the copy
+            log(f"{p.name} is already filed as {filed[sha256(p)].relative_to(cfg['paths']['raw'])} - removed from input/")
+            p.unlink()
+            cache_file(cfg, p).unlink(missing_ok=True)
+            photos.remove(p)
 
     status = {p: load_record(cfg, p) for p in photos}
     todo = [p for p, (_, s) in status.items() if s in ("missing", "changed")]
@@ -127,14 +192,24 @@ def run(cfg: dict, use_api: bool | None = None, log=print) -> int:
         for p, ext in loose:
             own = guess_month([(p.stem, ext)]) or fallback
             if own is None:
-                problems_global.append(f"{p.name}: cannot tell the month - put it in input/YYYY-MM/")
+                problems_global.append(f"{p.name}: cannot tell the month - put it in input/YYYY-MM/ (e.g. input/2025-11/)")
             else:
                 by_month[own].append((p, ext))
 
     exit_code = 0
+    moved = 0
     for (year, month), items in sorted(by_month.items()):
-        report, n_err = build_month(cfg, book, year, month, items, unread, log)
+        n_err, placed = build_month(cfg, book, year, month, items, unread, log)
         exit_code |= int(n_err > 0)
+        if cfg["workbook"].get("archive_input", True):
+            for photo in placed:
+                if in_input(cfg, photo):
+                    archive(cfg, photo, year, month, log)
+                    moved += 1
+    if moved:
+        clean_empty_dirs(cfg["paths"]["input"])
+        clean_empty_dirs(cfg["paths"]["extracted"])
+        log(f"\n{moved} photo(s) moved from input/ to {cfg['paths']['raw'].name}/ (input is ready for the next run)")
     if problems_global:
         exit_code = 1
         log("\nPhotos not in any workbook yet:")
@@ -146,8 +221,10 @@ def run(cfg: dict, use_api: bool | None = None, log=print) -> int:
     return exit_code
 
 
-def build_month(cfg, book, year, month, items, unread, log) -> tuple[Path, int]:
+def build_month(cfg, book, year, month, items, unread, log) -> tuple[int, list[Path]]:
+    """Write the month's workbook and report; return (errors, photos placed in the workbook)."""
     per_date: dict[date, list] = defaultdict(list)
+    placed: list[Path] = []
     date_errors = []
     date_warn: dict[date, list] = defaultdict(list)
     for photo, ext in items:
@@ -159,6 +236,7 @@ def build_month(cfg, book, year, month, items, unread, log) -> tuple[Path, int]:
             date_errors.append(f"{photo.name}: date {d:%d-%m-%Y} is outside {year}-{month:02d}")
             continue
         per_date[d].append((photo.name, ext))
+        placed.append(photo)
         date_warn[d] += warns
 
     days: list[Day] = []
@@ -175,8 +253,8 @@ def build_month(cfg, book, year, month, items, unread, log) -> tuple[Path, int]:
     out = write_month(cfg, days, year, month) if days else None
     report = report_path(cfg, year, month)
     n_err = write_report(report, year, month, days, date_errors)
-    log(f"\n{calendar.month_name[month]} {year}: {len(days)} day sheet(s) -> "
-        f"{out.name if out else 'no workbook'}")
+    shown = out.relative_to(cfg["paths"]["output"].parent) if out else "no workbook"
+    log(f"\n{calendar.month_name[month]} {year}: {len(days)} day sheet(s) -> {shown}")
     ok = sum(1 for d in days if not d.errors and not d.warnings)
     log(f"  {ok} clean, {sum(1 for d in days if d.warnings and not d.errors)} with notes, "
         f"{sum(1 for d in days if d.errors)} with ERRORS  (details: {report.name})")
@@ -185,7 +263,7 @@ def build_month(cfg, book, year, month, items, unread, log) -> tuple[Path, int]:
             log(f"  ERROR {d.date:%d-%m}: {e}")
     for e in date_errors:
         log(f"  ERROR {e}")
-    return report, n_err
+    return n_err, placed if out else []
 
 
 def report_path(cfg: dict, year: int, month: int) -> Path:

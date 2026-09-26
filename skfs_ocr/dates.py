@@ -18,11 +18,23 @@ _NAME = re.compile(
     r"(?:[\s_-]*\(\d+\)|[\s_-]*[a-z])?$", re.I)
 
 
+MONTH_ABBR = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"]
+
+
 def parse_month_folder(name: str) -> tuple[int, int] | None:
+    """"2025-10" (input) or "07 Oct-2025" (raw_data / output) -> (2025, 10)."""
     m = re.fullmatch(r"(20\d{2})[-_](\d{1,2})", name)
     if m and 1 <= int(m.group(2)) <= 12:
         return int(m.group(1)), int(m.group(2))
+    m = re.search(r"([A-Za-z]{3})[a-z]*[-_ ](20\d{2})$", name)
+    if m and m.group(1).lower() in MONTH_ABBR:
+        return int(m.group(2)), MONTH_ABBR.index(m.group(1).lower()) + 1
     return None
+
+
+def fy_of(year: int, month: int) -> int:
+    """Financial year (April-March) start year: Oct-2025 -> 2025, Feb-2026 -> 2025."""
+    return year if month >= 4 else year - 1
 
 
 def _year(y: str | None, default: int | None) -> int | None:

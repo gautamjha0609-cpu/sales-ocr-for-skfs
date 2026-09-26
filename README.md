@@ -6,18 +6,38 @@ workbook (one sheet per day, same format and formulas as
 
 ## Everyday use (Windows)
 
-1. Put the month's photos in `input\` (or `input\2025-11\`).
+1. Put the new photos in `input\` (any month, any number of photos).
    Name each photo with its day: `01.jpeg`, `02.jpeg`, `15.10.jpeg`, `2025-11-30.jpg` all work.
    Two photos of the same day (`07.jpeg`, `07 (2).jpeg`) are combined.
 2. Double-click **`run.bat`**.
-3. Open `output\sale <Mon>-<Year>.xlsx` and `output\sale <Mon>-<Year> - check report.txt`.
+3. Open the workbook and check report in `output\FY2025-26\07 Oct-2025\`.
 
-The first run creates a Python environment and installs the packages (needs Python 3.10+).
-`rebuild_only.bat` rebuilds the workbook from the saved readings without reading any photo.
+After the run, every photo that went into a workbook is **moved out of `input\`** into
+`raw_data\`, so `input\` is empty and ready for the next batch. Photos that could not be
+used yet (not read, no date) stay in `input\` and are listed at the end of the run.
+
+`rebuild_only.bat` rebuilds the workbooks from the saved readings without reading any photo.
+
+## Folders (financial year April–March)
+
+```
+input/                                   new photos only (empty after a run)
+raw_data/FY2025-26/01 Apr-2025/ ...      every photo, filed by FY and month
+raw_data/FY2025-26/07 Oct-2025/01.10.jpeg
+raw_data/FY2025-26/12 Mar-2026/
+raw_data/FY2026-27/01 Apr-2026/
+output/FY2025-26/07 Oct-2025/sale Oct-2025.xlsx
+output/FY2025-26/07 Oct-2025/sale Oct-2025 - check report.txt
+data/extracted/FY2025-26/07 Oct-2025/01.10.jpeg.json   what was read from each photo
+```
+
+Months are numbered in FY order (01 = April … 12 = March). Each run rebuilds a month from
+all of its photos in `raw_data` plus the new ones, so adding day 15 later keeps days 1–14.
+Folder names are set in `config.yaml` (`fy_folder`, `month_folder`).
 
 ## How a photo is read
 
-Each photo is read **once**, and the reading is saved to `data/extracted/<photo>.json`.
+Each photo is read **once**, and the reading is saved as a JSON file in `data/extracted/` (same FY/month folders).
 After that, running again never re-reads it (zero tokens), unless the photo file changes.
 
 * **With an API key** (`set ANTHROPIC_API_KEY=...` before `run.bat`): new photos are
@@ -44,7 +64,7 @@ misread digit is worse than none. Claude reads the photo; Python does all the ma
 | rates, weekday, file-name date vs page date, duplicate invoice numbers | |
 
 The report marks each day **OK**, **CHECK** (a note to look at), or **ERROR** (numbers don't add up).
-An ERROR is either a misread digit — fix it in `data/extracted/<photo>.json` and run again — or a
+An ERROR is either a misread digit — fix it in the photo's JSON under `data/extracted/` and run again (`rebuild_only.bat`) — or a
 real mistake in the ledger itself, which you then correct in Excel. The workbook's own
 "sales value diff" cell (D11) shows the same difference.
 
@@ -83,12 +103,17 @@ Edit a finished month workbook the way you want, then:
 python -m skfs_ocr make-template "path\to\your workbook.xlsx"
 ```
 
+(the current template was made from `template/sample sale Nov-2025.xlsx`)
+
+```
+```
+
 and adjust the cell addresses in `config.yaml` if you moved any input cell.
 
 ## Commands
 
 ```
-python -m skfs_ocr run [--no-api]     read new photos, rebuild workbooks, write report
+python -m skfs_ocr run [--no-api]     read new photos, rebuild workbooks, report, move photos to raw_data
 python -m skfs_ocr pending            list photos not read yet (creates blank JSON)
 python -m skfs_ocr tiles <photo>      zoomed crops of a photo, for reading by hand/Claude Code
 python -m skfs_ocr fill <photo>       save a compact reading from stdin (see skfs_ocr/fill.py)

@@ -47,10 +47,13 @@ def main(argv=None) -> int:
 
         from .fill import fill
 
-        photo = Path(args.photo)
-        if not photo.exists():
-            photo = cfg["paths"]["input"] / args.photo
-        for line in fill(cfg, photo.resolve(), json.load(sys.stdin)):
+        from .pipeline import find_photo
+
+        photo = find_photo(cfg, args.photo)
+        if photo is None:
+            print(f"photo {args.photo} not found in input/ or raw_data/")
+            return 2
+        for line in fill(cfg, photo, json.load(sys.stdin)):
             print(line)
         return 0
     if args.cmd == "pending":

@@ -22,9 +22,19 @@ class WorkbookError(Exception):
     pass
 
 
+def month_dir(cfg: dict, year: int, month: int) -> Path:
+    """FY2025-26/07 Oct-2025 (financial year April-March)."""
+    from .dates import fy_of
+
+    wb, fy = cfg["workbook"], fy_of(year, month)
+    fields = dict(year=year, month=month, mon=MONTHS[month - 1], fy_start=fy,
+                  fy_end=(fy + 1) % 100, fy_month=(month - 4) % 12 + 1)
+    return Path(wb["fy_folder"].format(**fields)) / wb["month_folder"].format(**fields)
+
+
 def output_path(cfg: dict, year: int, month: int) -> Path:
     name = cfg["workbook"]["file_name"].format(year=year, month=month, mon=MONTHS[month - 1])
-    return cfg["paths"]["output"] / name
+    return cfg["paths"]["output"] / month_dir(cfg, year, month) / name
 
 
 def sheet_name(cfg: dict, d) -> str:
