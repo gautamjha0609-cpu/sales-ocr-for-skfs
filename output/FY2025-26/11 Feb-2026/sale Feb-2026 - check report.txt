@@ -1,0 +1,137 @@
+Check report - February 2026
+
+
+01-02-2026  [CHECK]  photo: WhatsApp Image 2026-03-20 at 8.13.17 AM (1).jpeg
+   petrol 175,240.00 | diesel 103,934.00 | power 11,268.00 | udhar lines with invoice: 1
+   note:  unclear on photo: HSD A2 difference circled/corrected 28.28
+
+02-02-2026  [CHECK]  photo: WhatsApp Image 2026-03-20 at 8.13.28 AM.jpeg
+   petrol 161,731.00 | diesel 175,496.00 | power 720.00 | udhar lines with invoice: 7
+   note:  udhar lines add up to 97,236.2, udhar total written is 96,636  [one-digit fix would be: udhar line 7 33,924.37 -> 33,324.37; udhar line 9 12,921.78 -> 12,321.78]
+
+03-02-2026  [OK]  photo: WhatsApp Image 2026-03-20 at 8.13.18 AM (1).jpeg
+   petrol 140,848.00 | diesel 108,900.00 | power 30,459.00 | udhar lines with invoice: 2
+
+04-02-2026  [CHECK]  photo: WhatsApp Image 2026-03-20 at 8.13.23 AM.jpeg
+   petrol 180,076.00 | diesel 185,609.00 | power 1,359.00 | udhar lines with invoice: 2
+   note:  no readable date - dated 04-02-2026 by meter readings
+   note:  unclear on photo: date day digit unclear - dated by meter chain
+
+05-02-2026  [CHECK]  photo: WhatsApp Image 2026-03-20 at 8.13.22 AM.jpeg
+   petrol 183,786.00 | diesel 140,190.00 | power 3,848.00 | udhar lines with invoice: 3
+   note:  page/file says 04-02-2026 but meter readings give 05-02-2026 - using meter readings
+   note:  unclear on photo: date day digit smudged (?/2/26)
+
+06-02-2026  [CHECK]  photo: WhatsApp Image 2026-03-20 at 8.13.26 AM (2).jpeg
+   petrol 155,899.00 | diesel 140,578.00 | power 2,887.00 | udhar lines with invoice: 4
+   note:  no readable date - dated 06-02-2026 by meter readings
+   note:  MSP A1: 70.2 - 41.6 = 28.6, ledger writes 25.6 litres
+   note:  unclear on photo: large testing figures written this day (MSP 41.60 'testing' note, 26/22/27/16)
+   note:  unclear on photo: date smudged - dated by meter chain
+
+07-02-2026  [CHECK]  photo: WhatsApp Image 2026-03-20 at 8.13.25 AM.jpeg
+   petrol 179,331.00 | diesel 103,289.00 | power 8,800.00 | udhar lines with invoice: 3
+   note:  no readable date - dated 07-02-2026 by meter readings
+   note:  unclear on photo: date smudged - dated by meter chain
+   note:  unclear on photo: paytm written 5905017 read 59050.17
+
+08-02-2026  [OK]  photo: WhatsApp Image 2026-03-20 at 8.13.27 AM (1).jpeg
+   petrol 160,918.00 | diesel 158,769.00 | power 19,377.00 | udhar lines with invoice: 2
+
+09-02-2026  [OK]  photo: WhatsApp Image 2026-03-20 at 8.13.27 AM.jpeg
+   petrol 144,429.00 | diesel 126,565.00 | power 13,717.00 | udhar lines with invoice: 3
+
+10-02-2026  [ERROR]  photo: WhatsApp Image 2026-03-20 at 8.13.17 AM.jpeg
+   petrol 155,492.00 | diesel 174,935.00 | power 2,052.00 | udhar lines with invoice: 2
+   ERROR: payment lines add up to 336,478.25, total sale written is 332,479  [one-digit fix would be: icici 6,206 -> 2,206; paytm_card 5,158.68 -> 1,158.68; paytm 74,406 -> 70,406; phonepe_card 9,729 -> 5,729; total 332,479 -> 336,479]
+   note:  no readable date - dated 10-02-2026 by meter readings
+   note:  unclear on photo: date cut off - dated by meter chain
+   note:  unclear on photo: different handwriting; total read 332479/335479
+
+11-02-2026  [CHECK]  photo: WhatsApp Image 2026-03-20 at 8.13.24 AM.jpeg
+   petrol 157,870.00 | diesel 106,489.00 | power 3,061.00 | udhar lines with invoice: 3
+   note:  MS A2: closing 1,449,413.62 - opening 1,448,679.6 = 734.02, ledger writes 738.02
+   note:  unclear on photo: MS A2 (4th) difference 738.02 (closing 1449413.62 gives 734.02)
+   note:  unclear on photo: zoom: paytm 58395.15, Nathu Lal 1500
+
+12-02-2026  [CHECK]  photo: WhatsApp Image 2026-03-20 at 8.13.26 AM (1).jpeg
+   petrol 178,927.00 | diesel 130,729.00 | power 4,108.00 | udhar lines with invoice: 5
+   note:  unclear on photo: udhar total overwritten, corrected note (36166)
+   note:  MS A2: opening 1,449,417.62 but previous day closed at 1,449,413.62
+
+13-02-2026  [CHECK]  photo: WhatsApp Image 2026-03-20 at 8.13.18 AM (2).jpeg
+   petrol 181,736.00 | diesel 114,581.00 | power 7,022.00 | udhar lines with invoice: 1
+   note:  no readable date - dated 13-02-2026 by meter readings
+   note:  unclear on photo: day digit of date unclear (?/2/26) - dated by meter chain
+
+14-02-2026  [CHECK]  photo: WhatsApp Image 2026-03-20 at 8.13.23 AM (1).jpeg
+   petrol 158,681.00 | diesel 115,782.00 | power 13,469.00 | udhar lines with invoice: 4
+   note:  unclear on photo: ICICI = 7133.99 + POS ICICI 2000 written as a separate line -> 9133.99 in ICICI column
+   note:  unclear on photo: MSP difference circled (124.41?) 124.40 used
+   note:  unclear on photo: paytm second digit read as 8 in zoom (48358.90) - balances the day
+
+15-02-2026  [CHECK]  photo: WhatsApp Image 2026-03-20 at 8.13.25 AM (1).jpeg
+   petrol 158,663.00 | diesel 128,080.00 | power 5,968.00 | udhar lines with invoice: 3
+   note:  unclear on photo: HSD A1 (3rd) testing written -110 read as 10
+
+16-02-2026  [CHECK]  photo: WhatsApp Image 2026-03-20 at 8.13.29 AM.jpeg
+   petrol 175,786.00 | diesel 107,035.00 | power 10,136.00 | udhar lines with invoice: 4
+   note:  udhar lines add up to 34,151.87, udhar total written is 34,153  [one-digit fix would be: udhar line 1 1,500 -> 1,501; udhar line 1 1,500 -> 1,502; udhar line 1 1,500 -> 1,503; udhar line 1 1,500 -> 1,500.1; udhar line 1 1,500 -> 1,500.2; udhar line 1 1,500 -> 1,500.3]
+   note:  unclear on photo: ledger notes +369 difference on this day
+
+17-02-2026  [CHECK]  photo: WhatsApp Image 2026-03-20 at 8.13.20 AM.jpeg
+   petrol 152,981.00 | diesel 99,195.00 | power 3,456.00 | udhar lines with invoice: 1
+   note:  udhar lines add up to 12,349.75, udhar total written is 12,344  [one-digit fix would be: udhar line 1 2,649 -> 2,642; udhar line 1 2,649 -> 2,643; udhar line 1 2,649 -> 2,644; udhar line 1 2,649 -> 2,645; total 12,344 -> 12,348; total 12,344 -> 12,349]
+
+18-02-2026  [OK]  photo: WhatsApp Image 2026-03-20 at 8.13.19 AM.jpeg
+   petrol 168,002.00 | diesel 168,738.00 | power 12,404.00 | udhar lines with invoice: 4
+
+19-02-2026  [ERROR]  photo: WhatsApp Image 2026-03-20 at 8.13.22 AM (1).jpeg
+   petrol 197,504.00 | diesel 218,756.00 | power 12,209.00 | udhar lines with invoice: 4
+   ERROR: payment lines add up to 428,401.19, total sale written is 428,469
+   note:  MSP A1: 108.19 x 112.8 = 12,203.83, ledger writes 12,209
+
+20-02-2026  [CHECK]  photo: WhatsApp Image 2026-03-20 at 8.13.19 AM (2).jpeg
+   petrol 163,277.00 | diesel 107,712.00 | power 26,227.00 | udhar lines with invoice: 1
+   note:  unclear on photo: cash corrected in pen to 96552
+
+21-02-2026  [CHECK]  photo: WhatsApp Image 2026-03-20 at 8.13.21 AM (1).jpeg
+   petrol 168,876.00 | diesel 141,420.00 | power 9,935.00 | udhar lines with invoice: 4
+   note:  unclear on photo: page date looks like 21/2/26 but meters follow 20 Feb - meter chain decides
+
+22-02-2026  [ERROR]  photo: WhatsApp Image 2026-03-20 at 8.13.19 AM (1).jpeg
+   petrol 157,205.00 | diesel 132,261.00 | power 225.00 | udhar lines with invoice: 2
+   ERROR: payment lines add up to 289,890.98, total sale written is 289,691  [one-digit fix would be: credit 45,795 -> 45,595; paytm_card 560 -> 360; paytm 48,635.88 -> 48,435.88; phonepe_card 12,652.54 -> 12,452.54; phonepe 59,912.51 -> 59,712.51; cash 82,206 -> 82,006]
+
+23-02-2026  [CHECK]  photo: WhatsApp Image 2026-03-20 at 8.13.29 AM (1).jpeg
+   petrol 142,082.00 | diesel 97,236.00 | power 5,497.00 | udhar lines with invoice: 4
+   note:  no readable date - dated 23-02-2026 by meter readings
+   note:  HSD A1: 307.22 x 90.21 = 27,714.32, ledger writes 28,165
+   note:  udhar lines add up to 56,507.25, udhar total written is 56,502  [one-digit fix would be: udhar line 4 21,604.39 -> 21,600.39; udhar line 5 2,719.03 -> 2,712.03; udhar line 5 2,719.03 -> 2,713.03; udhar line 5 2,719.03 -> 2,714.03; udhar line 5 2,719.03 -> 2,715.03; total 56,502 -> 56,506]
+   note:  unclear on photo: page date written 23/2/25 (year slip); dated by meter chain
+   note:  unclear on photo: HSD A1 rate written 90.4, amount matches 90.21 x 312.22 (testing not subtracted)
+   note:  unclear on photo: phonepe card written 1511328 - read 15113.28 (balances)
+
+24-02-2026  [CHECK]  photo: WhatsApp Image 2026-03-20 at 8.13.30 AM.jpeg
+   petrol 113,242.00 | diesel 97,313.00 | power 14,520.00 | udhar lines with invoice: 2
+   note:  unclear on photo: HSD A2 difference written 48.23 but readings give 48.23; x 90.21 amount 3899 matches 43.23
+   note:  HSD A1: opening 957,037 but previous day closed at 957,032
+
+25-02-2026  [CHECK]  photo: WhatsApp Image 2026-03-20 at 8.13.26 AM.jpeg
+   petrol 133,146.00 | diesel 66,672.00 | power 1,053.00 | udhar lines with invoice: 3
+   note:  page/file says 23-02-2026 but meter readings give 25-02-2026 - using meter readings
+
+26-02-2026  [CHECK]  photo: WhatsApp Image 2026-03-20 at 8.13.20 AM (1).jpeg
+   petrol 170,036.00 | diesel 112,393.00 | power 6,835.00 | udhar lines with invoice: 3
+   note:  page/file says 21-02-2026 but meter readings give 26-02-2026 - using meter readings
+   note:  unclear on photo: HSD A2 rate circled as 104.71 on page, amount 40768 uses 90.21
+
+27-02-2026  [CHECK]  photo: WhatsApp Image 2026-03-20 at 8.13.21 AM.jpeg
+   petrol 127,874.00 | diesel 206,415.00 | power 32,146.00 | udhar lines with invoice: 3
+   note:  unclear on photo: udhar total overwritten (7?447) - 74447 matches list and payments
+
+28-02-2026  [OK]  photo: WhatsApp Image 2026-03-20 at 8.13.18 AM.jpeg
+   petrol 182,976.00 | diesel 119,491.00 | power 2,261.00 | udhar lines with invoice: 2
+
+How to fix: open data/extracted/<photo>.json, correct the number, run again.
+If the ledger itself has the mistake, the ERROR is real - fix it in Excel.

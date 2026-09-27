@@ -1,0 +1,126 @@
+{
+  "source": "2026-02-24.jpeg",
+  "sha256": "617d6851cc79d154134521d41d2a949f57f4f9d5fce44cf7a152057d733f8eb5",
+  "read_by": "claude-code",
+  "extraction": {
+    "date_text": "24/2/26",
+    "weekday": null,
+    "rates": {
+      "petrol": 104.71,
+      "diesel": 90.21,
+      "power": 112.8
+    },
+    "nozzles": [
+      {
+        "label": "MSP A1",
+        "opening": 116600.83,
+        "closing": 116734.56,
+        "difference": 133.73,
+        "testing": 5,
+        "net_litres": 128.73,
+        "rate": 112.8,
+        "amount_written": 14520,
+        "adjustments": [],
+        "final_amount": 14520
+      },
+      {
+        "label": "MS A2",
+        "opening": 1237683.25,
+        "closing": 1238196.48,
+        "difference": 513.23,
+        "testing": 5,
+        "net_litres": 508.23,
+        "rate": 104.71,
+        "amount_written": 53216,
+        "adjustments": [],
+        "final_amount": 53216
+      },
+      {
+        "label": "HSD A1",
+        "opening": 957037.0,
+        "closing": 957398.38,
+        "difference": 361.38,
+        "testing": 5,
+        "net_litres": 356.38,
+        "rate": 90.21,
+        "amount_written": 32149,
+        "adjustments": [],
+        "final_amount": 32149
+      },
+      {
+        "label": "MS A2",
+        "opening": 1459871.51,
+        "closing": 1460449.77,
+        "difference": 578.26,
+        "testing": 5,
+        "net_litres": 573.26,
+        "rate": 104.71,
+        "amount_written": 60026,
+        "adjustments": [],
+        "final_amount": 60026
+      },
+      {
+        "label": "HSD A1",
+        "opening": 889445.77,
+        "closing": 890129.91,
+        "difference": 684.14,
+        "testing": 5,
+        "net_litres": 679.14,
+        "rate": 90.21,
+        "amount_written": 61265,
+        "adjustments": [],
+        "final_amount": 61265
+      },
+      {
+        "label": "HSD A2",
+        "opening": 1017341.76,
+        "closing": 1017389.99,
+        "difference": 48.23,
+        "testing": 5,
+        "net_litres": 43.23,
+        "rate": 90.21,
+        "amount_written": 3899,
+        "adjustments": [],
+        "final_amount": 3899
+      }
+    ],
+    "sale_total": 225075,
+    "payments": {
+      "credit": 18263.31,
+      "icici": 8100,
+      "paytm_card": 16413.55,
+      "paytm": 52001.62,
+      "phonepe_card": 6245,
+      "phonepe": 42533.04,
+      "hp_card": null,
+      "cash": 81518
+    },
+    "other_payments": [],
+    "credit_entries": [
+      {
+        "amount": 800,
+        "party": "पंकज यादव (घर)",
+        "party_english": "Pankaj Yadav (ghar)",
+        "invoice_no": null,
+        "fuel": null
+      },
+      {
+        "amount": 6205.54,
+        "party": "मूलचंद यादव",
+        "party_english": "mool Chand yadav",
+        "invoice_no": "23106",
+        "fuel": null
+      },
+      {
+        "amount": 11257.77,
+        "party": "ममता यादव",
+        "party_english": "Mamta Yadav",
+        "invoice_no": "23107",
+        "fuel": null
+      }
+    ],
+    "unclear": [
+      "HSD A2 difference written 48.23 but readings give 48.23; x 90.21 amount 3899 matches 43.23"
+    ]
+  }
+}

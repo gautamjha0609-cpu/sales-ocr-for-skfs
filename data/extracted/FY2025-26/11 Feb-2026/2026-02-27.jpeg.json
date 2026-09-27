@@ -1,0 +1,175 @@
+{
+  "source": "2026-02-27.jpeg",
+  "sha256": "4153ba9a16d259e501af51b4d0545567ee10755fd3f9882d51f172e8a9e34fd3",
+  "read_by": "claude-code",
+  "extraction": {
+    "date_text": "27/2/26",
+    "weekday": null,
+    "rates": {
+      "petrol": 104.71,
+      "diesel": 90.21,
+      "power": 112.8
+    },
+    "nozzles": [
+      {
+        "label": "MSP A1",
+        "opening": 116824.5,
+        "closing": 117114.49,
+        "difference": 289.99,
+        "testing": 5,
+        "net_litres": 284.99,
+        "rate": 112.8,
+        "amount_written": 32146,
+        "adjustments": [],
+        "final_amount": 32146
+      },
+      {
+        "label": "MS A2",
+        "opening": 1239506.63,
+        "closing": 1239987.1,
+        "difference": 480.47,
+        "testing": 5,
+        "net_litres": 475.47,
+        "rate": 104.71,
+        "amount_written": 49786,
+        "adjustments": [],
+        "final_amount": 49786
+      },
+      {
+        "label": "HSD A1",
+        "opening": 958252.49,
+        "closing": 958926.14,
+        "difference": 673.65,
+        "testing": 5,
+        "net_litres": 668.65,
+        "rate": 90.21,
+        "amount_written": 60318,
+        "adjustments": [],
+        "final_amount": 60318
+      },
+      {
+        "label": "MS A2",
+        "opening": 1462055.09,
+        "closing": 1462805.85,
+        "difference": 750.76,
+        "testing": 5,
+        "net_litres": 745.76,
+        "rate": 104.71,
+        "amount_written": 78088,
+        "adjustments": [],
+        "final_amount": 78088
+      },
+      {
+        "label": "HSD A1",
+        "opening": 890609.59,
+        "closing": 891563.94,
+        "difference": 954.35,
+        "testing": 5,
+        "net_litres": 949.35,
+        "rate": 90.21,
+        "amount_written": 85640,
+        "adjustments": [],
+        "final_amount": 85640
+      },
+      {
+        "label": "HSD A2",
+        "opening": 1018071.21,
+        "closing": 1018746.4,
+        "difference": 675.19,
+        "testing": 5,
+        "net_litres": 670.19,
+        "rate": 90.21,
+        "amount_written": 60457,
+        "adjustments": [],
+        "final_amount": 60457
+      }
+    ],
+    "sale_total": 366435,
+    "payments": {
+      "credit": 74447,
+      "icici": 27714.69,
+      "paytm_card": null,
+      "paytm": 71783.71,
+      "phonepe_card": 16265.87,
+      "phonepe": 63207.61,
+      "hp_card": null,
+      "cash": 113016
+    },
+    "other_payments": [],
+    "credit_entries": [
+      {
+        "amount": 1500,
+        "party": "नाथुलाल पानी टैंकर",
+        "party_english": "Nathu Lal pani tanker",
+        "invoice_no": null,
+        "fuel": null
+      },
+      {
+        "amount": 10845,
+        "party": "यादव किराणा",
+        "party_english": "Yadav Kirana",
+        "invoice_no": null,
+        "fuel": null
+      },
+      {
+        "amount": 524,
+        "party": "सरदार सेठिया",
+        "party_english": "Sardar Sethiya",
+        "invoice_no": null,
+        "fuel": null
+      },
+      {
+        "amount": 9169.84,
+        "party": "पिपलोदा कस्बा",
+        "party_english": "Piploda",
+        "invoice_no": "23118",
+        "fuel": null
+      },
+      {
+        "amount": 22268.93,
+        "party": "ममता यादव",
+        "party_english": "Mamta Yadav",
+        "invoice_no": "23119",
+        "fuel": null
+      },
+      {
+        "amount": 22189.82,
+        "party": "मूलचंद यादव",
+        "party_english": "mool Chand yadav",
+        "invoice_no": "23124",
+        "fuel": null
+      },
+      {
+        "amount": 2000,
+        "party": "प्रेमचंद जाट",
+        "party_english": "Premchand Jat",
+        "invoice_no": null,
+        "fuel": null
+      },
+      {
+        "amount": 2650,
+        "party": "गुलाब यादव",
+        "party_english": "Gulab Yadav",
+        "invoice_no": null,
+        "fuel": null
+      },
+      {
+        "amount": 1500,
+        "party": "मोहित यादव",
+        "party_english": "Mohit Yadav",
+        "invoice_no": null,
+        "fuel": null
+      },
+      {
+        "amount": 1800,
+        "party": "हरि काका (घर)",
+        "party_english": "Hari Kaka (ghar)",
+        "invoice_no": null,
+        "fuel": null
+      }
+    ],
+    "unclear": [
+      "udhar total overwritten (7?447) - 74447 matches list and payments"
+    ]
+  }
+}

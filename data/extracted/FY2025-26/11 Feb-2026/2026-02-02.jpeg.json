@@ -1,0 +1,173 @@
+{
+  "source": "2026-02-02.jpeg",
+  "sha256": "17d955e6d43201bd9f70401f72dadea9fcf11610a47b0a40adfc1708c7835ede",
+  "read_by": "claude-code",
+  "extraction": {
+    "date_text": "2/2/26",
+    "weekday": null,
+    "rates": {
+      "petrol": 104.71,
+      "diesel": 90.21,
+      "power": 112.8
+    },
+    "nozzles": [
+      {
+        "label": "MSP A1",
+        "opening": 114705.3,
+        "closing": 114716.69,
+        "difference": 11.39,
+        "testing": 5,
+        "net_litres": 6.39,
+        "rate": 112.8,
+        "amount_written": 720,
+        "adjustments": [],
+        "final_amount": 720
+      },
+      {
+        "label": "MS A2",
+        "opening": 1221604.64,
+        "closing": 1222399.84,
+        "difference": 795.2,
+        "testing": 5,
+        "net_litres": 790.2,
+        "rate": 104.71,
+        "amount_written": 82741,
+        "adjustments": [],
+        "final_amount": 82741
+      },
+      {
+        "label": "HSD A1",
+        "opening": 944971.58,
+        "closing": 945370.13,
+        "difference": 398.55,
+        "testing": 5,
+        "net_litres": 393.55,
+        "rate": 90.21,
+        "amount_written": 35502,
+        "adjustments": [],
+        "final_amount": 35502
+      },
+      {
+        "label": "MS A2",
+        "opening": 1441070.22,
+        "closing": 1441829.59,
+        "difference": 759.37,
+        "testing": 5,
+        "net_litres": 754.37,
+        "rate": 104.71,
+        "amount_written": 78990,
+        "adjustments": [],
+        "final_amount": 78990
+      },
+      {
+        "label": "HSD A1",
+        "opening": 875997.54,
+        "closing": 876834.8,
+        "difference": 837.26,
+        "testing": 5,
+        "net_litres": 832.26,
+        "rate": 90.21,
+        "amount_written": 75078,
+        "adjustments": [],
+        "final_amount": 75078
+      },
+      {
+        "label": "HSD A2",
+        "opening": 1009414.03,
+        "closing": 1010138.64,
+        "difference": 724.61,
+        "testing": 5,
+        "net_litres": 719.61,
+        "rate": 90.21,
+        "amount_written": 64916,
+        "adjustments": [],
+        "final_amount": 64916
+      }
+    ],
+    "sale_total": 337947,
+    "payments": {
+      "credit": 96636,
+      "icici": 3467,
+      "paytm_card": 9059.97,
+      "paytm": 52567.24,
+      "phonepe_card": 17722.53,
+      "phonepe": 63035.46,
+      "hp_card": 2065,
+      "cash": 93393
+    },
+    "other_payments": [],
+    "credit_entries": [
+      {
+        "amount": 500,
+        "party": "कालू जी",
+        "party_english": "Kalu ji",
+        "invoice_no": null,
+        "fuel": null
+      },
+      {
+        "amount": 1200,
+        "party": "नाथुलाल पानी टैंकर",
+        "party_english": "Nathu Lal pani tanker",
+        "invoice_no": null,
+        "fuel": null
+      },
+      {
+        "amount": 2500,
+        "party": "गुलाब यादव",
+        "party_english": "Gulab Yadav",
+        "invoice_no": null,
+        "fuel": null
+      },
+      {
+        "amount": 21469.07,
+        "party": "मूलचंद यादव",
+        "party_english": "mool Chand yadav",
+        "invoice_no": "23005",
+        "fuel": null
+      },
+      {
+        "amount": 1050,
+        "party": "मूलचंद यादव",
+        "party_english": "mool Chand yadav",
+        "invoice_no": "23013",
+        "fuel": null
+      },
+      {
+        "amount": 15000,
+        "party": "पिपलोदा कस्बा",
+        "party_english": "Piploda",
+        "invoice_no": "23006",
+        "fuel": null
+      },
+      {
+        "amount": 33924.37,
+        "party": "ममता यादव",
+        "party_english": "Mamta Yadav",
+        "invoice_no": "23007",
+        "fuel": null
+      },
+      {
+        "amount": 5091.45,
+        "party": "श्री श्याम ट्रांसपोर्ट",
+        "party_english": "Shyam Tran.",
+        "invoice_no": "23008",
+        "fuel": null
+      },
+      {
+        "amount": 12921.78,
+        "party": "वन्दना स्कूल",
+        "party_english": "vandana School",
+        "invoice_no": "23009",
+        "fuel": null
+      },
+      {
+        "amount": 3579.53,
+        "party": "दिनेश यादव",
+        "party_english": "dinesh",
+        "invoice_no": "23012",
+        "fuel": null
+      }
+    ],
+    "unclear": []
+  }
+}

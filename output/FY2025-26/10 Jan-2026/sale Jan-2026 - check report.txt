@@ -1,71 +1,71 @@
 Check report - January 2026
 
 
-01-01-2026  [ERROR]  photo: 01.jpeg
+01-01-2026  [ERROR]  photo: 2026-01-01.jpeg
    petrol 152,376.00 | diesel 125,117.00 | power 4,255.00 | udhar lines with invoice: 4
    ERROR: payment lines add up to 281,806.5, total sale written is 281,748  [one-digit fix would be: credit 65,168 -> 65,108; icici 19,963 -> 19,903; phonepe_card 5,999.83 -> 5,939.83]
    note:  unclear on photo: paytm card corrected in pen from 5999.83 to 6621.45
 
-02-01-2026  [CHECK]  photo: 02.jpeg
+02-01-2026  [CHECK]  photo: 2026-01-02.jpeg
    petrol 150,182.00 | diesel 242,935.00 | power 9,095.00 | udhar lines with invoice: 4
    note:  unclear on photo: rate box written MS 104.?, HSD 90.4 - blocks use 104.71 / 90.21
    note:  unclear on photo: some udhar lines carry two invoice numbers (22852,53 / 22856,57 / 22858,59) - first one used
 
-03-01-2026  [ERROR]  photo: 03.jpeg
+03-01-2026  [ERROR]  photo: 2026-01-03.jpeg
    petrol 121,416.00 | diesel 164,141.00 | power 31,749.00 | udhar lines with invoice: 6
    ERROR: payment lines add up to 317,241.54, total sale written is 317,306
    note:  unclear on photo: HSD A1 (3rd) rate written 90.4, amount uses 90.21
 
-04-01-2026  [CHECK]  photo: 04.jpeg
+04-01-2026  [CHECK]  photo: 2026-01-04.jpeg
    petrol 167,199.00 | diesel 122,480.00 | power 3,523.00 | udhar lines with invoice: 3
    note:  unclear on photo: HP card overwritten; 330 per the slip list and it balances the day
 
-05-01-2026  [CHECK]  photo: 05.jpeg
+05-01-2026  [CHECK]  photo: 2026-01-05.jpeg
    petrol 159,485.00 | diesel 118,811.00 | power 12,987.00 | udhar lines with invoice: 3
    note:  udhar lines add up to 52,753.16, udhar total written is 50,753.16  [one-digit fix would be: udhar line 3 5,700 -> 3,700; udhar line 5 3,261.09 -> 1,261.09; total 50,753.16 -> 52,753.16]
 
-06-01-2026  [ERROR]  photo: 06.jpeg
+06-01-2026  [ERROR]  photo: 2026-01-06.jpeg
    petrol 127,496.00 | diesel 82,120.00 | power 4,032.00 | udhar lines with invoice: 3
    ERROR: payment lines add up to 212,987.48, total sale written is 213,648
    note:  udhar lines add up to 14,881.39, udhar total written is 14,322
 
-07-01-2026  [OK]  photo: 07.jpeg
+07-01-2026  [OK]  photo: 2026-01-07.jpeg
    petrol 138,645.00 | diesel 189,018.00 | power 12,218.00 | udhar lines with invoice: 5
 
-08-01-2026  [OK]  photo: 08.jpeg
+08-01-2026  [OK]  photo: 2026-01-08.jpeg
    petrol 152,893.00 | diesel 120,986.00 | power 7,991.00 | udhar lines with invoice: 5
 
-09-01-2026  [OK]  photo: 09.jpeg
+09-01-2026  [OK]  photo: 2026-01-09.jpeg
    petrol 132,300.00 | diesel 151,174.00 | power 10,843.00 | udhar lines with invoice: 4
 
-10-01-2026  [ERROR]  photo: 10.jpeg
+10-01-2026  [ERROR]  photo: 2026-01-10.jpeg
    petrol 162,692.00 | diesel 121,877.00 | power 2,460.00 | udhar lines with invoice: 2
    ERROR: payment lines add up to 284,828.76, total sale written is 287,029
    note:  unclear on photo: a 1917.86 Shyam Transport line (22893) is struck out
 
-11-01-2026  [ERROR]  photo: 11.jpeg
+11-01-2026  [ERROR]  photo: 2026-01-11.jpeg
    petrol 154,574.00 | diesel 140,970.00 | power 8,716.00 | udhar lines with invoice: 3
    ERROR: payment lines add up to 304,459.78, total sale written is 304,260  [one-digit fix would be: credit 71,798 -> 71,598; icici 14,986.64 -> 14,786.64; paytm_card 5,257.2 -> 5,057.2; paytm 44,813.32 -> 44,613.32; phonepe_card 11,755 -> 11,555; phonepe 66,976.62 -> 66,776.62]
 
-12-01-2026  [OK]  photo: 12.jpeg
+12-01-2026  [OK]  photo: 2026-01-12.jpeg
    petrol 146,203.00 | diesel 120,262.00 | power 9,185.00 | udhar lines with invoice: 5
 
-13-01-2026  [CHECK]  photo: 13.jpeg
+13-01-2026  [CHECK]  photo: 2026-01-13.jpeg
    petrol 174,721.00 | diesel 139,821.00 | power 1,378.00 | udhar lines with invoice: 5
    note:  unclear on photo: phonepe card read 65390.32 - smudged
 
-14-01-2026  [ERROR]  photo: 14.jpeg
+14-01-2026  [ERROR]  photo: 2026-01-14.jpeg
    petrol 122,408.00 | diesel 64,436.00 | power 4,181.00 | udhar lines with invoice: 1
    ERROR: payment lines add up to 190,224.02, total sale written is 191,025  [one-digit fix would be: phonepe_card 26,122.55 -> 26,922.55; hp_card 2,000 -> 2,800]
    note:  unclear on photo: udhar total overwritten, read 1900
 
-15-01-2026  [ERROR]  photo: 15.jpeg
+15-01-2026  [ERROR]  photo: 2026-01-15.jpeg
    petrol 166,637.00 | diesel 110,490.00 | power 1,847.00 | udhar lines with invoice: 2
    ERROR: payment lines add up to 272,973.16, total sale written is 278,974  [one-digit fix would be: icici 10,500 -> 16,500; paytm_card 13,547.1 -> 19,547.1; paytm 63,216.89 -> 69,216.89; phonepe 43,944.17 -> 49,944.17; total 278,974 -> 272,974]
    note:  MSP A1: 16.32 x 112.8 = 1,840.90, ledger writes 1,847
    note:  unclear on photo: MS A2 (2nd) difference written 712.50; closing 1209218.68 gives 717.50
 
-16-01-2026  [ERROR]  photo: 16.jpeg
+16-01-2026  [ERROR]  photo: 2026-01-16.jpeg
    petrol 155,923.00 | diesel 141,319.00 | power 4,941.00 | udhar lines with invoice: 5
    ERROR: payment lines add up to 302,171.91, total sale written is 302,183  [one-digit fix would be: credit 47,922 -> 47,932; paytm_card 5,943.54 -> 5,953.54; paytm 43,154.2 -> 43,164.2; phonepe_card 33,258.91 -> 33,268.91; phonepe 69,972.26 -> 69,982.26; hp_card 950 -> 960]
    note:  udhar lines add up to 47,927.1, udhar total written is 47,922  [one-digit fix would be: udhar line 2 29,384.1 -> 29,380.1; udhar line 3 4,279.58 -> 4,272.58; udhar line 3 4,279.58 -> 4,273.58; udhar line 3 4,279.58 -> 4,274.58; udhar line 3 4,279.58 -> 4,275.58; udhar line 4 4,868.63 -> 4,861.63]
@@ -74,68 +74,68 @@ Check report - January 2026
    note:  MSP A1: opening 113,335.49 but previous day closed at 113,335.43
    note:  MS A2: opening 1,425,477.58 but previous day closed at 1,425,477.56
 
-17-01-2026  [CHECK]  photo: 17.jpeg
+17-01-2026  [CHECK]  photo: 2026-01-17.jpeg
    petrol 149,255.00 | diesel 180,491.00 | power 11,047.00 | udhar lines with invoice: 3
    note:  MS A2: 775.15 - 5 = 770.15, ledger writes 774.15 litres
    note:  unclear on photo: MS A2 (4th) difference written 779.15 (calc 775.15); 774.15 litres used
    note:  MS A2: opening 1,426,370.03 but previous day closed at 1,426,370.05
 
-18-01-2026  [CHECK]  photo: 18.jpeg
+18-01-2026  [CHECK]  photo: 2026-01-18.jpeg
    petrol 160,839.00 | diesel 95,665.00 | power 1,905.00 | udhar lines with invoice: 5
    note:  MS A2: opening 1,427,149.18 but previous day closed at 1,427,145.18
 
-19-01-2026  [ERROR]  photo: 19.jpeg
+19-01-2026  [ERROR]  photo: 2026-01-19.jpeg
    petrol 155,290.00 | diesel 139,147.00 | power 1,343.00 | udhar lines with invoice: 4
    ERROR: payment lines add up to 295,773.91, total sale written is 295,780  [one-digit fix would be: credit 69,383.79 -> 69,388.79; credit 69,383.79 -> 69,389.79; icici 13,421.53 -> 13,426.53; icici 13,421.53 -> 13,427.53; icici 13,421.53 -> 13,428.53; icici 13,421.53 -> 13,429.53]
    note:  unclear on photo: HP card overwritten (?000) - left empty
    note:  MS A2: opening 1,211,100.76 but previous day closed at 1,211,100.78
 
-20-01-2026  [OK]  photo: 20.jpeg
+20-01-2026  [OK]  photo: 2026-01-20.jpeg
    petrol 143,890.00 | diesel 194,061.00 | power 21,993.00 | udhar lines with invoice: 4
 
-21-01-2026  [CHECK]  photo: 21.jpeg
+21-01-2026  [CHECK]  photo: 2026-01-21.jpeg
    petrol 165,660.00 | diesel 159,930.00 | power 16,459.00 | udhar lines with invoice: 4
    note:  HSD A2: 1,089.85 x 90.21 = 98,315.37, ledger writes 98,297
    note:  unclear on photo: several udhar lines carry two invoice numbers (22945,50 / 22946,47 / 22951,53) - first used
 
-22-01-2026  [CHECK]  photo: 22.jpeg
+22-01-2026  [CHECK]  photo: 2026-01-22.jpeg
    petrol 226,174.00 | diesel 185,586.00 | power 3,218.00 | udhar lines with invoice: 5
    note:  HSD A2: opening 1,005,370.39 but previous day closed at 1,005,370.59
 
-23-01-2026  [OK]  photo: 23.jpeg
+23-01-2026  [OK]  photo: 2026-01-23.jpeg
    petrol 186,505.00 | diesel 124,324.00 | power 2,152.00 | udhar lines with invoice: 2
 
-24-01-2026  [CHECK]  photo: 24.jpeg
+24-01-2026  [CHECK]  photo: 2026-01-24.jpeg
    petrol 200,190.00 | diesel 195,147.00 | power 5,077.00 | udhar lines with invoice: 3
    note:  unclear on photo: HP card written 15060/611 - taken as 15060+611 = 15671 (balances the day)
 
-25-01-2026  [ERROR]  photo: 25.jpeg
+25-01-2026  [ERROR]  photo: 2026-01-25.jpeg
    petrol 199,360.00 | diesel 162,577.00 | power 24,715.00 | udhar lines with invoice: 4
    ERROR: payment lines add up to 386,711.92, total sale written is 386,652  [one-digit fix would be: credit 67,082 -> 67,022; paytm_card 5,060.8 -> 5,000.8; paytm 66,279.36 -> 66,219.36; cash 144,695 -> 144,635]
    note:  udhar lines add up to 67,080.69, udhar total written is 67,082  [one-digit fix would be: udhar line 1 7,600 -> 7,601; udhar line 1 7,600 -> 7,602; udhar line 1 7,600 -> 7,603; udhar line 1 7,600 -> 7,600.1; udhar line 1 7,600 -> 7,600.2; udhar line 1 7,600 -> 7,600.3]
    note:  unclear on photo: total and cash corrected in pen (387932->386652, 145915->144695)
    note:  unclear on photo: MS A2 (4th) figures corrected in pen
 
-26-01-2026  [OK]  photo: 26.jpeg
+26-01-2026  [OK]  photo: 2026-01-26.jpeg
    petrol 162,207.00 | diesel 121,517.00 | power 3,820.00 | udhar lines with invoice: 1
 
-27-01-2026  [OK]  photo: 27.jpeg
+27-01-2026  [OK]  photo: 2026-01-27.jpeg
    petrol 193,794.00 | diesel 191,711.00 | power 3,811.00 | udhar lines with invoice: 6
 
-28-01-2026  [OK]  photo: 28.jpeg
+28-01-2026  [OK]  photo: 2026-01-28.jpeg
    petrol 152,222.00 | diesel 147,743.00 | power 21,356.00 | udhar lines with invoice: 4
 
-29-01-2026  [ERROR]  photo: 29.jpeg
+29-01-2026  [ERROR]  photo: 2026-01-29.jpeg
    petrol 165,633.00 | diesel 185,260.00 | power 2,711.00 | udhar lines with invoice: 5
    ERROR: payment lines add up to 353,003.83, total sale written is 353,604  [one-digit fix would be: icici 5,000 -> 5,600; paytm 58,137.29 -> 58,737.29; phonepe_card 38,351.95 -> 38,951.95; hp_card 199 -> 799; total 353,604 -> 353,004]
 
-30-01-2026  [ERROR]  photo: 30.jpeg
+30-01-2026  [ERROR]  photo: 2026-01-30.jpeg
    petrol 181,185.00 | diesel 120,747.00 | power 943.00 | udhar lines with invoice: 3
    ERROR: payment lines add up to 302,867.4, total sale written is 302,875  [one-digit fix would be: icici 1,533.52 -> 1,539.52; paytm_card 8,692.52 -> 8,698.52; paytm_card 8,692.52 -> 8,699.52; paytm 57,821.94 -> 57,827.94; paytm 57,821.94 -> 57,828.94; paytm 57,821.94 -> 57,829.94]
    note:  unclear on photo: ICICI read as 1533.52 (dot position unclear; 15335.2 would overshoot the total by 13,800)
    note:  unclear on photo: paytm 578?1.94 overwritten
 
-31-01-2026  [CHECK]  photo: 31.jpeg
+31-01-2026  [CHECK]  photo: 2026-01-31.jpeg
    petrol 138,307.00 | diesel 191,473.00 | power 8,129.00 | udhar lines with invoice: 4
    note:  udhar lines add up to 73,140.66, udhar total written is 79,140  [one-digit fix would be: udhar line 1 20,944.05 -> 26,944.05; udhar line 3 3,215.08 -> 9,215.08; udhar line 4 3,000 -> 9,000; udhar line 5 2,900 -> 8,900; total 79,140 -> 73,140]
    note:  unclear on photo: MSP A1 boxed 8159 -30 = 8129 (a -30 written under the power block)

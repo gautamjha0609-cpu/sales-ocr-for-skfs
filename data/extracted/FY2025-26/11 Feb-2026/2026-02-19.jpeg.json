@@ -1,0 +1,159 @@
+{
+  "source": "2026-02-19.jpeg",
+  "sha256": "f1c1ff4b5fda2ed433214340dda8fd1d72877807ee2847d856a01750e1c3ad93",
+  "read_by": "claude-code",
+  "extraction": {
+    "date_text": "19/2/26",
+    "weekday": null,
+    "rates": {
+      "petrol": 104.71,
+      "diesel": 90.21,
+      "power": 112.8
+    },
+    "nozzles": [
+      {
+        "label": "MSP A1",
+        "opening": 116096.31,
+        "closing": 116209.5,
+        "difference": 113.19,
+        "testing": 5,
+        "net_litres": 108.19,
+        "rate": 112.8,
+        "amount_written": 12209,
+        "adjustments": [],
+        "final_amount": 12209
+      },
+      {
+        "label": "MS A2",
+        "opening": 1234262.59,
+        "closing": 1234949.83,
+        "difference": 687.24,
+        "testing": 5,
+        "net_litres": 682.24,
+        "rate": 104.71,
+        "amount_written": 71437,
+        "adjustments": [],
+        "final_amount": 71437
+      },
+      {
+        "label": "HSD A1",
+        "opening": 954750.63,
+        "closing": 955503.89,
+        "difference": 753.26,
+        "testing": 5,
+        "net_litres": 748.26,
+        "rate": 90.21,
+        "amount_written": 67500,
+        "adjustments": [],
+        "final_amount": 67500
+      },
+      {
+        "label": "MS A2",
+        "opening": 1455325.57,
+        "closing": 1456534.54,
+        "difference": 1208.97,
+        "testing": 5,
+        "net_litres": 1203.97,
+        "rate": 104.71,
+        "amount_written": 126067,
+        "adjustments": [],
+        "final_amount": 126067
+      },
+      {
+        "label": "HSD A1",
+        "opening": 885654.09,
+        "closing": 887012.61,
+        "difference": 1358.52,
+        "testing": 5,
+        "net_litres": 1353.52,
+        "rate": 90.21,
+        "amount_written": 122101,
+        "adjustments": [],
+        "final_amount": 122101
+      },
+      {
+        "label": "HSD A2",
+        "opening": 1015614.05,
+        "closing": 1015942.25,
+        "difference": 328.2,
+        "testing": 5,
+        "net_litres": 323.2,
+        "rate": 90.21,
+        "amount_written": 29155,
+        "adjustments": [],
+        "final_amount": 29155
+      }
+    ],
+    "sale_total": 428469,
+    "payments": {
+      "credit": 86448,
+      "icici": 13422.35,
+      "paytm_card": 3331.37,
+      "paytm": 60873.41,
+      "phonepe_card": 20594.37,
+      "phonepe": 81954.69,
+      "hp_card": 3250,
+      "cash": 158527
+    },
+    "other_payments": [],
+    "credit_entries": [
+      {
+        "amount": 2900,
+        "party": "मोहित यादव",
+        "party_english": "Mohit Yadav",
+        "invoice_no": null,
+        "fuel": null
+      },
+      {
+        "amount": 2500,
+        "party": "नाथुलाल पानी टैंकर",
+        "party_english": "Nathu Lal pani tanker",
+        "invoice_no": null,
+        "fuel": null
+      },
+      {
+        "amount": 3500,
+        "party": "गुलाब यादव",
+        "party_english": "Gulab Yadav",
+        "invoice_no": null,
+        "fuel": null
+      },
+      {
+        "amount": 5000,
+        "party": "गुलाब यादव",
+        "party_english": "Gulab Yadav",
+        "invoice_no": null,
+        "fuel": null
+      },
+      {
+        "amount": 9196,
+        "party": "मोनू शंकर यादव",
+        "party_english": "monu",
+        "invoice_no": "23081",
+        "fuel": null
+      },
+      {
+        "amount": 41010.36,
+        "party": "ममता यादव",
+        "party_english": "Mamta Yadav",
+        "invoice_no": "23082",
+        "fuel": null
+      },
+      {
+        "amount": 18558.89,
+        "party": "मूलचंद यादव",
+        "party_english": "mool Chand yadav",
+        "invoice_no": "23084",
+        "fuel": null
+      },
+      {
+        "amount": 3783.4,
+        "party": "श्री श्याम ट्रांसपोर्ट",
+        "party_english": "Shyam Tran.",
+        "invoice_no": "23086",
+        "fuel": null
+      }
+    ],
+    "unclear": []
+  }
+}
