@@ -117,8 +117,8 @@ and adjust the cell addresses in `config.yaml` if you moved any input cell.
 ```
 python -m skfs_ocr run [--no-api]     read new photos, rebuild workbooks, report, move photos to raw_data
 python -m skfs_ocr pending            list photos not read yet (creates blank JSON)
-python -m skfs_ocr tiles <photo>      zoomed crops of a photo, for reading by hand/Claude Code
-python -m skfs_ocr fill <photo>       save a compact reading from stdin (see skfs_ocr/fill.py)
+python -m skfs_ocr tiles '#n' | --pending   zoomed crops (numbers from `pending`)
+python -m skfs_ocr fill '#n'          save a compact reading from stdin (see skfs_ocr/fill.py)
 python -m skfs_ocr make-template <xlsx>
 python -m pytest                      run the tests
 ```
