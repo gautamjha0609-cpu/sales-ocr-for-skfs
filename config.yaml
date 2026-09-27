@@ -32,7 +32,7 @@ workbook:
   archive_input: true           # move photos out of input/ once they are in a workbook
   day_sheet_name: "{d}-{m}-{Y}"        # 1-11-2025 like the sample
   template_day_sheet: TEMPLATE         # sheet in template.xlsx copied for each day
-  register_sheet: Sheet1               # month credit register; null to skip
+  register_sheet: null                 # month udhar register sheet (e.g. Sheet1); null = none
   register_first_row: 5
 
 cells:
@@ -46,8 +46,7 @@ cells:
   phonepe: N8        # PhonePe card + PhonePe
   cash: R8
   credit: T8         # udhar total
-  icici_copy: K17    # sample always repeats ICICI here
-  # boxed nozzle amounts: one per row (13,14,15); H24/I24/J24 add them up
+  # boxed nozzle amounts: one per row (13,14,15); B4:B6 = (row 13+14+15) / rate
   petrol_col: H
   diesel_col: I
   power_col: J
@@ -55,10 +54,15 @@ cells:
   fuel_amounts: split   # split = one nozzle per row (like the sample)
                         # sum   = total of all nozzles in row 13 only
 
-# Day-to-day manual cells in the template that the ledger photo does not
-# contain (Paytm/PhonePe petrol-diesel split, cash qty). They are left blank
-# for you to fill so no stale number is carried from another day.
-manual_cells: [K15, K16, K19, M20, Q4, Q5, Q6]
+# Cash qty (Q4:Q6) is written as a number, the same way it is worked out by hand:
+#   sale qty - Paytm share - ICICI - PhonePe share - HP card - udhar qty
+# Paytm and PhonePe are split petrol/diesel by the % in the template's G4/G5, M4/M5
+# formulas (60/40); ICICI is all petrol, HP card all diesel, power is all cash.
+cash_qty: {petrol: Q4, diesel: Q5, power: Q6}
+petrol_share: {paytm: 0.6, phonepe: 0.6}
+
+# Other cells the ledger photo does not contain; cleared on every day sheet.
+manual_cells: []
 
 credit_rows:            # udhar lines that carry an invoice number
   first_row: 15

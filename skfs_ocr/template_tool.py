@@ -4,7 +4,7 @@ Keeps every formula, label, format and column width of the chosen day
 sheet; only blanks the cells that change from day to day so no old value
 can leak into a new day. Run once (or again if you change the format):
 
-    python -m skfs_ocr make-template "template/sample sale Nov-2025.xlsx"
+    python -m skfs_ocr make-template "template/sample sale Oct-2025.xlsx"
 """
 from pathlib import Path
 
@@ -15,7 +15,8 @@ def day_input_cells(cfg: dict) -> list[str]:
     """Every cell the program writes (or blanks) on a day sheet."""
     c = cfg["cells"]
     cells = [c[k] for k in ("rate_petrol", "rate_diesel", "rate_power", "paytm", "hp_card",
-                            "icici", "phonepe", "cash", "credit", "icici_copy")]
+                            "icici", "phonepe", "cash", "credit")]
+    cells += list(cfg.get("cash_qty", {}).values())
     for col in (c["petrol_col"], c["diesel_col"], c["power_col"]):
         cells += [f"{col}{r}" for r in c["nozzle_rows"]]
     cr = cfg["credit_rows"]

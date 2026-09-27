@@ -59,7 +59,7 @@
         "adjustments": [
           -19
         ],
-        "final_amount": 75953
+        "final_amount": 75952
       },
       {
         "label": "HSD A1",
@@ -69,9 +69,9 @@
         "testing": 5,
         "net_litres": 257.32,
         "rate": 90.21,
-        "amount_written": 23212,
+        "amount_written": 23232,
         "adjustments": [],
-        "final_amount": 23212
+        "final_amount": 23232
       },
       {
         "label": "HSD A2",
@@ -95,7 +95,7 @@
       "phonepe_card": 35780.25,
       "phonepe": 86930.35,
       "hp_card": null,
-      "cash": 75457
+      "cash": 75857
     },
     "other_payments": [],
     "credit_entries": [
@@ -144,7 +144,8 @@
     ],
     "unclear": [
       "udhar 17463.75 carries invoice numbers 22456,57 - using 22456",
-      "MS A2 (4th block) adjustment read as -19 (75972 -> 75953)"
+      "MS A2 (4th block) adjustment read as -19 (75972 -> 75953)",
+      "cash 75457 -> 75857, MS A2 (4th) 75953 -> 75952, HSD A1 (5th) 23212 -> 23232: corrected to match final workbook sale Oct-2025 (checked by owner)"
     ]
   }
 }

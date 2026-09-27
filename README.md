@@ -2,7 +2,7 @@
 
 Turns photos of the handwritten daily sale ledger into the monthly Excel
 workbook (one sheet per day, same format and formulas as
-`sale Nov-2025.xlsx`), and checks every number before writing it.
+`template/sample sale Oct-2025.xlsx`), and checks every number before writing it.
 
 ## Everyday use (Windows)
 
@@ -81,16 +81,18 @@ Only input cells are written; every formula from your workbook is kept. All addr
 | petrol / diesel / power rate | C4 / C5 / C6 |
 | Paytm card + Paytm | H8 |
 | HP card | J8 |
-| ICICI | L8 (and K17) |
+| ICICI | L8 |
 | PhonePe card + PhonePe | N8 |
 | cash | R8 |
 | udhar total | T8 |
 | boxed nozzle amounts (petrol / diesel / power) | H / I / J, rows 13–15 |
 | udhar lines with invoice no. | A (party), B (fuel), E (amount), F (invoice), rows 15–25 |
-| month udhar register | `Sheet1` |
+| cash qty petrol / diesel / power | Q4 / Q5 / Q6 (worked out, see below) |
 
-Q4:Q6, K15, K16, K19 and M20 (cash litres and the Paytm/PhonePe petrol/diesel split) are not in
-the ledger photo, so they are left blank for you.
+Qty, the Paytm/PhonePe 60/40 petrol/diesel split, ICICI and HP litres are formulas in the
+template. Cash qty (Q4:Q6) is written as a number, worked out the same way as in the October
+workbook: sale qty − Paytm share − ICICI − PhonePe share − HP card − udhar qty, so the
+"Qty Diffrence" column comes to 0.
 
 Party names are matched to `parties.yaml` so the same party is always spelled the same.
 New parties appear in the report — add them to `parties.yaml`.
@@ -103,7 +105,7 @@ Edit a finished month workbook the way you want, then:
 python -m skfs_ocr make-template "path\to\your workbook.xlsx"
 ```
 
-(the current template was made from `template/sample sale Nov-2025.xlsx`)
+(the current template was made from `template/sample sale Oct-2025.xlsx`)
 
 ```
 ```

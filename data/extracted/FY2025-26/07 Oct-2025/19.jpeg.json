@@ -94,10 +94,10 @@
       "icici": 2679.0,
       "paytm_card": 5853.08,
       "paytm": 66887.1,
-      "phonepe_card": 16938.43,
+      "phonepe_card": 16938.49,
       "phonepe": 103525.64,
       "hp_card": 4500,
-      "cash": 117746
+      "cash": 121746.69
     },
     "other_payments": [],
     "credit_entries": [
@@ -145,7 +145,8 @@
       }
     ],
     "unclear": [
-      "udhar 26725.15 carries two invoice numbers (22446,47) - using 22446"
+      "udhar 26725.15 carries two invoice numbers (22446,47) - using 22446",
+      "phonepe card 16938.43 -> 16938.49, cash 117746 -> 121746.69: corrected to match final workbook sale Oct-2025 (checked by owner)"
     ]
   }
 }

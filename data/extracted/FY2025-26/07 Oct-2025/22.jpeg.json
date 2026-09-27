@@ -97,7 +97,7 @@
       "phonepe_card": null,
       "phonepe": 66418.6,
       "hp_card": null,
-      "cash": 106978
+      "cash": 111028.15
     },
     "other_payments": [],
     "credit_entries": [
@@ -110,7 +110,8 @@
       }
     ],
     "unclear": [
-      "HSD A1 closing looks like 886936.38; next day's opening and the amount 49407 both give 886936.98"
+      "HSD A1 closing looks like 886936.38; next day's opening and the amount 49407 both give 886936.98",
+      "cash 106978 -> 111028.15: corrected to match final workbook sale Oct-2025 (checked by owner)"
     ]
   }
 }

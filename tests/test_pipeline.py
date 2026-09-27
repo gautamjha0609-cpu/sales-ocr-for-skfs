@@ -157,11 +157,11 @@ def test_cells_match_sample_layout(cfg):
     assert v["H13"] + v["H14"] == 161380 and v["H15"] is None
     assert v["I13"] + v["I14"] + v["I15"] == 181023
     assert v["J13"] == 15833
-    assert v["T8"] == 90869 and v["R8"] == 75717 and v["L8"] == v["K17"] == 3673.71
+    assert v["T8"] == 90869 and v["R8"] == 75717 and v["L8"] == 3673.71
     assert v["N8"] == round(15815.65 + 95681.60, 2)
     assert v["A15"] == "mool Chand yadav" and v["F15"] == 22343 and v["E15"] == 20454.21
     assert v["B15"] == "diesal"
-    assert v["Q4"] is None and v["K15"] is None      # manual cells are cleared
+    assert "K17" not in v and "K15" not in v           # old manual cells no longer written
 
 
 def test_full_run_writes_verified_workbook(cfg):
@@ -171,7 +171,7 @@ def test_full_run_writes_verified_workbook(cfg):
     assert code == 1                          # day 4 has a real ledger mismatch
     out = cfg["paths"]["output"] / OCT / "sale Oct-2025.xlsx"
     wb = openpyxl.load_workbook(out)
-    assert wb.sheetnames == ["3-10-2025", "4-10-2025", "Sheet1"]
+    assert wb.sheetnames == ["3-10-2025", "4-10-2025"]
     ws = wb["3-10-2025"]
     tpl = openpyxl.load_workbook(cfg["paths"]["template"])["TEMPLATE"]
     # every formula of the template survives unchanged
@@ -180,8 +180,6 @@ def test_full_run_writes_verified_workbook(cfg):
             if isinstance(c.value, str) and c.value.startswith("="):
                 assert ws[c.coordinate].value == c.value, c.coordinate
     assert ws["C4"].value == 104.71 and ws["R8"].value == 75717
-    reg = wb["Sheet1"]
-    assert reg["B5"].value == "mool Chand yadav" and reg["G5"].value == 22343
     report = (cfg["paths"]["output"] / OCT / "sale Oct-2025 - check report.txt").read_text(encoding="utf-8")
     assert "03-10-2025  [OK]" in report and "04-10-2025  [ERROR]" in report
     assert "No photo for day(s): 1, 2, 5," in report
@@ -300,3 +298,25 @@ def test_same_photo_put_in_twice_is_not_duplicated(cfg):
     run(cfg, use_api=False, log=lambda *a: None)
     assert [p.name for p in (cfg["paths"]["raw"] / OCT).iterdir()] == ["03.jpeg"]
     assert not list(cfg["paths"]["input"].iterdir())
+
+
+def test_cash_qty_matches_owner_workbook(cfg):
+    """Q4:Q6 = sale qty - Paytm/ICICI/PhonePe/HP/udhar qty, as in the owner's final October file."""
+    from skfs_ocr.config import ROOT
+
+    ref = openpyxl.load_workbook(ROOT / "template" / "sample sale Oct-2025.xlsx")["3-10-2025"]
+    day = build_day(date(2025, 10, 3), [], fixture("day_clean.json"), cfg, load_parties(cfg))
+    v = day_cell_values(cfg, day)
+    for cell in ("Q4", "Q5", "Q6"):
+        assert v[cell] == pytest.approx(ref[cell].value, abs=1e-9)
+
+
+def test_template_keeps_owner_formulas():
+    from skfs_ocr.config import ROOT
+
+    ref = openpyxl.load_workbook(ROOT / "template" / "sample sale Oct-2025.xlsx")["1-10-2025"]
+    tpl = openpyxl.load_workbook(ROOT / "template" / "template.xlsx")["TEMPLATE"]
+    for row in ref.iter_rows():
+        for c in row:
+            if isinstance(c.value, str) and c.value.startswith("="):
+                assert tpl[c.coordinate].value == c.value, c.coordinate

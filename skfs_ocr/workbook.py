@@ -42,6 +42,21 @@ def sheet_name(cfg: dict, d) -> str:
         d=d.day, m=d.month, Y=d.year, dd=f"{d.day:02d}", mm=f"{d.month:02d}")
 
 
+def cash_qty(cfg: dict, day: Day) -> dict:
+    """Cash litres per fuel = sale litres - litres paid by Paytm, ICICI, PhonePe, HP card, udhar."""
+    if not cfg.get("cash_qty"):
+        return {}
+    share, p, r = cfg["petrol_share"], day.payments, day.rates
+    sold = day.fuel_totals
+    credit = {f: sum(row["amount"] for row in day.credit_rows if row["fuel"] == f) for f in r}
+    paid = {
+        "petrol": p["paytm"] * share["paytm"] + p["icici"] + p["phonepe"] * share["phonepe"],
+        "diesel": p["paytm"] * (1 - share["paytm"]) + p["hp_card"] + p["phonepe"] * (1 - share["phonepe"]),
+        "power": 0.0,
+    }
+    return {f: (sold[f] - paid[f] - credit[f]) / r[f] for f in ("petrol", "diesel", "power") if r[f]}
+
+
 def day_cell_values(cfg: dict, day: Day) -> dict:
     """Cell -> value for one day sheet (None = leave blank)."""
     c, cr = cfg["cells"], cfg["credit_rows"]
@@ -51,7 +66,8 @@ def day_cell_values(cfg: dict, day: Day) -> dict:
     values[c["rate_power"]] = day.rates["power"]
     for key in ("paytm", "hp_card", "icici", "phonepe", "cash", "credit"):
         values[c[key]] = day.payments[key]
-    values[c["icici_copy"]] = day.payments["icici"]
+    for fuel, ref in cash_qty(cfg, day).items():
+        values[cfg["cash_qty"][fuel]] = ref
 
     rows = c["nozzle_rows"]
     for fuel in ("petrol", "diesel", "power"):

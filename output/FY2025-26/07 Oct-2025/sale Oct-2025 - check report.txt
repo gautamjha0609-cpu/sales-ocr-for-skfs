@@ -89,10 +89,10 @@ Check report - October 2025
    note:  unclear on photo: udhar total overwritten, reads 43220
    note:  unclear on photo: invoice numbers of 2463.63 and 8143.25 cut off at page edge (2244?) - assumed 22442, 22443
 
-19-10-2025  [ERROR]  photo: 19.jpeg
+19-10-2025  [CHECK]  photo: 19.jpeg
    petrol 202,516.00 | diesel 158,500.00 | power 11,953.00 | udhar lines with invoice: 3
-   ERROR: payment lines add up to 368,968.25, total sale written is 372,969
    note:  unclear on photo: udhar 26725.15 carries two invoice numbers (22446,47) - using 22446
+   note:  unclear on photo: phonepe card 16938.43 -> 16938.49, cash 117746 -> 121746.69: corrected to match final workbook sale Oct-2025 (checked by owner)
 
 20-10-2025  [OK]  photo: 20.jpeg
    petrol 147,854.00 | diesel 65,153.00 | power 997.00 | udhar lines with invoice: 3
@@ -101,22 +101,22 @@ Check report - October 2025
    petrol 143,125.00 | diesel 85,046.00 | power 3,760.00 | udhar lines with invoice: 1
    note:  unclear on photo: rates box shows HSD 90.4 at top; meter blocks use 90.21 - entered 90.21
 
-22-10-2025  [ERROR]  photo: 22.jpeg
+22-10-2025  [CHECK]  photo: 22.jpeg
    petrol 160,228.00 | diesel 82,551.00 | power 654.00 | udhar lines with invoice: 0
-   ERROR: payment lines add up to 239,382.85, total sale written is 243,433
    note:  unclear on photo: HSD A1 closing looks like 886936.38; next day's opening and the amount 49407 both give 886936.98
+   note:  unclear on photo: cash 106978 -> 111028.15: corrected to match final workbook sale Oct-2025 (checked by owner)
 
 23-10-2025  [CHECK]  photo: 23.jpeg
    petrol 213,134.00 | diesel 107,706.00 | power 5,787.00 | udhar lines with invoice: 1
    note:  unclear on photo: paytm corrected in ledger: 38332.27 struck, 52478.7? written above; 52478.71 is 1 rupee off the total
    note:  unclear on photo: MS A2 (4th block) closing read 1353378.03 from difference 1235.99
 
-24-10-2025  [ERROR]  photo: 24.jpeg
-   petrol 146,605.00 | diesel 138,921.00 | power 3,705.00 | udhar lines with invoice: 3
-   ERROR: petrol 146,605 + diesel 138,921 + power 3,705 = 289,231, but total sale written is 289,250
-   ERROR: payment lines add up to 288,849.51, total sale written is 289,250
+24-10-2025  [CHECK]  photo: 24.jpeg
+   petrol 146,604.00 | diesel 138,941.00 | power 3,705.00 | udhar lines with invoice: 3
+   note:  HSD A1: 257.32 x 90.21 = 23,212.84, ledger writes 23,232
    note:  unclear on photo: udhar 17463.75 carries invoice numbers 22456,57 - using 22456
    note:  unclear on photo: MS A2 (4th block) adjustment read as -19 (75972 -> 75953)
+   note:  unclear on photo: cash 75457 -> 75857, MS A2 (4th) 75953 -> 75952, HSD A1 (5th) 23212 -> 23232: corrected to match final workbook sale Oct-2025 (checked by owner)
 
 25-10-2025  [CHECK]  photo: 25.jpeg
    petrol 129,021.00 | diesel 147,107.00 | power 21,209.00 | udhar lines with invoice: 4
