@@ -1,0 +1,152 @@
+{
+  "source": "2025-04-03.jpeg",
+  "sha256": "9d449fd4847c12b2e36f44cc9af965b9ed57a1ee3a87b345839d97a690f45722",
+  "read_by": "claude-code",
+  "extraction": {
+    "date_text": "3/4/25",
+    "weekday": null,
+    "rates": {
+      "petrol": 104.71,
+      "diesel": 90.21,
+      "power": 112.8
+    },
+    "nozzles": [
+      {
+        "label": "MSP A1",
+        "opening": 91096.59,
+        "closing": 91195.18,
+        "difference": 98.59,
+        "testing": 5,
+        "net_litres": 93.59,
+        "rate": 112.8,
+        "amount_written": 10556,
+        "adjustments": [],
+        "final_amount": 10556
+      },
+      {
+        "label": "MS A2",
+        "opening": 998749.45,
+        "closing": 999604.18,
+        "difference": 854.73,
+        "testing": 5,
+        "net_litres": 849.73,
+        "rate": 104.71,
+        "amount_written": 88975,
+        "adjustments": [],
+        "final_amount": 88975
+      },
+      {
+        "label": "HSD A1",
+        "opening": 766415.1,
+        "closing": 767104.31,
+        "difference": 689.21,
+        "testing": 5,
+        "net_litres": 684.21,
+        "rate": 90.21,
+        "amount_written": 61722,
+        "adjustments": [
+          -5
+        ],
+        "final_amount": 61717
+      },
+      {
+        "label": "MS A2",
+        "opening": 1158520.36,
+        "closing": 1159570.66,
+        "difference": 1050.3,
+        "testing": 5,
+        "net_litres": 1045.3,
+        "rate": 104.71,
+        "amount_written": 109453,
+        "adjustments": [],
+        "final_amount": 109453
+      },
+      {
+        "label": "HSD A1",
+        "opening": 715649.18,
+        "closing": 716212.48,
+        "difference": 563.3,
+        "testing": 5,
+        "net_litres": 558.3,
+        "rate": 90.21,
+        "amount_written": 50364,
+        "adjustments": [],
+        "final_amount": 50364
+      },
+      {
+        "label": "HSD A2",
+        "opening": 783720.33,
+        "closing": 784142.61,
+        "difference": 422.28,
+        "testing": 5,
+        "net_litres": 417.28,
+        "rate": 90.21,
+        "amount_written": 37642,
+        "adjustments": [],
+        "final_amount": 37642
+      }
+    ],
+    "sale_total": 358707,
+    "payments": {
+      "credit": 38090,
+      "icici": 18759.57,
+      "paytm_card": 8876.84,
+      "paytm": 71929.25,
+      "phonepe_card": 27252.97,
+      "phonepe": 63221.66,
+      "hp_card": null,
+      "cash": 130578
+    },
+    "other_payments": [],
+    "credit_entries": [
+      {
+        "amount": 100,
+        "party": "कालू जी",
+        "party_english": "Kalu ji",
+        "invoice_no": null,
+        "fuel": null
+      },
+      {
+        "amount": 3000,
+        "party": "हरी यादव (घर)",
+        "party_english": "Hari Kaka (ghar)",
+        "invoice_no": null,
+        "fuel": null
+      },
+      {
+        "amount": 3581,
+        "party": "MK सोलर",
+        "party_english": "mk Soler",
+        "invoice_no": "21302",
+        "fuel": null
+      },
+      {
+        "amount": 2309.37,
+        "party": "मूलचंद यादव",
+        "party_english": "mool Chand yadav",
+        "invoice_no": "21301",
+        "fuel": null
+      },
+      {
+        "amount": 25800.06,
+        "party": "प्रमोद यादव",
+        "party_english": "Pramod Yadav",
+        "invoice_no": "21303",
+        "fuel": null
+      },
+      {
+        "amount": 3299.88,
+        "party": "दिनेश जी",
+        "party_english": "dinesh",
+        "invoice_no": "21304",
+        "fuel": null
+      }
+    ],
+    "unclear": [
+      "date smudged; follows 2/4 by meter readings",
+      "ICICI read 18759.57 (payments then 1.29 over total)",
+      "a 3300 udhar line is struck out - left out",
+      "MS A2 (4th) closing written 1159570.66 here, next day opens 1159570.86"
+    ]
+  }
+}

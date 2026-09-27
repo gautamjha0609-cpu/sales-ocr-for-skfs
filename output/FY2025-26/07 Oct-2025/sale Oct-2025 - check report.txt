@@ -3,7 +3,7 @@ Check report - October 2025
 
 01-10-2025  [CHECK]  photo: 01.10.jpeg
    petrol 169,193.00 | diesel 120,044.00 | power 5,788.00 | udhar lines with invoice: 3
-   note:  udhar lines add up to 15,758.22, udhar total written is 21,758.21
+   note:  udhar lines add up to 15,758.22, udhar total written is 21,758.21  [one-digit fix would be: udhar line 1 12,054.63 -> 18,054.63; udhar line 3 3,180.04 -> 9,180.04]
    note:  new udhar party 'Moolchand Mali' (inv 22337) - add it to parties.yaml if correct
    note:  unclear on photo: third udhar name unclear: मूलचंद माली?
 
@@ -17,7 +17,7 @@ Check report - October 2025
 
 04-10-2025  [ERROR]  photo: 04.jpeg
    petrol 190,937.22 | diesel 179,337.47 | power 895.63 | udhar lines with invoice: 3
-   ERROR: petrol 190,937.22 + diesel 179,337.47 + power 895.63 = 371,170.32, but total sale written is 371,189
+   ERROR: petrol 190,937.22 + diesel 179,337.47 + power 895.63 = 371,170.32, but total sale written is 371,189  [one-digit fix would be: total 371,189 -> 371,169]
    note:  unclear on photo: payment box blurry: phonepe card 51608.11 / phonepe 68094.36 chosen because they make payments = total 371189
 
 05-10-2025  [ERROR]  photo: 05.jpeg
@@ -39,7 +39,7 @@ Check report - October 2025
 
 08-10-2025  [CHECK]  photo: 08.jpeg
    petrol 156,898.00 | diesel 130,922.00 | power 9,560.00 | udhar lines with invoice: 2
-   note:  udhar lines add up to 44,196.54, udhar total written is 44,197.77
+   note:  udhar lines add up to 44,196.54, udhar total written is 44,197.77  [one-digit fix would be: udhar line 1 3,500 -> 3,501; udhar line 1 3,500 -> 3,502; udhar line 1 3,500 -> 3,503; udhar line 1 3,500 -> 3,500.1; udhar line 1 3,500 -> 3,500.2; udhar line 1 3,500 -> 3,500.3]
    note:  unclear on photo: udhar total paise unclear (44197.?) - 44197.77 makes payments equal total
 
 09-10-2025  [CHECK]  photo: 09.jpeg
@@ -85,7 +85,7 @@ Check report - October 2025
 
 18-10-2025  [ERROR]  photo: 18.jpeg
    petrol 198,136.00 | diesel 159,238.00 | power 2,509.00 | udhar lines with invoice: 5
-   ERROR: payment lines add up to 359,873.53, total sale written is 359,883
+   ERROR: payment lines add up to 359,873.53, total sale written is 359,883  [one-digit fix would be: credit 43,220 -> 43,230; credit 43,220 -> 43,228; credit 43,220 -> 43,229; icici 16,250.59 -> 16,260.59; icici 16,250.59 -> 16,258.59; icici 16,250.59 -> 16,259.59]
    note:  unclear on photo: udhar total overwritten, reads 43220
    note:  unclear on photo: invoice numbers of 2463.63 and 8143.25 cut off at page edge (2244?) - assumed 22442, 22443
 
@@ -139,7 +139,7 @@ Check report - October 2025
 29-10-2025  [CHECK]  photo: 29.jpeg
    petrol 129,040.00 | diesel 194,966.00 | power 12,636.00 | udhar lines with invoice: 6
    note:  HSD A1: 460.16 x 90.21 = 41,511.03, ledger writes 41,556
-   note:  udhar lines add up to 95,651.01, udhar total written is 95,650
+   note:  udhar lines add up to 95,651.01, udhar total written is 95,650  [one-digit fix would be: udhar line 1 19,792 -> 19,790; udhar line 1 19,792 -> 19,791; udhar line 1 19,792 -> 19,792.1; udhar line 1 19,792 -> 19,792.2; udhar line 1 19,792 -> 19,792.3; udhar line 1 19,792 -> 19,792.4]
    note:  unclear on photo: udhar total looks like 95150; the udhar list and the day total both give 95650
    note:  unclear on photo: first udhar paise unclear (19792.0?)
 

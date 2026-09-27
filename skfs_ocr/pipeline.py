@@ -10,7 +10,7 @@ from pathlib import Path
 import jsonschema
 import yaml
 
-from .dates import guess_month, parse_month_folder, resolve_date
+from .dates import chain_dates, guess_month, parse_month_folder, resolve_date
 from .extract import (IMAGE_EXTS, ClaudeReader, ExtractionError, blank_extraction,
                       save_record, sha256)
 from .schema import EXTRACTION_SCHEMA
@@ -48,7 +48,17 @@ def cache_file(cfg: dict, photo: Path) -> Path:
     return cfg["paths"]["extracted"] / rel.parent / f"{rel.name}.json"
 
 
+def input_photos(cfg: dict) -> list[Path]:
+    """Photos in input/, numbered #1, #2 ... in this order (stable while filling)."""
+    return _photos(cfg["paths"]["input"])
+
+
 def find_photo(cfg: dict, name: str) -> Path | None:
+    """Accepts '#3' (number from `pending`), a file name, or a path."""
+    if name.startswith("#") and name[1:].isdigit():
+        photos = input_photos(cfg)
+        i = int(name[1:]) - 1
+        return photos[i] if 0 <= i < len(photos) else None
     p = Path(name)
     if p.exists():
         return p.resolve()
@@ -58,20 +68,22 @@ def find_photo(cfg: dict, name: str) -> Path | None:
     return None
 
 
-def archive(cfg: dict, photo: Path, year: int, month: int, log) -> Path:
-    """Move a photo from input/ to raw_data/FY.../MM Mon-YYYY/ together with its reading."""
-    dest_dir = cfg["paths"]["raw"] / month_dir(cfg, year, month)
+def archive(cfg: dict, photo: Path, day: date, log) -> Path:
+    """Move a photo from input/ to raw_data/FY.../MM Mon-YYYY/<yyyy-mm-dd>.jpg with its
+    reading. The date in the file name means it never has to be worked out again."""
+    dest_dir = cfg["paths"]["raw"] / month_dir(cfg, day.year, day.month)
     dest_dir.mkdir(parents=True, exist_ok=True)
     src_json = cache_file(cfg, photo)
-    dest = dest_dir / photo.name
+    dest = dest_dir / f"{day:%Y-%m-%d}{photo.suffix.lower()}"
+    if dest.exists() and sha256(dest) != sha256(photo):
+        n = 2
+        while (dest_dir / f"{day:%Y-%m-%d} ({n}){photo.suffix.lower()}").exists():
+            n += 1
+        dest = dest_dir / f"{day:%Y-%m-%d} ({n}){photo.suffix.lower()}"
     if dest.exists() and sha256(dest) == sha256(photo):     # same photo put in twice
         photo.unlink()
         src_json.unlink(missing_ok=True)
         return dest
-    n = 2
-    while dest.exists():
-        dest = dest_dir / f"{photo.stem} ({n}){photo.suffix}"
-        n += 1
     shutil.move(str(photo), dest)
     dest_json = cache_file(cfg, dest)
     dest_json.parent.mkdir(parents=True, exist_ok=True)
@@ -202,9 +214,9 @@ def run(cfg: dict, use_api: bool | None = None, log=print) -> int:
         n_err, placed = build_month(cfg, book, year, month, items, unread, log)
         exit_code |= int(n_err > 0)
         if cfg["workbook"].get("archive_input", True):
-            for photo in placed:
+            for photo, day in placed:
                 if in_input(cfg, photo):
-                    archive(cfg, photo, year, month, log)
+                    archive(cfg, photo, day, log)
                     moved += 1
     if moved:
         clean_empty_dirs(cfg["paths"]["input"])
@@ -221,14 +233,22 @@ def run(cfg: dict, use_api: bool | None = None, log=print) -> int:
     return exit_code
 
 
-def build_month(cfg, book, year, month, items, unread, log) -> tuple[int, list[Path]]:
+def build_month(cfg, book, year, month, items, unread, log) -> tuple[int, list]:
     """Write the month's workbook and report; return (errors, photos placed in the workbook)."""
     per_date: dict[date, list] = defaultdict(list)
-    placed: list[Path] = []
+    placed: list = []                   # (photo, date)
     date_errors = []
     date_warn: dict[date, list] = defaultdict(list)
+    resolved = []
     for photo, ext in items:
         d, errs, warns = resolve_date(photo.stem, ext, year, month)
+        resolved.append((photo, ext, d, errs, warns))
+    # meter chain fills missing dates and corrects misread ones
+    chained, chain_notes = chain_dates([(p.name, e, d) for p, e, d, _, _ in resolved])
+    notes_by_photo = defaultdict(list)
+    for note in chain_notes:
+        notes_by_photo[note.split(": ", 1)[0]].append(note.split(": ", 1)[1])
+    for (photo, ext, _, errs, warns), d in zip(resolved, chained):
         if d is None:
             date_errors += [f"{photo.name}: {e}" for e in errs]
             continue
@@ -236,8 +256,8 @@ def build_month(cfg, book, year, month, items, unread, log) -> tuple[int, list[P
             date_errors.append(f"{photo.name}: date {d:%d-%m-%Y} is outside {year}-{month:02d}")
             continue
         per_date[d].append((photo.name, ext))
-        placed.append(photo)
-        date_warn[d] += warns
+        placed.append((photo, d))
+        date_warn[d] += notes_by_photo[photo.name] + [w for w in warns if not notes_by_photo[photo.name]]
 
     days: list[Day] = []
     for d, group in sorted(per_date.items()):

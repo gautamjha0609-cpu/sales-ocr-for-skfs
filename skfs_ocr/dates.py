@@ -66,7 +66,11 @@ def parse_page_date(text: str | None, year: int | None, month: int | None) -> da
 
 
 def parse_file_date(stem: str, year: int | None, month: int | None) -> date | None:
-    m = _YMD.search(stem)
+    """Only names that ARE a date count. Camera/WhatsApp names such as
+    "WhatsApp Image 2025-05-15 at 21.53.51" carry the sending date, not the
+    ledger date, so they are ignored and the date written on the page is used."""
+    stem = stem.strip()
+    m = re.fullmatch(r"(20\d{2})[-_.](\d{1,2})[-_.](\d{1,2})(?:[\s_-]*\(\d+\)|[\s_-]*[a-z])?", stem, re.I)
     if m:
         return _make(*m.groups())
     m = _NAME.match(stem.strip())
@@ -105,3 +109,61 @@ def resolve_date(stem: str, extraction: dict, year: int, month: int) -> tuple[da
         warnings.append(f"page weekday {weekday} does not match {chosen:%d-%m-%Y} "
                         f"({WEEKDAYS[chosen.weekday()]})")
     return chosen, errors, warnings
+
+
+# ---- dating pages by meter readings -----------------------------------------
+
+def _readings(ext: dict) -> tuple[set, set]:
+    op, cl = set(), set()
+    for nz in ext.get("nozzles") or []:
+        if nz.get("opening") is not None:
+            op.add(round(float(nz["opening"]), 2))
+        if nz.get("closing") is not None:
+            cl.add(round(float(nz["closing"]), 2))
+    return op, cl
+
+
+def follows(prev: dict, nxt: dict, min_match: int = 3) -> bool:
+    """True if `nxt` opens where `prev` closed (at least `min_match` meters agree)."""
+    return len(_readings(prev)[1] & _readings(nxt)[0]) >= min_match
+
+
+def chain_dates(items: list[tuple[str, dict, date | None]]) -> tuple[list[date | None], list[str]]:
+    """Fix or fill dates using the meter chain: every day opens where the day
+    before closed. Pages are linked into runs; each run takes the date offset
+    most of its dated pages agree on. So a smudged or missing date (WhatsApp
+    file names, "?/4/25") gets the right day, and a misread date is corrected.
+
+    items: (name, extraction, date from file name / page or None)
+    returns: (dates, notes)"""
+    n = len(items)
+    nxt = [None] * n
+    prv = [None] * n
+    for i in range(n):
+        for j in range(n):
+            if i != j and nxt[i] is None and prv[j] is None and follows(items[i][1], items[j][1]):
+                nxt[i], prv[j] = j, i
+    dates = [d for _, _, d in items]
+    notes = []
+    seen = set()
+    for start in range(n):
+        if prv[start] is not None or start in seen:
+            continue
+        run, k = [], start
+        while k is not None and k not in seen:
+            seen.add(k)
+            run.append(k)
+            k = nxt[k]
+        votes = Counter(dates[k].toordinal() - pos for pos, k in enumerate(run) if dates[k])
+        if not votes or len(run) == 1:
+            continue
+        offset = votes.most_common(1)[0][0]
+        for pos, k in enumerate(run):
+            chained = date.fromordinal(offset + pos)
+            if dates[k] is None:
+                notes.append(f"{items[k][0]}: no readable date - dated {chained:%d-%m-%Y} by meter readings")
+            elif dates[k] != chained:
+                notes.append(f"{items[k][0]}: page/file says {dates[k]:%d-%m-%Y} but meter readings "
+                             f"give {chained:%d-%m-%Y} - using meter readings")
+            dates[k] = chained
+    return dates, notes

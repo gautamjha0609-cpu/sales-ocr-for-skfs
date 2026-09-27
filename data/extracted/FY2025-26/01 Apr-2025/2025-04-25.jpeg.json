@@ -1,0 +1,170 @@
+{
+  "source": "2025-04-25.jpeg",
+  "sha256": "693cd1775fd6424a1b287f36ebf5137f7d52d64aecda9fc90c0559a2aa2fc5b5",
+  "read_by": "claude-code",
+  "extraction": {
+    "date_text": "25/4/25",
+    "weekday": null,
+    "rates": {
+      "petrol": 104.71,
+      "diesel": 90.21,
+      "power": 112.8
+    },
+    "nozzles": [
+      {
+        "label": "MSP A1",
+        "opening": 92204.19,
+        "closing": 92236.79,
+        "difference": 32.6,
+        "testing": 5,
+        "net_litres": 27.6,
+        "rate": 112.8,
+        "amount_written": 3113,
+        "adjustments": [],
+        "final_amount": 3113
+      },
+      {
+        "label": "MS A2",
+        "opening": 1017069.13,
+        "closing": 1017792.49,
+        "difference": 723.36,
+        "testing": 5,
+        "net_litres": 718.36,
+        "rate": 104.71,
+        "amount_written": 75219,
+        "adjustments": [],
+        "final_amount": 75219
+      },
+      {
+        "label": "HSD A1",
+        "opening": 780333.08,
+        "closing": 781043.66,
+        "difference": 710.58,
+        "testing": 5,
+        "net_litres": 705.58,
+        "rate": 90.21,
+        "amount_written": 63650,
+        "adjustments": [],
+        "final_amount": 63650
+      },
+      {
+        "label": "MS A2",
+        "opening": 1182873.8,
+        "closing": 1184022.48,
+        "difference": 1148.68,
+        "testing": 5,
+        "net_litres": 1143.68,
+        "rate": 104.71,
+        "amount_written": 119754,
+        "adjustments": [
+          -7
+        ],
+        "final_amount": 119747
+      },
+      {
+        "label": "HSD A1",
+        "opening": 732810.56,
+        "closing": 733929.44,
+        "difference": 1118.88,
+        "testing": 5,
+        "net_litres": 1113.88,
+        "rate": 90.21,
+        "amount_written": 100483,
+        "adjustments": [],
+        "final_amount": 100483
+      },
+      {
+        "label": "HSD A2",
+        "opening": 798043.86,
+        "closing": 798789.62,
+        "difference": 745.76,
+        "testing": 5,
+        "net_litres": 740.76,
+        "rate": 90.21,
+        "amount_written": 66823,
+        "adjustments": [],
+        "final_amount": 66823
+      }
+    ],
+    "sale_total": 429035,
+    "payments": {
+      "credit": 111310.76,
+      "icici": 12462.39,
+      "paytm_card": 4839,
+      "paytm": 66033.23,
+      "phonepe_card": 26115,
+      "phonepe": 62553.1,
+      "hp_card": 896,
+      "cash": 144825
+    },
+    "other_payments": [],
+    "credit_entries": [
+      {
+        "amount": 26538.87,
+        "party": "पिपलोदा कस्बा",
+        "party_english": "Piploda",
+        "invoice_no": "21431",
+        "fuel": null
+      },
+      {
+        "amount": 43260.64,
+        "party": "पिपलोदा कस्बा",
+        "party_english": "Piploda",
+        "invoice_no": "21432",
+        "fuel": null
+      },
+      {
+        "amount": 5500.19,
+        "party": "शंकर यादव",
+        "party_english": "monu",
+        "invoice_no": "21434",
+        "fuel": null
+      },
+      {
+        "amount": 21440.21,
+        "party": "सीता देवी",
+        "party_english": "Sita Devi",
+        "invoice_no": "21435",
+        "fuel": null
+      },
+      {
+        "amount": 4009.83,
+        "party": "श्री श्याम ट्रांसपोर्ट",
+        "party_english": "Shyam Tran.",
+        "invoice_no": "21437",
+        "fuel": null
+      },
+      {
+        "amount": 460.73,
+        "party": "मूलचंद यादव",
+        "party_english": "mool Chand yadav",
+        "invoice_no": "21441",
+        "fuel": null
+      },
+      {
+        "amount": 3350.39,
+        "party": "दिनेश यादव",
+        "party_english": "dinesh",
+        "invoice_no": "21442",
+        "fuel": null
+      },
+      {
+        "amount": 3750,
+        "party": "मोहित नाला",
+        "party_english": "Mohit Yadav",
+        "invoice_no": null,
+        "fuel": null
+      },
+      {
+        "amount": 3000,
+        "party": "सरदार सेठिया",
+        "party_english": "Sardar Sethiya",
+        "invoice_no": null,
+        "fuel": null
+      }
+    ],
+    "unclear": [
+      "Piploda 43260.64 line carries invoices 21432,33 - using 21432"
+    ]
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "source": "2025-04-04.jpeg",
+  "sha256": "7d70224ae6022bf09d9e88bd41b8ceffb2c05236912c70605cc3a586f0fcefbb",
+  "read_by": "claude-code",
+  "extraction": {
+    "date_text": "4/4/25",
+    "weekday": null,
+    "rates": {
+      "petrol": 104.71,
+      "diesel": 90.21,
+      "power": 112.8
+    },
+    "nozzles": [
+      {
+        "label": "MSP A1",
+        "opening": 91195.18,
+        "closing": 91214.85,
+        "difference": 19.67,
+        "testing": 5,
+        "net_litres": 14.67,
+        "rate": 112.8,
+        "amount_written": 1654,
+        "adjustments": [],
+        "final_amount": 1654
+      },
+      {
+        "label": "MS A2",
+        "opening": 999604.18,
+        "closing": 1000537.23,
+        "difference": 933.05,
+        "testing": 5,
+        "net_litres": 928.05,
+        "rate": 104.71,
+        "amount_written": 97176,
+        "adjustments": [],
+        "final_amount": 97176
+      },
+      {
+        "label": "HSD A1",
+        "opening": 767104.31,
+        "closing": 767660.18,
+        "difference": 555.87,
+        "testing": 5,
+        "net_litres": 550.87,
+        "rate": 90.21,
+        "amount_written": 49693,
+        "adjustments": [],
+        "final_amount": 49693
+      },
+      {
+        "label": "MS A2",
+        "opening": 1159570.86,
+        "closing": 1160664.64,
+        "difference": 1093.78,
+        "testing": 5,
+        "net_litres": 1088.78,
+        "rate": 104.71,
+        "amount_written": 114008,
+        "adjustments": [
+          -7
+        ],
+        "final_amount": 114001
+      },
+      {
+        "label": "HSD A1",
+        "opening": 716212.48,
+        "closing": 717445.69,
+        "difference": 1233.21,
+        "testing": 5,
+        "net_litres": 1228.21,
+        "rate": 90.21,
+        "amount_written": 110796,
+        "adjustments": [],
+        "final_amount": 110796
+      },
+      {
+        "label": "HSD A2",
+        "opening": 784142.61,
+        "closing": 784999.82,
+        "difference": 857.21,
+        "testing": 5,
+        "net_litres": 852.21,
+        "rate": 90.21,
+        "amount_written": 76877,
+        "adjustments": [],
+        "final_amount": 76877
+      }
+    ],
+    "sale_total": 450197,
+    "payments": {
+      "credit": 101202,
+      "icici": 19935.95,
+      "paytm_card": 2217.21,
+      "paytm": 67123.23,
+      "phonepe_card": 36106,
+      "phonepe": 61865.41,
+      "hp_card": 13600,
+      "cash": 148149
+    },
+    "other_payments": [],
+    "credit_entries": [
+      {
+        "amount": 9120.23,
+        "party": "मूलचंद यादव",
+        "party_english": "mool Chand yadav",
+        "invoice_no": "21308",
+        "fuel": null
+      },
+      {
+        "amount": 2492.5,
+        "party": "मूलचंद यादव",
+        "party_english": "mool Chand yadav",
+        "invoice_no": "21310",
+        "fuel": null
+      },
+      {
+        "amount": 20000,
+        "party": "पिपलोदा",
+        "party_english": "Piploda",
+        "invoice_no": "21309",
+        "fuel": null
+      },
+      {
+        "amount": 33483.24,
+        "party": "पिपलोदा",
+        "party_english": "Piploda",
+        "invoice_no": "21311",
+        "fuel": null
+      },
+      {
+        "amount": 26000.32,
+        "party": "प्रमोद यादव",
+        "party_english": "Pramod Yadav",
+        "invoice_no": "21312",
+        "fuel": null
+      },
+      {
+        "amount": 3400.01,
+        "party": "दिनेश यादव",
+        "party_english": "dinesh",
+        "invoice_no": "21315",
+        "fuel": null
+      },
+      {
+        "amount": 3250.0,
+        "party": "मूलचंद यादव",
+        "party_english": "mool Chand yadav",
+        "invoice_no": "21314",
+        "fuel": null
+      },
+      {
+        "amount": 3455.43,
+        "party": "Balaji care and cure",
+        "party_english": "Balaji Care and Cure",
+        "invoice_no": "21313",
+        "fuel": null
+      }
+    ],
+    "unclear": [
+      "date smudged; follows 3/4 by meter readings",
+      "first udhar amount faint (9120.23?)",
+      "MS A2 (4th) adjustment written like -5 but 114008 -> 114001 is -7"
+    ]
+  }
+}

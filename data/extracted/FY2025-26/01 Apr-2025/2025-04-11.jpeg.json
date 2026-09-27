@@ -1,0 +1,164 @@
+{
+  "source": "2025-04-11.jpeg",
+  "sha256": "6e1ac4f5270e0c2ec3866ea747a9dc1a336baa19bb1d4d760bc6a684de4c7977",
+  "read_by": "claude-code",
+  "extraction": {
+    "date_text": "11/4/25",
+    "weekday": null,
+    "rates": {
+      "petrol": 104.71,
+      "diesel": 90.21,
+      "power": 112.8
+    },
+    "nozzles": [
+      {
+        "label": "MSP A1",
+        "opening": 91511.67,
+        "closing": 91559.96,
+        "difference": 48.29,
+        "testing": 5,
+        "net_litres": 43.29,
+        "rate": 112.8,
+        "amount_written": 4883,
+        "adjustments": [],
+        "final_amount": 4883
+      },
+      {
+        "label": "MS A2",
+        "opening": 1005651.15,
+        "closing": 1006328.47,
+        "difference": 677.32,
+        "testing": 5,
+        "net_litres": 672.32,
+        "rate": 104.71,
+        "amount_written": 70398,
+        "adjustments": [],
+        "final_amount": 70398
+      },
+      {
+        "label": "HSD A1",
+        "opening": 771099.24,
+        "closing": 772009.57,
+        "difference": 910.33,
+        "testing": 5,
+        "net_litres": 905.33,
+        "rate": 90.21,
+        "amount_written": 81669,
+        "adjustments": [],
+        "final_amount": 81669
+      },
+      {
+        "label": "MS A2",
+        "opening": 1167290.34,
+        "closing": 1168538.94,
+        "difference": 1248.6,
+        "testing": 5,
+        "net_litres": 1243.6,
+        "rate": 104.71,
+        "amount_written": 130217,
+        "adjustments": [
+          -6
+        ],
+        "final_amount": 130211
+      },
+      {
+        "label": "HSD A1",
+        "opening": 721987.84,
+        "closing": 722680.56,
+        "difference": 692.72,
+        "testing": 5,
+        "net_litres": 687.72,
+        "rate": 90.21,
+        "amount_written": 62039,
+        "adjustments": [],
+        "final_amount": 62039
+      },
+      {
+        "label": "HSD A2",
+        "opening": 789527.38,
+        "closing": 789650.33,
+        "difference": 122.95,
+        "testing": 5,
+        "net_litres": 117.95,
+        "rate": 90.21,
+        "amount_written": 10640,
+        "adjustments": [],
+        "final_amount": 10640
+      }
+    ],
+    "sale_total": 359840,
+    "payments": {
+      "credit": 54675.32,
+      "icici": 13719.55,
+      "paytm_card": 10008.09,
+      "paytm": 59519.33,
+      "phonepe_card": 11000,
+      "phonepe": 65774.9,
+      "hp_card": 6486,
+      "cash": 138656
+    },
+    "other_payments": [],
+    "credit_entries": [
+      {
+        "amount": 7494.64,
+        "party": "पीपलोदा कस्बा",
+        "party_english": "Piploda",
+        "invoice_no": "21349",
+        "fuel": null
+      },
+      {
+        "amount": 3980.96,
+        "party": "MK सोलर",
+        "party_english": "mk Soler",
+        "invoice_no": "21350",
+        "fuel": null
+      },
+      {
+        "amount": 20500.22,
+        "party": "सीताराम यादव",
+        "party_english": "Sitaram Yadav",
+        "invoice_no": "21351",
+        "fuel": null
+      },
+      {
+        "amount": 10002.48,
+        "party": "सीताराम यादव",
+        "party_english": "Sitaram Yadav",
+        "invoice_no": "21352",
+        "fuel": null
+      },
+      {
+        "amount": 3396.4,
+        "party": "दिनेश यादव",
+        "party_english": "dinesh",
+        "invoice_no": "21353",
+        "fuel": null
+      },
+      {
+        "amount": 3799.64,
+        "party": "दिनेश यादव",
+        "party_english": "dinesh",
+        "invoice_no": "21354",
+        "fuel": null
+      },
+      {
+        "amount": 3000.98,
+        "party": "Balaji care and cure",
+        "party_english": "Balaji Care and Cure",
+        "invoice_no": "21355",
+        "fuel": null
+      },
+      {
+        "amount": 2500,
+        "party": "मोहन प्रभु लाला",
+        "party_english": "Mohan Prabhu Lala",
+        "invoice_no": null,
+        "fuel": null
+      }
+    ],
+    "unclear": [
+      "Piploda invoice read 21349 - same number as a 10/4 line, one of them is likely 21346",
+      "udhar 21352 and 21354 names unclear"
+    ]
+  }
+}

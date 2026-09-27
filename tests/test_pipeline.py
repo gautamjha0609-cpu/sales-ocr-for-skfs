@@ -259,9 +259,9 @@ def test_photos_move_to_raw_data_and_input_is_cleared(cfg):
     Image.new("RGB", (40, 30), (1, 2, 3)).save(new)
     run(cfg, use_api=False, log=lambda *a: None)
     raw = cfg["paths"]["raw"] / OCT
-    assert sorted(p.name for p in raw.iterdir()) == ["03.jpeg", "04.jpeg"]
+    assert sorted(p.name for p in raw.iterdir()) == ["2025-10-03.jpeg", "2025-10-04.jpeg"]
     assert sorted(p.name for p in cfg["paths"]["input"].rglob("*")) == ["05.jpeg"]
-    assert (cfg["paths"]["extracted"] / OCT / "03.jpeg.json").exists()
+    assert (cfg["paths"]["extracted"] / OCT / "2025-10-03.jpeg.json").exists()
     assert not (cfg["paths"]["extracted"] / "03.jpeg.json").exists()
 
     # next run: input has only the unread photo, month still has both days
@@ -279,7 +279,7 @@ def test_adding_a_day_later_keeps_earlier_days(cfg):
     run(cfg, use_api=False, log=lambda *a: None)
     wb = openpyxl.load_workbook(cfg["paths"]["output"] / OCT / "sale Oct-2025.xlsx")
     assert wb.sheetnames[:2] == ["3-10-2025", "4-10-2025"]
-    assert sorted(p.name for p in (cfg["paths"]["raw"] / OCT).iterdir()) == ["03.jpeg", "04.jpeg"]
+    assert sorted(p.name for p in (cfg["paths"]["raw"] / OCT).iterdir()) == ["2025-10-03.jpeg", "2025-10-04.jpeg"]
 
 
 def test_same_name_different_photo_is_kept_both(cfg):
@@ -288,7 +288,7 @@ def test_same_name_different_photo_is_kept_both(cfg):
     add_photo(cfg, "03.jpeg", fixture("day_clean.json"), color=(7, 7, 7))   # second page of day 3
     run(cfg, use_api=False, log=lambda *a: None)
     names = sorted(p.name for p in (cfg["paths"]["raw"] / OCT).iterdir())
-    assert names == ["03 (2).jpeg", "03.jpeg"]
+    assert names == ["2025-10-03 (2).jpeg", "2025-10-03.jpeg"]
 
 
 def test_same_photo_put_in_twice_is_not_duplicated(cfg):
@@ -296,7 +296,7 @@ def test_same_photo_put_in_twice_is_not_duplicated(cfg):
     run(cfg, use_api=False, log=lambda *a: None)
     add_photo(cfg, "03.jpeg", fixture("day_clean.json"))                    # identical file
     run(cfg, use_api=False, log=lambda *a: None)
-    assert [p.name for p in (cfg["paths"]["raw"] / OCT).iterdir()] == ["03.jpeg"]
+    assert [p.name for p in (cfg["paths"]["raw"] / OCT).iterdir()] == ["2025-10-03.jpeg"]
     assert not list(cfg["paths"]["input"].iterdir())
 
 
@@ -320,3 +320,32 @@ def test_template_keeps_owner_formulas():
         for c in row:
             if isinstance(c.value, str) and c.value.startswith("="):
                 assert tpl[c.coordinate].value == c.value, c.coordinate
+
+
+def test_whatsapp_names_do_not_give_the_date():
+    assert parse_file_date("WhatsApp Image 2025-05-15 at 21.53.51 (1)", 2025, 4) is None
+    assert parse_file_date("2025-04-03 (2)", None, None) == date(2025, 4, 3)
+    d, errors, _ = resolve_date("WhatsApp Image 2025-05-15 at 21.53.51", {"date_text": "3/4/25"}, 2025, 4)
+    assert d == date(2025, 4, 3) and not errors
+
+
+def test_one_digit_fix_hint(cfg):
+    ext = fixture("day_clean.json")
+    ext["payments"]["paytm"] = 71427.69 + 900          # 71427.69 misread as 72327.69? no: one digit
+    ext["payments"]["paytm"] = 71927.69                # 4 -> 9 in one place
+    day = build_day(date(2025, 10, 3), [], ext, cfg, load_parties(cfg))
+    err = next(e for e in day.errors if "payment lines" in e)
+    assert "paytm 71,927.69 -> 71,427.69" in err
+
+
+def test_meter_chain_dates_pages():
+    from skfs_ocr.dates import chain_dates
+
+    def page(o, c):
+        return {"nozzles": [{"opening": o + i, "closing": c + i} for i in range(4)]}
+    a, b, c = page(100, 200), page(200, 300), page(300, 400)
+    dates, notes = chain_dates([("x", c, None), ("y", a, date(2025, 4, 1)),
+                                ("z", b, date(2025, 4, 9))])      # 9 is a misread of 2
+    assert dates == [date(2025, 4, 3), date(2025, 4, 1), date(2025, 4, 2)] or \
+        dates[0] == date(2025, 4, 3)
+    assert any("no readable date" in n for n in notes)

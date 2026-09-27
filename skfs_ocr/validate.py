@@ -10,6 +10,7 @@ A misread digit almost always breaks at least one of these.
 """
 import difflib
 import re
+from collections import Counter
 from dataclasses import dataclass, field
 from datetime import date
 
@@ -60,6 +61,38 @@ def _fuel_by_rate(rate, rates: dict) -> str | None:
         if rates.get(f) is not None and abs(rates[f] - rate) < 0.011:
             return f
     return None
+
+
+def _digit_variants(v: float):
+    """Every number that differs from v in exactly one digit (same length)."""
+    x = f"{v:.2f}"
+    for i, ch in enumerate(x):
+        if not ch.isdigit():
+            continue
+        for d in "0123456789":
+            if d != ch and not (i == 0 and d == "0"):
+                yield float(x[:i] + d + x[i + 1:])
+
+
+def fix_hints(values: dict, total: float | None, excess: float, tol: float = 2.0) -> list[str]:
+    """Which single number, changed in ONE digit, would make the check balance.
+    `excess` = sum(values) - total. Tells the reader exactly which digit to zoom into."""
+    hints = []
+    for label, v in values.items():
+        if not v:
+            continue
+        for cand in _digit_variants(v):
+            if abs(excess - (v - cand)) <= tol:
+                hints.append(f"{label} {_fmt(v)} -> {_fmt(cand)}")
+    if total:
+        for cand in _digit_variants(total):
+            if abs(excess + (total - cand)) <= tol:
+                hints.append(f"total {_fmt(total)} -> {_fmt(cand)}")
+    return hints[:6]
+
+
+def _with_hints(msg: str, hints: list[str]) -> str:
+    return msg + (f"  [one-digit fix would be: {'; '.join(hints)}]" if hints else "")
 
 
 class PartyBook:
@@ -194,6 +227,7 @@ def build_day(d: date, sources: list[str], ext: dict, cfg: dict, book: PartyBook
         day.rates[f] = r
 
     # meter blocks -> H/I/J 13..15
+    proven = set()
     for nz in ext.get("nozzles") or []:
         day.readings.append((nz.get("label") or "?", _n(nz.get("opening")), _n(nz.get("closing"))))
         fuel, amount, errs, warns = check_nozzle(nz, day.rates, tol)
@@ -201,6 +235,8 @@ def build_day(d: date, sources: list[str], ext: dict, cfg: dict, book: PartyBook
         day.warnings += warns
         if fuel and amount is not None:
             day.nozzles[fuel].append((nz.get("label") or "?", amount))
+            if not errs and not warns and nz.get("amount_written") is not None:
+                proven.add(f"{nz.get('label') or '?'} ({fuel})")   # litres x rate confirms it
     if not any(day.nozzles.values()):
         day.errors.append("no meter blocks read")
 
@@ -210,9 +246,14 @@ def build_day(d: date, sources: list[str], ext: dict, cfg: dict, book: PartyBook
         day.errors.append("total sale (first line of payment box) missing")
     elif abs(fuel_sum - sale_total) > tol["day_total"]:
         t = day.fuel_totals
-        day.errors.append(
+        boxed = {f"{label} ({fuel})": amt for fuel in FUELS for label, amt in day.nozzles[fuel]}
+        boxed = {k: v for k, v in boxed.items() if k not in proven}
+        fuel_msg = _with_hints(
             f"petrol {_fmt(t['petrol'])} + diesel {_fmt(t['diesel'])} + power {_fmt(t['power'])} "
-            f"= {_fmt(fuel_sum)}, but total sale written is {_fmt(sale_total)}")
+            f"= {_fmt(fuel_sum)}, but total sale written is {_fmt(sale_total)}",
+            fix_hints(boxed, sale_total, fuel_sum - sale_total))
+    else:
+        fuel_msg = None
 
     # payment box -> row 8
     p = {k: _n(v) for k, v in (ext.get("payments") or {}).items()}
@@ -232,16 +273,28 @@ def build_day(d: date, sources: list[str], ext: dict, cfg: dict, book: PartyBook
         if amt:
             day.errors.append(f"payment line {label!r} = {_fmt(amt)} has no column in the sheet")
     paid = round(sum(day.payments.values()) + sum(a or 0 for _, a in others), 2)
+    pay_msg = None
     if sale_total is not None and abs(paid - sale_total) > tol["payments"]:
-        day.errors.append(f"payment lines add up to {_fmt(paid)}, total sale written is {_fmt(sale_total)}")
+        pay_msg = _with_hints(
+            f"payment lines add up to {_fmt(paid)}, total sale written is {_fmt(sale_total)}",
+            fix_hints({k: p.get(k) for k in p}, sale_total, paid - sale_total))
+    if fuel_msg and pay_msg and abs(fuel_sum - paid) <= tol["payments"] + tol["day_total"]:
+        # meters and payments agree with each other: only the written total is off
+        day.errors.append(f"total sale written {_fmt(sale_total)} is wrong: meters give {_fmt(fuel_sum)} "
+                          f"and payments give {_fmt(paid)} (check the total, the rest agrees)")
+    else:
+        day.errors += [m for m in (fuel_msg, pay_msg) if m]
 
     # udhar list -> rows 15..25
     entries = ext.get("credit_entries") or []
     day.credit_all_total = round(sum(float(e["amount"]) for e in entries), 2)
     if abs(day.credit_all_total - day.payments["credit"]) > tol["credit_list"]:
         # common in the ledger (udhar given elsewhere on the page), so a note, not an error
-        day.warnings.append(f"udhar lines add up to {_fmt(day.credit_all_total)}, "
-                            f"udhar total written is {_fmt(day.payments['credit'])}")
+        lines = {f"udhar line {i + 1}": float(e["amount"]) for i, e in enumerate(entries)}
+        day.warnings.append(_with_hints(
+            f"udhar lines add up to {_fmt(day.credit_all_total)}, "
+            f"udhar total written is {_fmt(day.payments['credit'])}",
+            fix_hints(lines, day.payments["credit"], day.credit_all_total - day.payments["credit"])))
     for e in entries:
         inv = str(e.get("invoice_no") or "").strip()
         inv = re.sub(r"[^\d]", "", inv)
@@ -261,6 +314,18 @@ def build_day(d: date, sources: list[str], ext: dict, cfg: dict, book: PartyBook
     if len(day.credit_rows) > n_rows:
         day.errors.append(f"{len(day.credit_rows)} invoiced udhar lines but the sheet has only {n_rows} rows")
 
+    # a fix suggested by two independent checks is almost certainly the misread
+    values = Counter()
+    for msg in day.errors + day.warnings:
+        m = re.search(r"\[one-digit fix would be: (.*)\]", msg)
+        if m:
+            for v in {h.rsplit(" ", 3)[-3] + "->" + h.rsplit(" ", 1)[-1] for h in m.group(1).split("; ")}:
+                values[v] += 1
+    for v, n in values.items():
+        if n >= 2:
+            old, new = v.split("->")
+            day.errors.insert(0, f"LIKELY MISREAD: {old} should be {new} (two separate checks agree)")
+
     for note in ext.get("unclear") or []:
         day.warnings.append(f"unclear on photo: {note}")
     return day
@@ -275,6 +340,17 @@ def month_checks(days: list[Day]) -> None:
         for (label, _, closing), (_, opening, _) in zip(prev.readings, day.readings):
             if closing is not None and opening is not None and abs(closing - opening) > 0.001:
                 day.warnings.append(f"{label}: opening {_fmt(opening)} but previous day closed at {_fmt(closing)}")
+    told = set()
+    for day in days:
+        keep = []
+        for w in day.warnings:
+            if w.startswith("new udhar party"):
+                name = w.split("'")[1]
+                if name in told:
+                    continue
+                told.add(name)
+            keep.append(w)
+        day.warnings = keep
     seen = {}
     for day in days:
         for row in day.credit_rows:

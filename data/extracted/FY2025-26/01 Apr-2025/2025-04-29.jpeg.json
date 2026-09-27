@@ -1,0 +1,118 @@
+{
+  "source": "2025-04-29.jpeg",
+  "sha256": "fb4feec8e1e23972c73421fbf5acf4011dae8c8443ac6d8ae394ed54e21a021d",
+  "read_by": "claude-code",
+  "extraction": {
+    "date_text": "29/4/25",
+    "weekday": null,
+    "rates": {
+      "petrol": 104.71,
+      "diesel": 90.21,
+      "power": 112.8
+    },
+    "nozzles": [
+      {
+        "label": "MSP A1",
+        "opening": 92377.72,
+        "closing": 92466.14,
+        "difference": 88.42,
+        "testing": 5,
+        "net_litres": 83.42,
+        "rate": 112.8,
+        "amount_written": 9409,
+        "adjustments": [],
+        "final_amount": 9409
+      },
+      {
+        "label": "MS A2",
+        "opening": 1020315.55,
+        "closing": 1021022.15,
+        "difference": 706.6,
+        "testing": 5,
+        "net_litres": 701.6,
+        "rate": 104.71,
+        "amount_written": 73464,
+        "adjustments": [],
+        "final_amount": 73464
+      },
+      {
+        "label": "HSD A1",
+        "opening": 782566.35,
+        "closing": 783103.66,
+        "difference": 537.31,
+        "testing": 5,
+        "net_litres": 532.31,
+        "rate": 90.21,
+        "amount_written": 48019,
+        "adjustments": [
+          -68
+        ],
+        "final_amount": 47951
+      },
+      {
+        "label": "MS A2",
+        "opening": 1187044.76,
+        "closing": 1188010.79,
+        "difference": 966.03,
+        "testing": 5,
+        "net_litres": 961.03,
+        "rate": 104.71,
+        "amount_written": 100629,
+        "adjustments": [],
+        "final_amount": 100629
+      },
+      {
+        "label": "HSD A1+A2",
+        "opening": null,
+        "closing": null,
+        "difference": 1064.96,
+        "testing": 10,
+        "net_litres": 1054.96,
+        "rate": 90.21,
+        "amount_written": 95167,
+        "adjustments": [],
+        "final_amount": 95167
+      }
+    ],
+    "sale_total": 326620,
+    "payments": {
+      "credit": 30002,
+      "icici": 26130.3,
+      "paytm_card": 8372.52,
+      "paytm": 50755.17,
+      "phonepe_card": 17000,
+      "phonepe": 67962.34,
+      "hp_card": null,
+      "cash": 126334
+    },
+    "other_payments": [],
+    "credit_entries": [
+      {
+        "amount": 19002.73,
+        "party": "सीता देवी",
+        "party_english": "Sita Devi",
+        "invoice_no": "21457",
+        "fuel": null
+      },
+      {
+        "amount": 6499.63,
+        "party": "शंकर यादव (मोनू)",
+        "party_english": "monu",
+        "invoice_no": "21458",
+        "fuel": null
+      },
+      {
+        "amount": 4500,
+        "party": "रेलवे गेट",
+        "party_english": "Railway gate",
+        "invoice_no": null,
+        "fuel": null
+      }
+    ],
+    "unclear": [
+      "different handwriting, blurry",
+      "HSD A1 (734831.05->735207.66 = 376.61) and HSD A2 (800850.97->801539.32 = 688.35) written together: 1064.96 -10 = 95167",
+      "ICICI blurry (26130.30?)"
+    ]
+  }
+}

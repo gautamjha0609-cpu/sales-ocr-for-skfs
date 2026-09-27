@@ -14,7 +14,8 @@ def main(argv=None) -> int:
     r.add_argument("--no-api", action="store_true", help="never call the Claude API")
     sub.add_parser("pending", help="list photos that still need reading, create their blank JSON")
     tl = sub.add_parser("tiles", help="save zoomed crops of a photo (for reading it in Claude Code)")
-    tl.add_argument("photo", type=Path)
+    tl.add_argument("photo", nargs="?", help="#n from `pending`, a file name or path")
+    tl.add_argument("--pending", action="store_true", help="tiles for every unread photo")
     tl.add_argument("--box", help="zoom one area: left,top,right,bottom as fractions, e.g. 0.5,0.4,0.62,0.62")
     f = sub.add_parser("fill", help="save a compact transcription from stdin (see skfs_ocr/fill.py)")
     f.add_argument("photo", help="photo file name or path inside input/")
@@ -36,11 +37,24 @@ def main(argv=None) -> int:
         print(f"template written: {make_template(cfg, args.sample, args.sheet)}")
         return 0
     if args.cmd == "tiles":
+        from .pipeline import find_photo, input_photos, load_record
         from .tiles import make_tiles
 
         box = tuple(float(x) for x in args.box.split(",")) if args.box else None
-        for p in make_tiles(args.photo, cfg["paths"]["extracted"].parent / "tiles", box):
-            print(p)
+        out = cfg["paths"]["extracted"].parent / "tiles"
+        if args.pending:
+            jobs = [(f"p{i:02d}", p) for i, p in enumerate(input_photos(cfg), 1)
+                    if load_record(cfg, p)[0] is None]
+        else:
+            photo = find_photo(cfg, args.photo or "")
+            if photo is None:
+                print(f"photo {args.photo} not found")
+                return 2
+            ids = {p: f"p{i:02d}" for i, p in enumerate(input_photos(cfg), 1)}
+            jobs = [(ids.get(photo, photo.stem), photo)]
+        for short, photo in jobs:
+            for p in make_tiles(photo, out, box, prefix=short):
+                print(p.relative_to(cfg["paths"]["extracted"].parent.parent))
         return 0
     if args.cmd == "fill":
         import json
@@ -57,20 +71,19 @@ def main(argv=None) -> int:
             print(line)
         return 0
     if args.cmd == "pending":
-        from .pipeline import discover, load_record, write_stub
+        from .pipeline import input_photos, load_record, write_stub
 
         n = 0
-        for photo in discover(cfg):
+        for i, photo in enumerate(input_photos(cfg), 1):
             rec, status = load_record(cfg, photo)
             if rec is None:
                 n += 1
                 if status in ("missing", "changed"):
-                    print(f"{photo}  ->  {write_stub(cfg, photo)}")
-                else:
-                    print(f"{photo}  ->  {status}")
-        print(f"{n} photo(s) pending")
+                    write_stub(cfg, photo)
+                    status = "not read"
+                print(f"#{i:<3} {photo.name}   ({status})")
+        print(f"{n} photo(s) pending  -> python -m skfs_ocr tiles --pending ; fill #n < reading")
         return 0
-
     from .pipeline import run
     from .workbook import WorkbookError
 
