@@ -1,0 +1,166 @@
+{
+  "source": "2026-01-22.jpeg",
+  "sha256": "5b914e8552a09c64ddb838b4fb3dbc09f34fc917bf606b05bf782cf730a55216",
+  "read_by": "claude-code",
+  "extraction": {
+    "date_text": "22/1/26",
+    "weekday": null,
+    "rates": {
+      "petrol": 104.71,
+      "diesel": 90.21,
+      "power": 112.8
+    },
+    "nozzles": [
+      {
+        "label": "MSP A1",
+        "opening": 113876.94,
+        "closing": 113910.47,
+        "difference": 33.53,
+        "testing": 5,
+        "net_litres": 28.53,
+        "rate": 112.8,
+        "amount_written": 3218,
+        "adjustments": [],
+        "final_amount": 3218
+      },
+      {
+        "label": "MS A2",
+        "opening": 1213037.93,
+        "closing": 1214017.04,
+        "difference": 979.11,
+        "testing": 5,
+        "net_litres": 974.11,
+        "rate": 104.71,
+        "amount_written": 101999,
+        "adjustments": [],
+        "final_amount": 101999
+      },
+      {
+        "label": "HSD A1",
+        "opening": 938476.96,
+        "closing": 939196.97,
+        "difference": 720.01,
+        "testing": 5,
+        "net_litres": 715.01,
+        "rate": 90.21,
+        "amount_written": 64501,
+        "adjustments": [],
+        "final_amount": 64501
+      },
+      {
+        "label": "MS A2",
+        "opening": 1430608.8,
+        "closing": 1431799.7,
+        "difference": 1190.9,
+        "testing": 5,
+        "net_litres": 1185.9,
+        "rate": 104.71,
+        "amount_written": 124175,
+        "adjustments": [],
+        "final_amount": 124175
+      },
+      {
+        "label": "HSD A1",
+        "opening": 867185.98,
+        "closing": 868319.35,
+        "difference": 1133.37,
+        "testing": 5,
+        "net_litres": 1128.37,
+        "rate": 90.21,
+        "amount_written": 101790,
+        "adjustments": [],
+        "final_amount": 101790
+      },
+      {
+        "label": "HSD A2",
+        "opening": 1005370.39,
+        "closing": 1005589.28,
+        "difference": 218.89,
+        "testing": 5,
+        "net_litres": 213.89,
+        "rate": 90.21,
+        "amount_written": 19295,
+        "adjustments": [],
+        "final_amount": 19295
+      }
+    ],
+    "sale_total": 414978,
+    "payments": {
+      "credit": 67434,
+      "icici": 15187.62,
+      "paytm_card": 13080.65,
+      "paytm": 70724.64,
+      "phonepe_card": 10860,
+      "phonepe": 73985.75,
+      "hp_card": 15000,
+      "cash": 148705
+    },
+    "other_payments": [],
+    "credit_entries": [
+      {
+        "amount": 2000,
+        "party": "सरदार सेठिया",
+        "party_english": "Sardar Sethiya",
+        "invoice_no": null,
+        "fuel": null
+      },
+      {
+        "amount": 1500,
+        "party": "नाथुलाल पानी टैंकर",
+        "party_english": "Nathu Lal pani tanker",
+        "invoice_no": null,
+        "fuel": null
+      },
+      {
+        "amount": 7800,
+        "party": "गुलाब यादव",
+        "party_english": "Gulab Yadav",
+        "invoice_no": null,
+        "fuel": null
+      },
+      {
+        "amount": 3608,
+        "party": "मोहित यादव",
+        "party_english": "Mohit Yadav",
+        "invoice_no": null,
+        "fuel": null
+      },
+      {
+        "amount": 3000.38,
+        "party": "M.K. सोलर",
+        "party_english": "mk Soler",
+        "invoice_no": "22955",
+        "fuel": null
+      },
+      {
+        "amount": 20000,
+        "party": "पिपलोदा कस्बा",
+        "party_english": "Piploda",
+        "invoice_no": "22954",
+        "fuel": null
+      },
+      {
+        "amount": 23951.65,
+        "party": "आशा देवी",
+        "party_english": "aasha devi",
+        "invoice_no": "22956",
+        "fuel": null
+      },
+      {
+        "amount": 3549.76,
+        "party": "दिनेश यादव",
+        "party_english": "dinesh",
+        "invoice_no": "22958",
+        "fuel": null
+      },
+      {
+        "amount": 2024.31,
+        "party": "श्री श्याम ट्रांसपोर्ट",
+        "party_english": "Shyam Tran.",
+        "invoice_no": "22959",
+        "fuel": null
+      }
+    ],
+    "unclear": []
+  }
+}

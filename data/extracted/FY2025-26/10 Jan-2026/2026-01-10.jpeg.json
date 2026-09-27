@@ -1,0 +1,126 @@
+{
+  "source": "2026-01-10.jpeg",
+  "sha256": "a4e2937691df7faf0acde8da13eb8d96f633a5f585f457b32899d96e8c09d014",
+  "read_by": "claude-code",
+  "extraction": {
+    "date_text": "10/1/26",
+    "weekday": null,
+    "rates": {
+      "petrol": 104.71,
+      "diesel": 90.21,
+      "power": 112.8
+    },
+    "nozzles": [
+      {
+        "label": "MSP A1",
+        "opening": 113054.31,
+        "closing": 113081.12,
+        "difference": 26.81,
+        "testing": 5,
+        "net_litres": 21.81,
+        "rate": 112.8,
+        "amount_written": 2460,
+        "adjustments": [],
+        "final_amount": 2460
+      },
+      {
+        "label": "MS A2",
+        "opening": 1205123.13,
+        "closing": 1205770.54,
+        "difference": 647.41,
+        "testing": 5,
+        "net_litres": 642.41,
+        "rate": 104.71,
+        "amount_written": 67266,
+        "adjustments": [],
+        "final_amount": 67266
+      },
+      {
+        "label": "HSD A1",
+        "opening": 932975.74,
+        "closing": 933358.14,
+        "difference": 382.4,
+        "testing": 5,
+        "net_litres": 377.4,
+        "rate": 90.21,
+        "amount_written": 34045,
+        "adjustments": [],
+        "final_amount": 34045
+      },
+      {
+        "label": "MS A2",
+        "opening": 1420637.49,
+        "closing": 1421553.83,
+        "difference": 916.34,
+        "testing": 5,
+        "net_litres": 911.34,
+        "rate": 104.71,
+        "amount_written": 95426,
+        "adjustments": [],
+        "final_amount": 95426
+      },
+      {
+        "label": "HSD A1",
+        "opening": 861791.78,
+        "closing": 862297.95,
+        "difference": 506.17,
+        "testing": 5,
+        "net_litres": 501.17,
+        "rate": 90.21,
+        "amount_written": 45210,
+        "adjustments": [],
+        "final_amount": 45210
+      },
+      {
+        "label": "HSD A2",
+        "opening": 998238.33,
+        "closing": 998715.81,
+        "difference": 477.48,
+        "testing": 5,
+        "net_litres": 472.48,
+        "rate": 90.21,
+        "amount_written": 42622,
+        "adjustments": [],
+        "final_amount": 42622
+      }
+    ],
+    "sale_total": 287029,
+    "payments": {
+      "credit": 26880,
+      "icici": 4031.97,
+      "paytm_card": 3397.56,
+      "paytm": 70001.76,
+      "phonepe_card": 25333,
+      "phonepe": 60840.47,
+      "hp_card": 800,
+      "cash": 93544
+    },
+    "other_payments": [],
+    "credit_entries": [
+      {
+        "amount": 2880,
+        "party": "गुलाब यादव (मजदूरी)",
+        "party_english": "Gulab Yadav",
+        "invoice_no": null,
+        "fuel": null
+      },
+      {
+        "amount": 3999.91,
+        "party": "श्री श्याम ट्रांसपोर्ट",
+        "party_english": "Shyam Tran.",
+        "invoice_no": "22894",
+        "fuel": null
+      },
+      {
+        "amount": 20000,
+        "party": "पिपलोदा कस्बा",
+        "party_english": "Piploda",
+        "invoice_no": "22897",
+        "fuel": null
+      }
+    ],
+    "unclear": [
+      "a 1917.86 Shyam Transport line (22893) is struck out"
+    ]
+  }
+}
