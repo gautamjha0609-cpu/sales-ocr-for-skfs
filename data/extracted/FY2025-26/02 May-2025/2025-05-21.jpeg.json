@@ -1,0 +1,164 @@
+{
+  "source": "2025-05-21.jpeg",
+  "sha256": "61dd412bb7967e4a9a262c959d4c53d0d5a284810ad498589ccce2c182e9f953",
+  "read_by": "claude-code",
+  "extraction": {
+    "date_text": "?/5/25",
+    "weekday": null,
+    "rates": {
+      "petrol": 104.71,
+      "diesel": 90.21,
+      "power": 112.8
+    },
+    "nozzles": [
+      {
+        "label": "MSP A1",
+        "opening": 96628.59,
+        "closing": 96680.55,
+        "difference": 51.96,
+        "testing": 10,
+        "net_litres": 41.96,
+        "rate": 112.8,
+        "amount_written": 4733,
+        "adjustments": [],
+        "final_amount": 4733
+      },
+      {
+        "label": "MS A2",
+        "opening": 1035504.2,
+        "closing": 1036366.21,
+        "difference": 862.01,
+        "testing": 10,
+        "net_litres": 852.01,
+        "rate": 104.71,
+        "amount_written": 89213,
+        "adjustments": [],
+        "final_amount": 89213
+      },
+      {
+        "label": "HSD A1",
+        "opening": 796309.13,
+        "closing": 796849.92,
+        "difference": 540.79,
+        "testing": 10,
+        "net_litres": 530.79,
+        "rate": 90.21,
+        "amount_written": 47882,
+        "adjustments": [],
+        "final_amount": 47882
+      },
+      {
+        "label": "MS A2",
+        "opening": 1209714.66,
+        "closing": 1210630.31,
+        "difference": 915.65,
+        "testing": 10,
+        "net_litres": 905.65,
+        "rate": 104.71,
+        "amount_written": 94830,
+        "adjustments": [
+          -8
+        ],
+        "final_amount": 94822
+      },
+      {
+        "label": "HSD A1",
+        "opening": 749809.41,
+        "closing": 750098.77,
+        "difference": 289.36,
+        "testing": 10,
+        "net_litres": 279.36,
+        "rate": 90.21,
+        "amount_written": 25201,
+        "adjustments": [],
+        "final_amount": 25201
+      },
+      {
+        "label": "HSD A2",
+        "opening": 819452.41,
+        "closing": 820472.35,
+        "difference": 1019.94,
+        "testing": 10,
+        "net_litres": 1009.94,
+        "rate": 90.21,
+        "amount_written": 91106,
+        "adjustments": [],
+        "final_amount": 91106
+      }
+    ],
+    "sale_total": 352957,
+    "payments": {
+      "credit": 50475.9,
+      "icici": 10266.84,
+      "paytm_card": 10992.81,
+      "paytm": 74156.55,
+      "phonepe_card": 4310,
+      "phonepe": 59470.78,
+      "hp_card": 8160,
+      "cash": 135124
+    },
+    "other_payments": [],
+    "credit_entries": [
+      {
+        "amount": 3040.07,
+        "party": "मूलचंद यादव",
+        "party_english": "mool Chand yadav",
+        "invoice_no": "21587",
+        "fuel": null
+      },
+      {
+        "amount": 4699.94,
+        "party": "मोनू शंकर यादव",
+        "party_english": "monu",
+        "invoice_no": "21588",
+        "fuel": null
+      },
+      {
+        "amount": 25000.79,
+        "party": "धर्मेन्द्र सिंह",
+        "party_english": "Dharmendra Singh",
+        "invoice_no": "21589",
+        "fuel": null
+      },
+      {
+        "amount": 3989.98,
+        "party": "M.K. सोलर",
+        "party_english": "mk Soler",
+        "invoice_no": "21590",
+        "fuel": null
+      },
+      {
+        "amount": 3173.58,
+        "party": "M.K. सोलर",
+        "party_english": "mk Soler",
+        "invoice_no": "21591",
+        "fuel": null
+      },
+      {
+        "amount": 3547,
+        "party": "M.K. सोलर",
+        "party_english": "mk Soler",
+        "invoice_no": "21594",
+        "fuel": null
+      },
+      {
+        "amount": 3883.54,
+        "party": "श्री श्याम ट्रांसपोर्ट",
+        "party_english": "Shyam Tran.",
+        "invoice_no": "21593",
+        "fuel": null
+      },
+      {
+        "amount": 3141,
+        "party": "नाथुलाल जी",
+        "party_english": "Nathu Lal pani tanker",
+        "invoice_no": null,
+        "fuel": null
+      }
+    ],
+    "unclear": [
+      "date smudged - dated by meter chain",
+      "MS A2 (2nd) closing read 1036366.21 from difference 862.01"
+    ]
+  }
+}

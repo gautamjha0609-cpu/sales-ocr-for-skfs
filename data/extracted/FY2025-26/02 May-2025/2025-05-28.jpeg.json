@@ -1,0 +1,165 @@
+{
+  "source": "2025-05-28.jpeg",
+  "sha256": "0234ee9a178684a5fe2bc16beb70624ef250b18452762ea11f749dc09754bc35",
+  "read_by": "claude-code",
+  "extraction": {
+    "date_text": "?/5/25",
+    "weekday": null,
+    "rates": {
+      "petrol": 104.71,
+      "diesel": 90.21,
+      "power": 112.8
+    },
+    "nozzles": [
+      {
+        "label": "MSP A1",
+        "opening": 97070.43,
+        "closing": 97278.38,
+        "difference": 207.95,
+        "testing": 5,
+        "net_litres": 202.95,
+        "rate": 112.8,
+        "amount_written": 22892,
+        "adjustments": [],
+        "final_amount": 22892
+      },
+      {
+        "label": "MS A2",
+        "opening": 1041193.55,
+        "closing": 1041776.98,
+        "difference": 583.43,
+        "testing": 5,
+        "net_litres": 578.43,
+        "rate": 104.71,
+        "amount_written": 60567,
+        "adjustments": [],
+        "final_amount": 60567
+      },
+      {
+        "label": "HSD A1",
+        "opening": 800002.63,
+        "closing": 800984.75,
+        "difference": 982.12,
+        "testing": 5,
+        "net_litres": 977.12,
+        "rate": 90.21,
+        "amount_written": 88145,
+        "adjustments": [],
+        "final_amount": 88145
+      },
+      {
+        "label": "MS A2",
+        "opening": 1216790.45,
+        "closing": 1217972.58,
+        "difference": 1182.13,
+        "testing": 5,
+        "net_litres": 1177.13,
+        "rate": 104.71,
+        "amount_written": 123257,
+        "adjustments": [
+          -16
+        ],
+        "final_amount": 123241
+      },
+      {
+        "label": "HSD A1",
+        "opening": 753431.82,
+        "closing": 754387.52,
+        "difference": 955.7,
+        "testing": 5,
+        "net_litres": 950.7,
+        "rate": 90.21,
+        "amount_written": 85762,
+        "adjustments": [],
+        "final_amount": 85762
+      },
+      {
+        "label": "HSD A2",
+        "opening": 825998.21,
+        "closing": 826792.17,
+        "difference": 793.96,
+        "testing": 5,
+        "net_litres": 788.96,
+        "rate": 90.21,
+        "amount_written": 71172,
+        "adjustments": [],
+        "final_amount": 71172
+      }
+    ],
+    "sale_total": 451779,
+    "payments": {
+      "credit": 122483.14,
+      "icici": 21264.68,
+      "paytm_card": 6243.82,
+      "paytm": 59047.73,
+      "phonepe_card": 19026.55,
+      "phonepe": 77763.43,
+      "hp_card": null,
+      "cash": 145949.6
+    },
+    "other_payments": [],
+    "credit_entries": [
+      {
+        "amount": 3000,
+        "party": "यादव किराणा",
+        "party_english": "Yadav Kirana",
+        "invoice_no": null,
+        "fuel": null
+      },
+      {
+        "amount": 3966.17,
+        "party": "मूलचंद यादव",
+        "party_english": "mool Chand yadav",
+        "invoice_no": "21626",
+        "fuel": null
+      },
+      {
+        "amount": 2788.39,
+        "party": "दिनेश यादव",
+        "party_english": "dinesh",
+        "invoice_no": "21627",
+        "fuel": null
+      },
+      {
+        "amount": 39451.53,
+        "party": "सीताराम यादव",
+        "party_english": "Sitaram Yadav",
+        "invoice_no": "21628",
+        "fuel": null
+      },
+      {
+        "amount": 12750.28,
+        "party": "Balaji Hospital",
+        "party_english": "Balaji Care and Cure",
+        "invoice_no": "21629",
+        "fuel": null
+      },
+      {
+        "amount": 1788.44,
+        "party": "Balaji Hospital",
+        "party_english": "Balaji Care and Cure",
+        "invoice_no": "21630",
+        "fuel": null
+      },
+      {
+        "amount": 30000,
+        "party": "पिपलोदा कस्बा",
+        "party_english": "Piploda",
+        "invoice_no": "21635",
+        "fuel": null
+      },
+      {
+        "amount": 27738.33,
+        "party": "पिपलोदा कस्बा",
+        "party_english": "Piploda",
+        "invoice_no": "21637",
+        "fuel": null
+      }
+    ],
+    "unclear": [
+      "date smudged - dated by meter chain",
+      "MSP A1 opening overwritten (97070.4?)",
+      "Piploda 30000 read from overwritten 20000/30000"
+    ]
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "source": "2025-05-16.jpeg",
+  "sha256": "3b0975f83bb1ee699ea740b3c7a25fb4b7676a3d1e88e777f4a667f6245cd09c",
+  "read_by": "claude-code",
+  "extraction": {
+    "date_text": "16/5/25",
+    "weekday": null,
+    "rates": {
+      "petrol": 104.71,
+      "diesel": 90.21,
+      "power": 112.8
+    },
+    "nozzles": [
+      {
+        "label": "MSP A1",
+        "opening": 95806.51,
+        "closing": 96163.71,
+        "difference": 357.2,
+        "testing": 5,
+        "net_litres": 352.2,
+        "rate": 112.8,
+        "amount_written": 39728,
+        "adjustments": [],
+        "final_amount": 39728
+      },
+      {
+        "label": "MS A2",
+        "opening": 1032218.51,
+        "closing": 1032587.57,
+        "difference": 369.06,
+        "testing": 5,
+        "net_litres": 364.06,
+        "rate": 104.71,
+        "amount_written": 38120,
+        "adjustments": [],
+        "final_amount": 38120
+      },
+      {
+        "label": "HSD A1",
+        "opening": 793344.2,
+        "closing": 793674.0,
+        "difference": 329.8,
+        "testing": 5,
+        "net_litres": 324.8,
+        "rate": 90.21,
+        "amount_written": 29300,
+        "adjustments": [],
+        "final_amount": 29300
+      },
+      {
+        "label": "MS A2",
+        "opening": 1204335.12,
+        "closing": 1205375.68,
+        "difference": 1040.56,
+        "testing": 5,
+        "net_litres": 1035.56,
+        "rate": 104.71,
+        "amount_written": 108433,
+        "adjustments": [
+          -6
+        ],
+        "final_amount": 108427
+      },
+      {
+        "label": "HSD A1",
+        "opening": 746469.81,
+        "closing": 747236.5,
+        "difference": 766.69,
+        "testing": 5,
+        "net_litres": 761.69,
+        "rate": 90.21,
+        "amount_written": 68712,
+        "adjustments": [],
+        "final_amount": 68712
+      },
+      {
+        "label": "HSD A2",
+        "opening": 815279.53,
+        "closing": 816404.75,
+        "difference": 1125.22,
+        "testing": 5,
+        "net_litres": 1120.22,
+        "rate": 90.21,
+        "amount_written": 101055,
+        "adjustments": [],
+        "final_amount": 101055
+      }
+    ],
+    "sale_total": 385342,
+    "payments": {
+      "credit": 91787,
+      "icici": 12027,
+      "paytm_card": 14609.71,
+      "paytm": 68075.62,
+      "phonepe_card": 12260,
+      "phonepe": 58098.16,
+      "hp_card": 1800,
+      "cash": 126684
+    },
+    "other_payments": [],
+    "credit_entries": [
+      {
+        "amount": 25451.84,
+        "party": "पिपलोदा कस्बा",
+        "party_english": "Piploda",
+        "invoice_no": "21554",
+        "fuel": null
+      },
+      {
+        "amount": 17943.67,
+        "party": "मूलचंद यादव",
+        "party_english": "mool Chand yadav",
+        "invoice_no": "21555",
+        "fuel": null
+      },
+      {
+        "amount": 3567.86,
+        "party": "M.K. सोलर",
+        "party_english": "mk Soler",
+        "invoice_no": "21556",
+        "fuel": null
+      },
+      {
+        "amount": 34798.5,
+        "party": "धर्मेन्द्र सिंह",
+        "party_english": "Dharmendra Singh",
+        "invoice_no": "21557",
+        "fuel": null
+      },
+      {
+        "amount": 3325.14,
+        "party": "श्री श्याम ट्रांसपोर्ट",
+        "party_english": "Shyam Tran.",
+        "invoice_no": "21559",
+        "fuel": null
+      },
+      {
+        "amount": 3200,
+        "party": "श्री सायर स्कूल",
+        "party_english": "sayar School",
+        "invoice_no": "21560",
+        "fuel": null
+      },
+      {
+        "amount": 3500,
+        "party": "यादव किराणा",
+        "party_english": "Yadav Kirana",
+        "invoice_no": null,
+        "fuel": null
+      }
+    ],
+    "unclear": []
+  }
+}

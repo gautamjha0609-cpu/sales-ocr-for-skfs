@@ -1,0 +1,119 @@
+{
+  "source": "2025-05-05.jpeg",
+  "sha256": "cc99baf769bf13648561a73e81701611caa96983a672d4e7578ba1a2ae0a6f2f",
+  "read_by": "claude-code",
+  "extraction": {
+    "date_text": "5/5/25",
+    "weekday": null,
+    "rates": {
+      "petrol": 104.71,
+      "diesel": 90.21,
+      "power": 112.8
+    },
+    "nozzles": [
+      {
+        "label": "MSP A1",
+        "opening": 92722.06,
+        "closing": 92756.6,
+        "difference": 34.54,
+        "testing": 5,
+        "net_litres": 29.54,
+        "rate": 112.8,
+        "amount_written": 3332,
+        "adjustments": [],
+        "final_amount": 3332
+      },
+      {
+        "label": "MS A2",
+        "opening": 1024822.66,
+        "closing": 1025832.5,
+        "difference": 1009.84,
+        "testing": 5,
+        "net_litres": 1004.84,
+        "rate": 104.71,
+        "amount_written": 105216,
+        "adjustments": [],
+        "final_amount": 105216
+      },
+      {
+        "label": "HSD A1",
+        "opening": 786090.12,
+        "closing": 786632.47,
+        "difference": 542.35,
+        "testing": 5,
+        "net_litres": 537.35,
+        "rate": 90.21,
+        "amount_written": 48474,
+        "adjustments": [],
+        "final_amount": 48474
+      },
+      {
+        "label": "MS A2",
+        "opening": 1194046.08,
+        "closing": 1195059.76,
+        "difference": 1013.68,
+        "testing": 5,
+        "net_litres": 1008.68,
+        "rate": 104.71,
+        "amount_written": 105618,
+        "adjustments": [
+          -4
+        ],
+        "final_amount": 105614
+      },
+      {
+        "label": "HSD A1",
+        "opening": 739816.36,
+        "closing": 740293.49,
+        "difference": 477.13,
+        "testing": 5,
+        "net_litres": 472.13,
+        "rate": 90.21,
+        "amount_written": 42590,
+        "adjustments": [],
+        "final_amount": 42590
+      },
+      {
+        "label": "HSD A2",
+        "opening": 805516.04,
+        "closing": 806374.58,
+        "difference": 858.54,
+        "testing": 5,
+        "net_litres": 853.54,
+        "rate": 90.21,
+        "amount_written": 76997,
+        "adjustments": [],
+        "final_amount": 76997
+      }
+    ],
+    "sale_total": 382223,
+    "payments": {
+      "credit": 24000.41,
+      "icici": 25595.32,
+      "paytm_card": 8268.28,
+      "paytm": 89880.82,
+      "phonepe_card": 15706,
+      "phonepe": 58343.3,
+      "hp_card": 2000,
+      "cash": 158428
+    },
+    "other_payments": [],
+    "credit_entries": [
+      {
+        "amount": 22000.41,
+        "party": "सीता यादव",
+        "party_english": "Sita Devi",
+        "invoice_no": "21455",
+        "fuel": null
+      },
+      {
+        "amount": 2000,
+        "party": "Balaji care and cure hospital",
+        "party_english": "Balaji Care and Cure",
+        "invoice_no": "21456",
+        "fuel": null
+      }
+    ],
+    "unclear": []
+  }
+}

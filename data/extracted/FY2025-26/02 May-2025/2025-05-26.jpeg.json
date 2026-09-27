@@ -1,0 +1,164 @@
+{
+  "source": "2025-05-26.jpeg",
+  "sha256": "370058898d8ee854df45b08db020acf387eda952042be8cd59104e9127190211",
+  "read_by": "claude-code",
+  "extraction": {
+    "date_text": "26/5/25",
+    "weekday": null,
+    "rates": {
+      "petrol": 104.71,
+      "diesel": 90.21,
+      "power": 112.8
+    },
+    "nozzles": [
+      {
+        "label": "MSP A1",
+        "opening": 96933.23,
+        "closing": 97013.69,
+        "difference": 80.46,
+        "testing": 5,
+        "net_litres": 75.46,
+        "rate": 112.8,
+        "amount_written": 8511,
+        "adjustments": [],
+        "final_amount": 8511
+      },
+      {
+        "label": "MS A2",
+        "opening": 1039563.43,
+        "closing": 1040401.09,
+        "difference": 837.66,
+        "testing": 5,
+        "net_litres": 832.66,
+        "rate": 104.71,
+        "amount_written": 87187,
+        "adjustments": [],
+        "final_amount": 87187
+      },
+      {
+        "label": "HSD A1",
+        "opening": 798986.1,
+        "closing": 799588.55,
+        "difference": 602.45,
+        "testing": 5,
+        "net_litres": 597.45,
+        "rate": 90.21,
+        "amount_written": 53895,
+        "adjustments": [],
+        "final_amount": 53895
+      },
+      {
+        "label": "MS A2",
+        "opening": 1214698.56,
+        "closing": 1215800.05,
+        "difference": 1101.49,
+        "testing": 5,
+        "net_litres": 1096.49,
+        "rate": 104.71,
+        "amount_written": 114813,
+        "adjustments": [
+          -6
+        ],
+        "final_amount": 114807
+      },
+      {
+        "label": "HSD A1",
+        "opening": 752208.91,
+        "closing": 753052.58,
+        "difference": 843.67,
+        "testing": 5,
+        "net_litres": 838.67,
+        "rate": 90.21,
+        "amount_written": 75656,
+        "adjustments": [],
+        "final_amount": 75656
+      },
+      {
+        "label": "HSD A2",
+        "opening": 824100.29,
+        "closing": 825031.92,
+        "difference": 931.63,
+        "testing": 5,
+        "net_litres": 926.63,
+        "rate": 90.21,
+        "amount_written": 83591,
+        "adjustments": [],
+        "final_amount": 83591
+      }
+    ],
+    "sale_total": 423647,
+    "payments": {
+      "credit": 97014,
+      "icici": 13634.82,
+      "paytm_card": 10409.81,
+      "paytm": 68036.69,
+      "phonepe_card": 15000,
+      "phonepe": 49754.75,
+      "hp_card": 500,
+      "cash": 169296
+    },
+    "other_payments": [],
+    "credit_entries": [
+      {
+        "amount": 21511.47,
+        "party": "धर्मेन्द्र सिंह",
+        "party_english": "Dharmendra Singh",
+        "invoice_no": "21615",
+        "fuel": null
+      },
+      {
+        "amount": 25008.91,
+        "party": "धर्मेन्द्र सिंह",
+        "party_english": "Dharmendra Singh",
+        "invoice_no": "21619",
+        "fuel": null
+      },
+      {
+        "amount": 8837.65,
+        "party": "मूलचंद यादव",
+        "party_english": "mool Chand yadav",
+        "invoice_no": "21616",
+        "fuel": null
+      },
+      {
+        "amount": 22080.7,
+        "party": "पिपलोदा कस्बा",
+        "party_english": "Piploda",
+        "invoice_no": "21617",
+        "fuel": null
+      },
+      {
+        "amount": 4275.05,
+        "party": "श्री श्याम ट्रांसपोर्ट",
+        "party_english": "Shyam Tran.",
+        "invoice_no": "21620",
+        "fuel": null
+      },
+      {
+        "amount": 3200.22,
+        "party": "श्री श्याम ट्रांसपोर्ट",
+        "party_english": "Shyam Tran.",
+        "invoice_no": "21621",
+        "fuel": null
+      },
+      {
+        "amount": 2100,
+        "party": "मोहित यादव",
+        "party_english": "Mohit Yadav",
+        "invoice_no": null,
+        "fuel": null
+      },
+      {
+        "amount": 10000,
+        "party": "(नाम कटा)",
+        "party_english": "unclear",
+        "invoice_no": null,
+        "fuel": null
+      }
+    ],
+    "unclear": [
+      "line 2 is 25008.91",
+      "last line (नाम कटा) read as 10000; 3200.22 line may be 2200.22 - list then equals udhar total 97014"
+    ]
+  }
+}

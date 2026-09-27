@@ -1,30 +1,30 @@
 Check report - April 2025
 
 
-01-04-2025  [CHECK]  photo: WhatsApp Image 2025-05-15 at 21.53.52.jpeg
+01-04-2025  [CHECK]  photo: 2025-04-01.jpeg
    petrol 216,510.00 | diesel 195,368.00 | power 3,105.00 | udhar lines with invoice: 4
    note:  unclear on photo: udhar 21293 name unclear (प्रमोद यादव?)
 
-02-04-2025  [CHECK]  photo: WhatsApp Image 2025-05-15 at 21.53.51 (2).jpeg
+02-04-2025  [CHECK]  photo: 2025-04-02.jpeg
    petrol 178,731.00 | diesel 174,555.00 | power 10,141.00 | udhar lines with invoice: 3
    note:  unclear on photo: date smudged; page follows 1/4 by meter readings
    note:  unclear on photo: total corrected in pen to 363427, cash corrected to 134069, HP card to 4135
 
-03-04-2025  [CHECK]  photo: WhatsApp Image 2025-05-15 at 21.53.51 (1).jpeg
+03-04-2025  [CHECK]  photo: 2025-04-03.jpeg
    petrol 198,428.00 | diesel 149,723.00 | power 10,556.00 | udhar lines with invoice: 4
    note:  unclear on photo: date smudged; follows 2/4 by meter readings
    note:  unclear on photo: ICICI read 18759.57 (payments then 1.29 over total)
    note:  unclear on photo: a 3300 udhar line is struck out - left out
    note:  unclear on photo: MS A2 (4th) closing written 1159570.66 here, next day opens 1159570.86
 
-04-04-2025  [CHECK]  photo: WhatsApp Image 2025-05-15 at 21.53.51.jpeg
+04-04-2025  [CHECK]  photo: 2025-04-04.jpeg
    petrol 211,177.00 | diesel 237,366.00 | power 1,654.00 | udhar lines with invoice: 8
    note:  unclear on photo: date smudged; follows 3/4 by meter readings
    note:  unclear on photo: first udhar amount faint (9120.23?)
    note:  unclear on photo: MS A2 (4th) adjustment written like -5 but 114008 -> 114001 is -7
    note:  MS A2: opening 1,159,570.86 but previous day closed at 1,159,570.66
 
-05-04-2025  [CHECK]  photo: WhatsApp Image 2025-05-15 at 21.53.50 (1).jpeg
+05-04-2025  [CHECK]  photo: 2025-04-05.jpeg
    petrol 204,877.00 | diesel 267,629.00 | power 9,725.00 | udhar lines with invoice: 7
    note:  petrol rate not written at top - using 104.71 from the meter blocks
    note:  diesel rate not written at top - using 90.21 from the meter blocks
@@ -34,109 +34,109 @@ Check report - April 2025
    note:  unclear on photo: RAR line carries invoices 21318,20 - using 21318
    note:  MS A2: opening 1,160,664.44 but previous day closed at 1,160,664.64
 
-06-04-2025  [CHECK]  photo: WhatsApp Image 2025-05-15 at 21.53.50.jpeg
+06-04-2025  [CHECK]  photo: 2025-04-06.jpeg
    petrol 255,699.00 | diesel 189,381.00 | power 1,650.00 | udhar lines with invoice: 4
    note:  unclear on photo: paytm card has an overwritten digit: read 17268.45
 
-07-04-2025  [OK]  photo: WhatsApp Image 2025-05-15 at 21.53.49 (2).jpeg
+07-04-2025  [OK]  photo: 2025-04-07.jpeg
    petrol 189,067.00 | diesel 168,437.00 | power 4,894.00 | udhar lines with invoice: 4
 
-08-04-2025  [CHECK]  photo: WhatsApp Image 2025-05-15 at 21.53.49 (1).jpeg
+08-04-2025  [CHECK]  photo: 2025-04-08.jpeg
    petrol 182,695.00 | diesel 160,553.00 | power 7,435.00 | udhar lines with invoice: 4
    note:  unclear on photo: mool chand invoice read 21335 (page edge)
    note:  unclear on photo: first udhar name struck/unclear
 
-09-04-2025  [CHECK]  photo: WhatsApp Image 2025-05-15 at 21.53.49.jpeg
+09-04-2025  [CHECK]  photo: 2025-04-09.jpeg
    petrol 195,945.00 | diesel 154,022.00 | power 1,589.00 | udhar lines with invoice: 3
    note:  unclear on photo: udhar total corrected in pen to 50970.72; cash corrected to 129861
    note:  unclear on photo: Piploda invoice cut at page edge (2133?) - assumed 21339
    note:  unclear on photo: udhar 21341 name unclear (सीताराम यादव?)
 
-10-04-2025  [CHECK]  photo: WhatsApp Image 2025-05-15 at 21.53.48 (2).jpeg
+10-04-2025  [CHECK]  photo: 2025-04-10.jpeg
    petrol 194,621.00 | diesel 180,128.00 | power 4,801.00 | udhar lines with invoice: 3
    note:  new udhar party 'Yadav (name unclear)' (inv 21349) - add it to parties.yaml if correct
    note:  unclear on photo: udhar 21349 party name unclear - please check
 
-11-04-2025  [CHECK]  photo: WhatsApp Image 2025-05-15 at 21.53.48 (1).jpeg
+11-04-2025  [CHECK]  photo: 2025-04-11.jpeg
    petrol 200,609.00 | diesel 154,348.00 | power 4,883.00 | udhar lines with invoice: 7
    note:  unclear on photo: Piploda invoice read 21349 - same number as a 10/4 line, one of them is likely 21346
    note:  unclear on photo: udhar 21352 and 21354 names unclear
    note:  invoice 21349 also used on 10-04-2025
 
-12-04-2025  [CHECK]  photo: WhatsApp Image 2025-05-15 at 21.53.48.jpeg
+12-04-2025  [CHECK]  photo: 2025-04-12.jpeg
    petrol 206,253.00 | diesel 182,027.00 | power 5,634.00 | udhar lines with invoice: 5
    note:  unclear on photo: Piploda invoice cut at page edge (2136?) - assumed 21360
 
-13-04-2025  [OK]  photo: WhatsApp Image 2025-05-15 at 21.53.47 (2).jpeg
+13-04-2025  [OK]  photo: 2025-04-13.jpeg
    petrol 203,090.00 | diesel 143,061.00 | power 455.00 | udhar lines with invoice: 1
 
-14-04-2025  [CHECK]  photo: WhatsApp Image 2025-05-15 at 21.53.47 (1).jpeg
+14-04-2025  [CHECK]  photo: 2025-04-14.jpeg
    petrol 217,988.00 | diesel 290,426.00 | power 4,303.00 | udhar lines with invoice: 5
    note:  unclear on photo: Balaji invoice cut at page edge (2136?) - assumed 21367
 
-15-04-2025  [CHECK]  photo: WhatsApp Image 2025-05-15 at 21.53.47.jpeg
+15-04-2025  [CHECK]  photo: 2025-04-15.jpeg
    petrol 199,038.00 | diesel 180,592.00 | power 591.00 | udhar lines with invoice: 4
    note:  new udhar party 'Shankar ji Lodha' (inv 21375) - add it to parties.yaml if correct
    note:  unclear on photo: invoice numbers cut at page edge (2137?) - assumed 21373-21376 in order
    note:  unclear on photo: first udhar 4?50.32 - 4650.32 makes the list equal the udhar total
 
-16-04-2025  [ERROR]  photo: WhatsApp Image 2025-05-15 at 21.53.46 (2).jpeg
+16-04-2025  [ERROR]  photo: 2025-04-16.jpeg
    petrol 207,866.00 | diesel 169,387.00 | power 5,118.00 | udhar lines with invoice: 5
    ERROR: total sale written 383,371 is wrong: meters give 382,371 and payments give 382,374.42 (check the total, the rest agrees)
    note:  unclear on photo: MSP amount overwritten (51?8) - 45.38 x 112.80 = 5118.86
 
-17-04-2025  [OK]  photo: WhatsApp Image 2025-05-15 at 21.53.46 (1).jpeg
+17-04-2025  [OK]  photo: 2025-04-17.jpeg
    petrol 172,632.00 | diesel 171,987.00 | power 14,608.00 | udhar lines with invoice: 5
 
-18-04-2025  [ERROR]  photo: WhatsApp Image 2025-05-15 at 21.53.46.jpeg
+18-04-2025  [ERROR]  photo: 2025-04-18.jpeg
    petrol 180,707.00 | diesel 171,106.00 | power 8,153.00 | udhar lines with invoice: 5
    ERROR: payment lines add up to 359,164.55, total sale written is 359,965  [one-digit fix would be: total 359,965 -> 359,165]
    note:  unclear on photo: paytm card first digits overwritten (?2353.60)
    note:  unclear on photo: MS A2 (4th) boxed written 100?84 - 100222-38 = 100184
 
-19-04-2025  [CHECK]  photo: WhatsApp Image 2025-05-15 at 21.53.45 (2).jpeg
+19-04-2025  [CHECK]  photo: 2025-04-19.jpeg
    petrol 219,745.00 | diesel 194,926.00 | power 5,047.00 | udhar lines with invoice: 2
    note:  unclear on photo: first udhar faint (?2665.21); 52665.21 makes the list equal the udhar total, which payments confirm
 
-20-04-2025  [CHECK]  photo: WhatsApp Image 2025-05-15 at 21.53.45 (1).jpeg
+20-04-2025  [CHECK]  photo: 2025-04-20.jpeg
    petrol 227,046.00 | diesel 204,604.00 | power 2,153.00 | udhar lines with invoice: 6
    note:  udhar lines add up to 96,042.04, udhar total written is 99,042.09  [one-digit fix would be: udhar line 4 20,041.05 -> 23,041.05; udhar line 5 5,849.61 -> 8,849.61; udhar line 6 1,995.44 -> 4,995.44; udhar line 7 3,500 -> 6,500; udhar line 8 1,500 -> 4,500; total 99,042.09 -> 96,042.09]
 
-21-04-2025  [CHECK]  photo: WhatsApp Image 2025-05-15 at 21.53.45.jpeg
+21-04-2025  [CHECK]  photo: 2025-04-21.jpeg
    petrol 197,220.00 | diesel 186,914.00 | power 2,048.00 | udhar lines with invoice: 6
    note:  unclear on photo: udhar total read 57077; udhar list and payments both give 51077
    note:  unclear on photo: MS A2 (2nd) opening read as 1013786.98 (previous day's closing)
 
-22-04-2025  [CHECK]  photo: WhatsApp Image 2025-05-15 at 21.53.44 (2).jpeg
+22-04-2025  [CHECK]  photo: 2025-04-22.jpeg
    petrol 201,432.00 | diesel 194,042.00 | power 6,387.00 | udhar lines with invoice: 4
    note:  HSD A1: closing 779,160.72 - opening 778,687.96 = 472.76, ledger writes 472.82
    note:  unclear on photo: HSD A1 (3rd) testing written 13.86 (not 5); an 800 note beside it
    note:  HSD A1: opening 778,687.96 but previous day closed at 778,687.9
 
-23-04-2025  [CHECK]  photo: WhatsApp Image 2025-05-15 at 21.53.44 (1).jpeg
+23-04-2025  [CHECK]  photo: 2025-04-23.jpeg
    petrol 198,802.00 | diesel 141,165.00 | power 2,012.00 | udhar lines with invoice: 5
    note:  udhar lines add up to 20,126.99, udhar total written is 48,126.9
 
-24-04-2025  [ERROR]  photo: WhatsApp Image 2025-05-15 at 21.53.44.jpeg
+24-04-2025  [ERROR]  photo: 2025-04-24.jpeg
    petrol 177,923.00 | diesel 171,679.00 | power 7,694.00 | udhar lines with invoice: 6
    ERROR: payment lines add up to 349,295.54, total sale written is 357,296  [one-digit fix would be: paytm_card 10,843.82 -> 18,843.82; phonepe_card 51,744.38 -> 59,744.38]
    note:  udhar lines add up to 77,530.26, udhar total written is 75,730.18
    note:  unclear on photo: HSD A1 (3rd) difference written 532.47 but 780333.08-779795.61 = 537.47; litres 532.47
    note:  invoice 21421 also used on 23-04-2025
 
-25-04-2025  [CHECK]  photo: WhatsApp Image 2025-05-15 at 21.53.43 (2).jpeg
+25-04-2025  [CHECK]  photo: 2025-04-25.jpeg
    petrol 194,966.00 | diesel 230,956.00 | power 3,113.00 | udhar lines with invoice: 7
    note:  unclear on photo: Piploda 43260.64 line carries invoices 21432,33 - using 21432
 
-26-04-2025  [CHECK]  photo: WhatsApp Image 2025-05-15 at 21.53.43 (1).jpeg
+26-04-2025  [CHECK]  photo: 2025-04-26.jpeg
    petrol 211,067.00 | diesel 166,600.00 | power 4,830.00 | udhar lines with invoice: 4
    note:  unclear on photo: first udhar 440(.82?) - Sardar Sethiya
 
-27-04-2025  [CHECK]  photo: WhatsApp Image 2025-05-15 at 21.53.43.jpeg
+27-04-2025  [CHECK]  photo: 2025-04-27.jpeg
    petrol 169,506.00 | diesel 105,348.00 | power 4,449.00 | udhar lines with invoice: 2
    note:  unclear on photo: invoice numbers at page edge (214??) - 21449, 21451 as best read
 
-28-04-2025  [ERROR]  photo: WhatsApp Image 2025-05-15 at 21.53.42 (2).jpeg
+28-04-2025  [ERROR]  photo: 2025-04-28.jpeg
    petrol 196,901.00 | diesel 128,634.00 | power 4,924.00 | udhar lines with invoice: 3
    ERROR: payment lines add up to 330,445.21, total sale written is 330,459
    note:  unclear on photo: different handwriting
@@ -144,14 +144,14 @@ Check report - April 2025
    note:  unclear on photo: udhar total read 26?98; udhar list gives 26198
    note:  unclear on photo: cash corrected in pen to 132786
 
-29-04-2025  [ERROR]  photo: WhatsApp Image 2025-05-15 at 21.53.42 (1).jpeg
+29-04-2025  [ERROR]  photo: 2025-04-29.jpeg
    petrol 174,093.00 | diesel 143,118.00 | power 9,409.00 | udhar lines with invoice: 2
    ERROR: payment lines add up to 326,556.33, total sale written is 326,620
    note:  unclear on photo: different handwriting, blurry
    note:  unclear on photo: HSD A1 (734831.05->735207.66 = 376.61) and HSD A2 (800850.97->801539.32 = 688.35) written together: 1064.96 -10 = 95167
    note:  unclear on photo: ICICI blurry (26130.30?)
 
-30-04-2025  [ERROR]  photo: WhatsApp Image 2025-05-15 at 21.53.42.jpeg
+30-04-2025  [ERROR]  photo: 2025-04-30.jpeg
    petrol 190,967.00 | diesel 209,288.00 | power 3,761.00 | udhar lines with invoice: 6
    ERROR: payment lines add up to 394,017.87, total sale written is 404,016  [one-digit fix would be: paytm 65,888.33 -> 75,888.33; phonepe_card 19,256 -> 29,256; phonepe 54,536.33 -> 64,536.33; cash 150,963 -> 160,963]
    note:  new udhar party 'HP Photo Construction' (inv 21460) - add it to parties.yaml if correct

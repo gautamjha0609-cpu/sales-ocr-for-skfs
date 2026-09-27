@@ -1,0 +1,171 @@
+{
+  "source": "2025-05-23.jpeg",
+  "sha256": "0e665e66fb1618989d969b192850279036cf81e0556586c2c3659a28db5f8571",
+  "read_by": "claude-code",
+  "extraction": {
+    "date_text": "23/5/25",
+    "weekday": null,
+    "rates": {
+      "petrol": 104.71,
+      "diesel": 90.21,
+      "power": 112.8
+    },
+    "nozzles": [
+      {
+        "label": "MSP A1",
+        "opening": 96703.46,
+        "closing": 96724.52,
+        "difference": 21.06,
+        "testing": 5,
+        "net_litres": 16.06,
+        "rate": 112.8,
+        "amount_written": 1811,
+        "adjustments": [],
+        "final_amount": 1811
+      },
+      {
+        "label": "MS A2",
+        "opening": 1037200.63,
+        "closing": 1037963.06,
+        "difference": 762.43,
+        "testing": 5,
+        "net_litres": 757.43,
+        "rate": 104.71,
+        "amount_written": 79310,
+        "adjustments": [],
+        "final_amount": 79310
+      },
+      {
+        "label": "HSD A1",
+        "opening": 797263.61,
+        "closing": 798067.5,
+        "difference": 797.89,
+        "testing": 5,
+        "net_litres": 792.89,
+        "rate": 90.21,
+        "amount_written": 71526,
+        "adjustments": [],
+        "final_amount": 71526
+      },
+      {
+        "label": "MS A2",
+        "opening": 1211597.56,
+        "closing": 1212421.11,
+        "difference": 823.55,
+        "testing": 5,
+        "net_litres": 818.55,
+        "rate": 104.71,
+        "amount_written": 85710,
+        "adjustments": [
+          -8
+        ],
+        "final_amount": 85702
+      },
+      {
+        "label": "HSD A1",
+        "opening": 750469.69,
+        "closing": 751401.07,
+        "difference": 931.38,
+        "testing": 5,
+        "net_litres": 926.38,
+        "rate": 90.21,
+        "amount_written": 83568,
+        "adjustments": [],
+        "final_amount": 83568
+      },
+      {
+        "label": "HSD A2",
+        "opening": 821717.58,
+        "closing": 822361.18,
+        "difference": 643.6,
+        "testing": 5,
+        "net_litres": 638.6,
+        "rate": 90.21,
+        "amount_written": 57608,
+        "adjustments": [],
+        "final_amount": 57608
+      }
+    ],
+    "sale_total": 379525,
+    "payments": {
+      "credit": 94468.21,
+      "icici": 4582,
+      "paytm_card": 8484.44,
+      "paytm": 71838.07,
+      "phonepe_card": 9527,
+      "phonepe": 72192.07,
+      "hp_card": 1100,
+      "cash": 117333
+    },
+    "other_payments": [],
+    "credit_entries": [
+      {
+        "amount": 9246.52,
+        "party": "पिपलोदा कस्बा",
+        "party_english": "Piploda",
+        "invoice_no": "21599",
+        "fuel": null
+      },
+      {
+        "amount": 20000,
+        "party": "पिपलोदा कस्बा",
+        "party_english": "Piploda",
+        "invoice_no": "21600",
+        "fuel": null
+      },
+      {
+        "amount": 28800.44,
+        "party": "धर्मेन्द्र सिंह",
+        "party_english": "Dharmendra Singh",
+        "invoice_no": "21601",
+        "fuel": null
+      },
+      {
+        "amount": 3600.28,
+        "party": "दिनेश यादव",
+        "party_english": "dinesh",
+        "invoice_no": "21602",
+        "fuel": null
+      },
+      {
+        "amount": 4510.5,
+        "party": "असत मिश्रा",
+        "party_english": "Asat Mishra",
+        "invoice_no": "21603",
+        "fuel": null
+      },
+      {
+        "amount": 18900.79,
+        "party": "पिपलोदा कस्बा",
+        "party_english": "Piploda",
+        "invoice_no": "21604",
+        "fuel": null
+      },
+      {
+        "amount": 1799.68,
+        "party": "दिनेश यादव",
+        "party_english": "dinesh",
+        "invoice_no": "21605",
+        "fuel": null
+      },
+      {
+        "amount": 3810,
+        "party": "मोहित यादव",
+        "party_english": "Mohit Yadav",
+        "invoice_no": null,
+        "fuel": null
+      },
+      {
+        "amount": 3800,
+        "party": "यादव किराणा",
+        "party_english": "Yadav Kirana",
+        "invoice_no": null,
+        "fuel": null
+      }
+    ],
+    "unclear": [
+      "MS A2 (2nd) amount written 79310 (757.43 x 104.71 = 79311)",
+      "first Piploda invoice (2159?) read 21599"
+    ]
+  }
+}

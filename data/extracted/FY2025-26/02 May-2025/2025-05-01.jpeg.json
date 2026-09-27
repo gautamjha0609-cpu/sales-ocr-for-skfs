@@ -1,0 +1,153 @@
+{
+  "source": "2025-05-01.jpeg",
+  "sha256": "accb0e3f8b82687acf574f3069f660c67b7ec2f67d7c05ab5674ca17ea6980f8",
+  "read_by": "claude-code",
+  "extraction": {
+    "date_text": "1/5/25",
+    "weekday": null,
+    "rates": {
+      "petrol": 104.71,
+      "diesel": 90.21,
+      "power": 112.8
+    },
+    "nozzles": [
+      {
+        "label": "MSP A1",
+        "opening": 92504.49,
+        "closing": 92575.05,
+        "difference": 70.56,
+        "testing": 5,
+        "net_litres": 65.56,
+        "rate": 112.8,
+        "amount_written": 7395,
+        "adjustments": [],
+        "final_amount": 7395
+      },
+      {
+        "label": "MS A2",
+        "opening": null,
+        "closing": null,
+        "difference": 617.78,
+        "testing": 5,
+        "net_litres": 612.78,
+        "rate": 104.71,
+        "amount_written": 64164,
+        "adjustments": [],
+        "final_amount": 64164
+      },
+      {
+        "label": "HSD A1",
+        "opening": 783439.31,
+        "closing": 784113.26,
+        "difference": 673.95,
+        "testing": 5,
+        "net_litres": 668.95,
+        "rate": 90.21,
+        "amount_written": 60345,
+        "adjustments": [],
+        "final_amount": 60345
+      },
+      {
+        "label": "MS A2",
+        "opening": 1189060.49,
+        "closing": 1190295.17,
+        "difference": 1234.68,
+        "testing": 5,
+        "net_litres": 1229.68,
+        "rate": 104.71,
+        "amount_written": 128760,
+        "adjustments": [],
+        "final_amount": 128760
+      },
+      {
+        "label": "HSD A1+A2",
+        "opening": null,
+        "closing": null,
+        "difference": 1679.01,
+        "testing": 10,
+        "net_litres": 1669.01,
+        "rate": 90.21,
+        "amount_written": 150561,
+        "adjustments": [],
+        "final_amount": 150561
+      }
+    ],
+    "sale_total": 411224,
+    "payments": {
+      "credit": 109449,
+      "icici": 11009.81,
+      "paytm_card": 9298,
+      "paytm": 44099.62,
+      "phonepe_card": 17833.27,
+      "phonepe": 86643.23,
+      "hp_card": 1500,
+      "cash": 131390
+    },
+    "other_payments": [],
+    "credit_entries": [
+      {
+        "amount": 20000,
+        "party": "Piploda Construction",
+        "party_english": "Piploda",
+        "invoice_no": "21468",
+        "fuel": null
+      },
+      {
+        "amount": 30512.62,
+        "party": "Piploda Construction",
+        "party_english": "Piploda",
+        "invoice_no": "21469",
+        "fuel": null
+      },
+      {
+        "amount": 24000.14,
+        "party": "सीता देवी",
+        "party_english": "Sita Devi",
+        "invoice_no": "21471",
+        "fuel": null
+      },
+      {
+        "amount": 3980.61,
+        "party": "दिनेश यादव",
+        "party_english": "dinesh",
+        "invoice_no": "21472",
+        "fuel": null
+      },
+      {
+        "amount": 12400.11,
+        "party": "कन्या स्कूल",
+        "party_english": "Kanya School",
+        "invoice_no": "21473",
+        "fuel": null
+      },
+      {
+        "amount": 3836.63,
+        "party": "श्री श्याम ट्रांसपोर्ट",
+        "party_english": "Shyam Tran.",
+        "invoice_no": "21475",
+        "fuel": null
+      },
+      {
+        "amount": 3000,
+        "party": "(नाम अस्पष्ट)",
+        "party_english": "unclear",
+        "invoice_no": null,
+        "fuel": null
+      },
+      {
+        "amount": 2000,
+        "party": "(नाम अस्पष्ट)",
+        "party_english": "unclear",
+        "invoice_no": null,
+        "fuel": null
+      }
+    ],
+    "unclear": [
+      "different handwriting, blurry; bottom of page cut off - more udhar lines below",
+      "MS A2 (2nd) readings unreadable; 617.78 -5 = 612.78 x 104.71 = 64164",
+      "HSD A1 (736131.74->737410.90 = 1279.16) + HSD A2 (802614.62->803014.47 = 399.85) written together 1679.01 -10; amount cut off, 1669.01 x 90.21 = 150561",
+      "MS A2 (4th) amount read 128753, 1229.68 x 104.71 = 128760",
+      "paytm card 9298 / phonepe card 17833.27 / phonepe 86643.23 / paytm 44099.62 - payment line order unclear"
+    ]
+  }
+}

@@ -1,0 +1,178 @@
+{
+  "source": "2025-05-19.jpeg",
+  "sha256": "6ad3999ac3d32093e4a4ca7923f9affa4203d69897793506cafde49b2100d153",
+  "read_by": "claude-code",
+  "extraction": {
+    "date_text": "19/5/25",
+    "weekday": null,
+    "rates": {
+      "petrol": 104.71,
+      "diesel": 90.21,
+      "power": 112.8
+    },
+    "nozzles": [
+      {
+        "label": "MSP A1",
+        "opening": 96207.9,
+        "closing": 96531.61,
+        "difference": 323.71,
+        "testing": 5,
+        "net_litres": 318.71,
+        "rate": 112.8,
+        "amount_written": 35950,
+        "adjustments": [],
+        "final_amount": 35950
+      },
+      {
+        "label": "MS A2",
+        "opening": 1034328.74,
+        "closing": 1034843.62,
+        "difference": 514.88,
+        "testing": 5,
+        "net_litres": 509.88,
+        "rate": 104.71,
+        "amount_written": 53389,
+        "adjustments": [],
+        "final_amount": 53389
+      },
+      {
+        "label": "HSD A1",
+        "opening": 794976.17,
+        "closing": 795560.19,
+        "difference": 584.02,
+        "testing": 5,
+        "net_litres": 579.02,
+        "rate": 90.21,
+        "amount_written": 52233,
+        "adjustments": [],
+        "final_amount": 52233
+      },
+      {
+        "label": "MS A2",
+        "opening": 1207577.4,
+        "closing": 1208651.96,
+        "difference": 1074.56,
+        "testing": 5,
+        "net_litres": 1069.56,
+        "rate": 104.71,
+        "amount_written": 111993,
+        "adjustments": [
+          -6
+        ],
+        "final_amount": 111987
+      },
+      {
+        "label": "HSD A1",
+        "opening": 748332.02,
+        "closing": 749501.67,
+        "difference": 1169.65,
+        "testing": 5,
+        "net_litres": 1164.65,
+        "rate": 90.21,
+        "amount_written": 105063,
+        "adjustments": [],
+        "final_amount": 105063
+      },
+      {
+        "label": "HSD A2",
+        "opening": 818044.39,
+        "closing": 818693.7,
+        "difference": 649.31,
+        "testing": 5,
+        "net_litres": 644.31,
+        "rate": 90.21,
+        "amount_written": 58123,
+        "adjustments": [],
+        "final_amount": 58123
+      }
+    ],
+    "sale_total": 416745,
+    "payments": {
+      "credit": 118904.41,
+      "icici": 15350.94,
+      "paytm_card": 8080.55,
+      "paytm": 62552.12,
+      "phonepe_card": 28500,
+      "phonepe": 32061.01,
+      "hp_card": 11430,
+      "cash": 139865
+    },
+    "other_payments": [],
+    "credit_entries": [
+      {
+        "amount": 24966.51,
+        "party": "पिपलोदा कस्बा",
+        "party_english": "Piploda",
+        "invoice_no": "21572",
+        "fuel": null
+      },
+      {
+        "amount": 17059.61,
+        "party": "पिपलोदा कस्बा",
+        "party_english": "Piploda",
+        "invoice_no": "21573",
+        "fuel": null
+      },
+      {
+        "amount": 3550,
+        "party": "मूलचंद यादव",
+        "party_english": "mool Chand yadav",
+        "invoice_no": "21574",
+        "fuel": null
+      },
+      {
+        "amount": 24000.37,
+        "party": "धर्मेन्द्र सिंह",
+        "party_english": "Dharmendra Singh",
+        "invoice_no": "21577",
+        "fuel": null
+      },
+      {
+        "amount": 3804.15,
+        "party": "दिनेश यादव",
+        "party_english": "dinesh",
+        "invoice_no": "21578",
+        "fuel": null
+      },
+      {
+        "amount": 341.11,
+        "party": "दिनेश यादव",
+        "party_english": "dinesh",
+        "invoice_no": "21579",
+        "fuel": null
+      },
+      {
+        "amount": 5500.19,
+        "party": "पिपलोदा कस्बा",
+        "party_english": "Piploda",
+        "invoice_no": "21580",
+        "fuel": null
+      },
+      {
+        "amount": 23681.92,
+        "party": "पिपलोदा कस्बा",
+        "party_english": "Piploda",
+        "invoice_no": "21581",
+        "fuel": null
+      },
+      {
+        "amount": 11001,
+        "party": "प्रेमचंद जाट",
+        "party_english": "Premchand Jat",
+        "invoice_no": null,
+        "fuel": null
+      },
+      {
+        "amount": 2200,
+        "party": "नाथुलाल पानी टैंकर",
+        "party_english": "Nathu Lal pani tanker",
+        "invoice_no": null,
+        "fuel": null
+      }
+    ],
+    "unclear": [
+      "first udhar is 24966.51 (zoomed)",
+      "dinesh 21579 amount looks like 341.11 - list is 2799.55 short of udhar total; could be 3141.11"
+    ]
+  }
+}
